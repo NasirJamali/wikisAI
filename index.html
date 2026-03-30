@@ -381,34 +381,7 @@ body.article-active .home-theme-btn{display:none;}
 }
 .search-go-btn:hover{transform:scale(1.08);box-shadow:0 4px 18px rgba(184,106,8,.5);}
 
-/* ── DROPDOWN ── */
-.dropdown{
-  position:absolute;top:calc(100% + 8px);left:0;right:0;
-  background:var(--dropdown-bg);border:1px solid var(--border2);
-  border-radius:14px;overflow:hidden;z-index:100;
-  box-shadow:var(--shadow-dropdown);
-  opacity:0;transform:translateY(-6px) scale(.98);pointer-events:none;
-  transition:opacity .18s,transform .2s cubic-bezier(.34,1.4,.64,1);
-  backdrop-filter:blur(20px);
-}
-.dropdown.open{opacity:1;transform:translateY(0) scale(1);pointer-events:all;}
-.dropdown-header{
-  padding:.65rem 1.1rem;font-size:.56rem;letter-spacing:.18em;
-  text-transform:uppercase;color:var(--muted);
-  border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem;
-}
-.dropdown-item{
-  display:flex;align-items:center;gap:.85rem;padding:.75rem 1.1rem;
-  cursor:pointer;transition:background .1s;border-bottom:1px solid var(--dd-item-border);
-}
-.dropdown-item:last-child{border-bottom:none;}
-.dropdown-item:hover,.dropdown-item.active{background:var(--surface2);}
-.dropdown-item:hover .di-title,.dropdown-item.active .di-title{color:var(--accent);}
-.di-icon{width:32px;height:32px;border-radius:8px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;border:1px solid var(--border);}
-.di-info{flex:1;min-width:0;}
-.di-title{font-size:.78rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:color .12s;}
-.di-desc{font-size:.63rem;color:var(--muted);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.di-badge{font-size:.54rem;color:var(--accent);background:var(--accent-dim);padding:2px 7px;border-radius:20px;white-space:nowrap;border:1px solid rgba(184,106,8,.18);}
+
 
 /* ── QUICK TOPIC PILLS ── */
 .home-topics{
@@ -659,10 +632,7 @@ body.article-active .home-theme-btn{display:none;}
           <button class="search-go-btn" onclick="triggerSearch()" aria-label="Search">↗</button>
         </div>
       </div>
-      <div class="dropdown" id="dropdown">
-        <div class="dropdown-header" id="dropdownHeader">🔥 Trending on Wikipedia</div>
-        <div id="dropdownList"></div>
-      </div>
+
     </div>
 
     <!-- Keyboard hint (desktop only) -->
@@ -712,7 +682,7 @@ body.article-active .home-theme-btn{display:none;}
     <div class="topbar-title" id="topbarTitle">—</div>
     <div class="topbar-right">
       <button class="topbar-theme" id="topbarTheme" onclick="toggleTheme()" title="Toggle theme">☀️</button>
-      <button class="summary-btn" id="summaryBtn" onclick="generateSummary()">✦ Summary</button>
+      <button class="summary-btn" id="summaryBtn" onclick="generateSummary()">✦ AI Summary</button>
     </div>
   </div>
   <div class="article-scroll" id="articleScroll">
@@ -728,7 +698,7 @@ body.article-active .home-theme-btn{display:none;}
         <button class="ask-quick-chip" onclick="askQuick('Summarize this article briefly')">✦ Summarize</button>
         <button class="ask-quick-chip" onclick="askQuick('What are the key questions about this topic?')">❓ Questions</button>
         <button class="ask-quick-chip" onclick="askQuick('What are the key facts and most important points?')">📌 Key Facts</button>
-      
+        <button class="ask-quick-chip" onclick="askQuick('What are the main controversies or debates around this topic?')">⚡ Controversies</button>
       </div>
     </div>
   </div>
@@ -774,7 +744,6 @@ const WIKI_API = 'https://en.wikipedia.org/w/api.php?origin=*';
 /* ── STATE ── */
 let article = null;
 let chatHistory = [];
-let dropdownItems = [], ddIndex = -1, searchTimer = null;
 
 /* ══ THEME ══ */
 function toggleTheme() {
@@ -818,63 +787,16 @@ const TRENDING = [
 
 /* ── SEARCH ── */
 const homeSearch = document.getElementById('homeSearch');
-const dropdown = document.getElementById('dropdown');
-const ddList = document.getElementById('dropdownList');
-const ddHeader = document.getElementById('dropdownHeader');
 const searchWrapper = document.getElementById('searchWrapper');
 
-homeSearch.addEventListener('focus', () => { searchWrapper.classList.add('focused'); showTrending(); });
+homeSearch.addEventListener('focus', () => searchWrapper.classList.add('focused'));
 homeSearch.addEventListener('blur', () => searchWrapper.classList.remove('focused'));
-homeSearch.addEventListener('input', () => {
-  clearTimeout(searchTimer);
-  const q = homeSearch.value.trim();
-  if (!q) { showTrending(); return; }
-  searchTimer = setTimeout(() => searchDropdown(q), 280);
-});
 homeSearch.addEventListener('keydown', e => {
-  if (e.key === 'ArrowDown') { e.preventDefault(); moveDd(1); return; }
-  if (e.key === 'ArrowUp') { e.preventDefault(); moveDd(-1); return; }
-  if (e.key === 'Enter') { e.preventDefault(); triggerSearch(); return; }
-  if (e.key === 'Escape') closeDropdown();
+  if (e.key === 'Enter') { e.preventDefault(); triggerSearch(); }
 });
 function triggerSearch() {
-  if (ddIndex >= 0 && dropdownItems[ddIndex]) loadArticle(dropdownItems[ddIndex].title);
-  else if (homeSearch.value.trim()) loadArticle(homeSearch.value.trim());
+  if (homeSearch.value.trim()) loadArticle(homeSearch.value.trim());
 }
-document.addEventListener('click', e => { if (!e.target.closest('.search-container')) closeDropdown(); });
-
-function showTrending() {
-  ddHeader.textContent = '🔥 Trending on Wikipedia';
-  ddList.innerHTML = '';
-  dropdownItems = TRENDING; ddIndex = -1;
-  TRENDING.forEach((item, i) => ddList.appendChild(makeDdItem(item.icon, item.title, item.desc, 'trending', i)));
-  dropdown.classList.add('open');
-}
-async function searchDropdown(q) {
-  ddHeader.textContent = '🔍 Searching…';
-  ddList.innerHTML = '';
-  dropdown.classList.add('open');
-  try {
-    const data = await (await fetch(`${WIKI_API}&action=query&list=search&srsearch=${encodeURIComponent(q)}&format=json&srlimit=6`)).json();
-    const results = data.query.search;
-    if (!results.length) { ddHeader.textContent = 'No results found'; return; }
-    ddHeader.textContent = `📄 Results for "${q}"`;
-    dropdownItems = results.map(r => ({ title: r.title, desc: stripHtml(r.snippet) }));
-    ddIndex = -1;
-    dropdownItems.forEach((item, i) => ddList.appendChild(makeDdItem('📄', item.title, item.desc, 'result', i)));
-  } catch { ddHeader.textContent = 'Search error'; }
-}
-function makeDdItem(icon, title, desc, type, idx) {
-  const el = document.createElement('div');
-  el.className = 'dropdown-item';
-  el.innerHTML = `<div class="di-icon">${icon}</div><div class="di-info"><div class="di-title">${escHtml(title)}</div><div class="di-desc">${escHtml(desc)}</div></div>${type==='trending'?'<div class="di-badge">Trending</div>':''}`;
-  el.addEventListener('click', () => loadArticle(title));
-  el.addEventListener('mouseenter', () => { ddIndex = idx; highlightDd(); });
-  return el;
-}
-function moveDd(dir) { ddIndex = Math.max(-1, Math.min(dropdownItems.length-1, ddIndex+dir)); highlightDd(); if (ddIndex>=0&&dropdownItems[ddIndex]) homeSearch.value = dropdownItems[ddIndex].title; }
-function highlightDd() { ddList.querySelectorAll('.dropdown-item').forEach((el,i) => el.classList.toggle('active', i===ddIndex)); }
-function closeDropdown() { dropdown.classList.remove('open'); ddIndex = -1; }
 
 /* ── LOAD ARTICLE ── */
 async function loadArticle(query) {
