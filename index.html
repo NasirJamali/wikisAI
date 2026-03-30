@@ -2,7 +2,7 @@
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 
 <!-- ══ PRIMARY SEO ══ -->
 <title>WikisAI — Read, Understand & Explore Wikipedia with AI</title>
@@ -242,67 +242,223 @@ body::after{content:'';position:fixed;inset:0;background-image:url("data:image/s
 .page{position:fixed;inset:0;overflow:hidden;transition:opacity .4s ease,transform .4s ease;}
 .page.hidden{opacity:0;pointer-events:none;transform:translateY(18px);}
 
-/* ══ HOME THEME TOGGLE (top-right on home page only) ══ */
+/* ══ HOME THEME TOGGLE ══ */
 .home-theme-btn{
-  position:fixed;top:1.1rem;right:1.2rem;z-index:9999;
-  background:var(--surface);border:1px solid var(--border2);border-radius:8px;
-  width:36px;height:36px;display:flex;align-items:center;justify-content:center;
-  cursor:pointer;transition:all .2s;font-size:.9rem;
+  position:fixed;top:1.2rem;right:1.2rem;z-index:9999;
+  background:rgba(255,255,255,.04);border:1px solid var(--border2);border-radius:50%;
+  width:40px;height:40px;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:all .25s;font-size:1rem;backdrop-filter:blur(12px);
 }
-.home-theme-btn:hover{border-color:var(--accent);color:var(--accent);}
-/* Hide home theme btn when article page is visible */
+.home-theme-btn:hover{border-color:var(--accent);background:var(--accent-dim);transform:rotate(20deg);}
 #articlePage:not(.hidden) ~ .home-theme-btn,
-body.article-active .home-theme-btn { display: none; }
+body.article-active .home-theme-btn{display:none;}
 
-/* ═══════ HOME PAGE ═══════ */
-#homePage{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--bg);}
-.home-grid{position:absolute;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 40%,transparent 100%);}
-.orb{position:absolute;border-radius:50%;filter:blur(130px);pointer-events:none;animation:orbFloat 8s ease-in-out infinite;}
-.orb-1{width:700px;height:700px;background:var(--orb1);top:-250px;left:-200px;}
-.orb-2{width:600px;height:600px;background:var(--orb2);bottom:-200px;right:-150px;animation-delay:-3s;}
-.orb-3{width:350px;height:350px;background:var(--orb3);bottom:80px;left:80px;animation-delay:-6s;}
-@keyframes orbFloat{0%,100%{transform:translate(0,0);}33%{transform:translate(20px,-15px);}66%{transform:translate(-10px,20px);}}
+/* ═══════ HOME PAGE — FULL REDESIGN ═══════ */
+#homePage{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:var(--bg);overflow:hidden;
+}
 
-.home-inner{position:relative;z-index:10;width:100%;max-width:680px;padding:2rem;}
-.brand{text-align:center;margin-bottom:3.5rem;}
-.brand-eyebrow{font-size:.6rem;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);margin-bottom:1rem;display:flex;align-items:center;justify-content:center;gap:.8rem;}
-.brand-eyebrow::before,.brand-eyebrow::after{content:'';flex:1;max-width:60px;height:1px;background:linear-gradient(90deg,transparent,var(--border2));}
-.brand-eyebrow::after{background:linear-gradient(90deg,var(--border2),transparent);}
-.brand-logo{font-family:'Syne',sans-serif;font-size:4.5rem;font-weight:800;color:var(--text);letter-spacing:-.04em;line-height:1;}
-.brand-logo em{font-style:italic;background:linear-gradient(135deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-.brand-tagline{margin-top:1rem;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
-.brand-tagline span{color:var(--text2);}
-.brand-stats{display:flex;justify-content:center;gap:2.5rem;margin-top:1.8rem;}
-.brand-stat-val{font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--text);}
-.brand-stat-lbl{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:1px;}
+/* Layered background: diagonal lines + radial fade */
+.home-bg-lines{
+  position:absolute;inset:0;pointer-events:none;
+  background-image:
+    repeating-linear-gradient(
+      -55deg,
+      transparent,
+      transparent 60px,
+      rgba(139,127,240,.025) 60px,
+      rgba(139,127,240,.025) 61px
+    );
+  mask-image:radial-gradient(ellipse 90% 90% at 50% 50%, black 30%, transparent 100%);
+}
+[data-theme="light"] .home-bg-lines{
+  background-image:repeating-linear-gradient(-55deg,transparent,transparent 60px,rgba(93,82,212,.04) 60px,rgba(93,82,212,.04) 61px);
+}
 
-.search-container{position:relative;}
+/* Glowing orbs */
+.orb{position:absolute;border-radius:50%;filter:blur(100px);pointer-events:none;animation:orbFloat 10s ease-in-out infinite;}
+.orb-1{width:600px;height:600px;background:var(--orb1);top:-180px;left:-160px;}
+.orb-2{width:500px;height:500px;background:var(--orb2);bottom:-160px;right:-120px;animation-delay:-4s;}
+.orb-3{width:280px;height:280px;background:var(--orb3);bottom:100px;left:10%;animation-delay:-7s;}
+@keyframes orbFloat{0%,100%{transform:translate(0,0);}33%{transform:translate(24px,-18px);}66%{transform:translate(-12px,22px);}}
+
+/* ── MAIN CONTENT WRAPPER ── */
+.home-inner{
+  position:relative;z-index:10;
+  width:100%;max-width:700px;
+  padding:1.5rem 1.5rem 2rem;
+  display:flex;flex-direction:column;align-items:center;gap:0;
+}
+
+/* ── TOP BADGE ── */
+.home-badge{
+  display:inline-flex;align-items:center;gap:.5rem;
+  background:var(--accent-dim);border:1px solid rgba(212,130,10,.25);
+  border-radius:20px;padding:.3rem .9rem;
+  font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent2);
+  margin-bottom:2rem;animation:fadeUp .6s ease both;
+}
+.home-badge-dot{width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 6px var(--accent);animation:pulse 2s infinite;}
+@keyframes pulse{0%,100%{opacity:1;}50%{opacity:.4;}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── HEADLINE ── */
+.home-headline{
+  font-family:'Syne',sans-serif;font-weight:800;
+  font-size:clamp(2.8rem,8vw,5.2rem);
+  line-height:1.0;letter-spacing:-.04em;
+  text-align:center;color:var(--text);
+  margin-bottom:1rem;
+  animation:fadeUp .6s .1s ease both;
+}
+.home-headline .hl-wiki{color:var(--text2);}
+.home-headline .hl-ai{
+  font-style:italic;
+  background:linear-gradient(120deg,var(--accent) 0%,var(--accent2) 50%,var(--purple) 100%);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  background-size:200%;animation:fadeUp .6s .1s ease both, shimmer 4s linear 1s infinite;
+}
+@keyframes shimmer{0%{background-position:0% 50%;}100%{background-position:200% 50%;}}
+
+/* ── SUBLINE ── */
+.home-sub{
+  font-size:clamp(.78rem,2.5vw,.95rem);color:var(--text2);
+  text-align:center;line-height:1.7;max-width:460px;
+  margin-bottom:2.5rem;
+  animation:fadeUp .6s .2s ease both;
+}
+
+/* ── SEARCH BLOCK ── */
+.search-container{position:relative;width:100%;animation:fadeUp .6s .3s ease both;}
+
+/* Glow ring that appears on focus */
+.search-glow{
+  position:absolute;inset:-3px;border-radius:18px;
+  background:linear-gradient(135deg,var(--accent),var(--purple));
+  opacity:0;transition:opacity .3s;z-index:0;filter:blur(8px);
+}
+.search-wrapper.focused .search-glow{opacity:.35;}
+
 .search-wrapper{position:relative;transition:transform .3s cubic-bezier(.34,1.56,.64,1);}
-.search-wrapper.focused{transform:scale(1.025);}
-.search-icon{position:absolute;left:1.2rem;top:50%;transform:translateY(-50%);color:var(--muted);font-size:.9rem;pointer-events:none;transition:color .2s;}
-.search-wrapper.focused .search-icon{color:var(--accent);}
-.search-box{width:100%;background:var(--surface);border:1px solid var(--border2);color:var(--text);font-family:'DM Mono',monospace;font-size:.95rem;padding:1.2rem 1.4rem 1.2rem 3rem;border-radius:10px;outline:none;transition:border-color .25s,box-shadow .25s;caret-color:var(--accent);}
+.search-wrapper.focused{transform:scale(1.015);}
+
+.search-inner{
+  position:relative;z-index:1;
+  display:flex;align-items:center;
+  background:var(--surface);
+  border:1px solid var(--border2);
+  border-radius:16px;
+  overflow:hidden;
+  transition:border-color .25s;
+}
+.search-wrapper.focused .search-inner{border-color:rgba(212,130,10,.5);}
+
+.search-icon-wrap{
+  padding:0 1rem 0 1.3rem;
+  color:var(--muted);font-size:1.1rem;
+  flex-shrink:0;pointer-events:none;
+  transition:color .2s;line-height:1;
+}
+.search-wrapper.focused .search-icon-wrap{color:var(--accent);}
+
+.search-box{
+  flex:1;background:none;border:none;outline:none;
+  color:var(--text);font-family:'DM Mono',monospace;
+  font-size:1rem;padding:1.1rem .5rem 1.1rem 0;
+  caret-color:var(--accent);min-width:0;
+  -webkit-appearance:none;
+}
 .search-box::placeholder{color:var(--muted);}
-.search-box:focus{border-color:rgba(184,106,8,.55);box-shadow:0 0 0 4px var(--accent-dim),var(--shadow-search);}
 
-.quick-actions{display:flex;justify-content:center;gap:.5rem;margin-top:.9rem;flex-wrap:wrap;}
-.qa-chip{font-family:'DM Mono',monospace;font-size:.65rem;letter-spacing:.06em;text-transform:uppercase;padding:.38rem .9rem;border:1px solid var(--border2);border-radius:20px;color:var(--text2);background:transparent;cursor:pointer;transition:all .18s;white-space:nowrap;}
-.qa-chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim);}
+.search-go-btn{
+  margin:.4rem .4rem .4rem 0;flex-shrink:0;
+  background:linear-gradient(135deg,var(--accent),#a85e06);
+  color:#fff;border:none;border-radius:12px;
+  width:42px;height:42px;cursor:pointer;
+  font-size:1.1rem;display:flex;align-items:center;justify-content:center;
+  transition:all .2s;box-shadow:0 2px 10px rgba(184,106,8,.3);
+}
+.search-go-btn:hover{transform:scale(1.08);box-shadow:0 4px 18px rgba(184,106,8,.5);}
 
-.dropdown{position:absolute;top:calc(100% + 10px);left:0;right:0;background:var(--dropdown-bg);border:1px solid var(--border2);border-radius:10px;overflow:hidden;z-index:100;box-shadow:var(--shadow-dropdown);opacity:0;transform:translateY(-8px);pointer-events:none;transition:opacity .2s,transform .22s cubic-bezier(.34,1.56,.64,1);backdrop-filter:blur(20px);}
-.dropdown.open{opacity:1;transform:translateY(0);pointer-events:all;}
-.dropdown-header{padding:.7rem 1.1rem;font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem;}
-.dropdown-item{display:flex;align-items:center;gap:.9rem;padding:.8rem 1.1rem;cursor:pointer;transition:background .12s;border-bottom:1px solid var(--dd-item-border);}
+/* ── DROPDOWN ── */
+.dropdown{
+  position:absolute;top:calc(100% + 8px);left:0;right:0;
+  background:var(--dropdown-bg);border:1px solid var(--border2);
+  border-radius:14px;overflow:hidden;z-index:100;
+  box-shadow:var(--shadow-dropdown);
+  opacity:0;transform:translateY(-6px) scale(.98);pointer-events:none;
+  transition:opacity .18s,transform .2s cubic-bezier(.34,1.4,.64,1);
+  backdrop-filter:blur(20px);
+}
+.dropdown.open{opacity:1;transform:translateY(0) scale(1);pointer-events:all;}
+.dropdown-header{
+  padding:.65rem 1.1rem;font-size:.56rem;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--muted);
+  border-bottom:1px solid var(--border);display:flex;align-items:center;gap:.5rem;
+}
+.dropdown-item{
+  display:flex;align-items:center;gap:.85rem;padding:.75rem 1.1rem;
+  cursor:pointer;transition:background .1s;border-bottom:1px solid var(--dd-item-border);
+}
 .dropdown-item:last-child{border-bottom:none;}
 .dropdown-item:hover,.dropdown-item.active{background:var(--surface2);}
 .dropdown-item:hover .di-title,.dropdown-item.active .di-title{color:var(--accent);}
-.di-icon{width:34px;height:34px;border-radius:6px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0;border:1px solid var(--border);}
+.di-icon{width:32px;height:32px;border-radius:8px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:.95rem;flex-shrink:0;border:1px solid var(--border);}
 .di-info{flex:1;min-width:0;}
-.di-title{font-size:.8rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:color .15s;}
-.di-desc{font-size:.65rem;color:var(--muted);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.di-badge{font-size:.56rem;color:var(--accent);background:var(--accent-dim);padding:2px 8px;border-radius:20px;white-space:nowrap;border:1px solid rgba(184,106,8,.2);}
-.search-hint{text-align:center;margin-top:1.3rem;font-size:.65rem;color:var(--muted);letter-spacing:.06em;}
-.search-hint kbd{background:var(--surface2);border:1px solid var(--border2);padding:1px 7px;border-radius:3px;font-family:'DM Mono',monospace;font-size:.62rem;color:var(--text2);}
+.di-title{font-size:.78rem;color:var(--text);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;transition:color .12s;}
+.di-desc{font-size:.63rem;color:var(--muted);margin-top:1px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.di-badge{font-size:.54rem;color:var(--accent);background:var(--accent-dim);padding:2px 7px;border-radius:20px;white-space:nowrap;border:1px solid rgba(184,106,8,.18);}
+
+/* ── QUICK TOPIC PILLS ── */
+.home-topics{
+  display:flex;justify-content:center;gap:.45rem;
+  flex-wrap:wrap;margin-top:1.1rem;
+  animation:fadeUp .6s .4s ease both;
+}
+.qa-chip{
+  font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.05em;
+  padding:.4rem .9rem;border:1px solid var(--border2);
+  border-radius:20px;color:var(--text2);background:transparent;
+  cursor:pointer;transition:all .18s;white-space:nowrap;
+}
+.qa-chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim);transform:translateY(-1px);}
+
+/* ── STATS ROW ── */
+.home-stats{
+  display:flex;align-items:center;justify-content:center;
+  gap:0;margin-top:2.8rem;
+  border:1px solid var(--border);border-radius:14px;
+  overflow:hidden;background:var(--surface);
+  animation:fadeUp .6s .5s ease both;
+  width:100%;max-width:420px;
+}
+.home-stat{
+  flex:1;padding:.9rem .5rem;text-align:center;
+  border-right:1px solid var(--border);
+}
+.home-stat:last-child{border-right:none;}
+.home-stat-val{
+  font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;
+  color:var(--text);letter-spacing:-.02em;line-height:1;
+}
+.home-stat-val span{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.home-stat-lbl{font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.3rem;}
+
+/* ── KEYBOARD HINT ── */
+.search-hint{
+  text-align:center;margin-top:.85rem;
+  font-size:.6rem;color:var(--muted);letter-spacing:.05em;
+  animation:fadeUp .6s .45s ease both;
+}
+.search-hint kbd{
+  background:var(--surface2);border:1px solid var(--border2);
+  padding:1px 6px;border-radius:3px;
+  font-family:'DM Mono',monospace;font-size:.58rem;color:var(--text2);
+}
 
 /* ═══════ ARTICLE PAGE ═══════ */
 #articlePage{background:var(--bg);display:flex;flex-direction:column;}
@@ -446,10 +602,17 @@ body.article-active .home-theme-btn { display: none; }
   .ask-bar-outer{bottom:1rem;}
   .chat-messages,.chat-input-area,.suggested-qs{padding-left:1rem;padding-right:1rem;}
   .article-topbar{padding:.8rem 1rem;gap:.6rem;}
-  .brand-logo{font-size:3.2rem;}
-  .brand-stats{gap:1.5rem;}
   .msg-bubble{max-width:90%;}
   .chat-body{max-width:100%;}
+  /* Home mobile tweaks */
+  .home-inner{padding:1rem 1rem 1.5rem;}
+  .home-badge{font-size:.55rem;padding:.28rem .75rem;}
+  .home-sub{font-size:.8rem;margin-bottom:2rem;}
+  .home-stats{max-width:100%;}
+  .home-stat-val{font-size:1.1rem;}
+  .search-hint{display:none;} /* hide kb hint on mobile */
+  .home-topics{gap:.4rem;}
+  .qa-chip{font-size:.6rem;padding:.35rem .75rem;}
 }
 </style>
 </head>
@@ -462,39 +625,81 @@ body.article-active .home-theme-btn { display: none; }
 
 <!-- ═══ HOME ════════════════════════════════════ -->
 <div id="homePage" class="page">
-  <div class="home-grid"></div>
+  <div class="home-bg-lines"></div>
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="orb orb-3"></div>
+
   <div class="home-inner">
-    <div class="brand">
-      <div class="brand-eyebrow">Powered by Wikipedia & AI</div>
-      <div class="brand-logo">Wikis<em>AI</em></div>
-      <div class="brand-tagline">Read &nbsp;<span>·</span>&nbsp; Understand &nbsp;<span>·</span>&nbsp; Explore</div>
-      <div class="brand-stats">
-        <div class="brand-stat"><div class="brand-stat-val">60M+</div><div class="brand-stat-lbl">Articles</div></div>
-        <div class="brand-stat"><div class="brand-stat-val">AI</div><div class="brand-stat-lbl">Powered</div></div>
-        <div class="brand-stat"><div class="brand-stat-val">∞</div><div class="brand-stat-lbl">Knowledge</div></div>
-      </div>
+
+    <!-- Live badge -->
+    <div class="home-badge">
+      <span class="home-badge-dot"></span>
+      Wikipedia · AI Powered · Free
     </div>
+
+    <!-- Big headline -->
+    <h1 class="home-headline">
+      <span class="hl-wiki">Wikis</span><em class="hl-ai">AI</em>
+    </h1>
+
+    <!-- Subline -->
+    <p class="home-sub">Search any Wikipedia article. Get instant AI summaries, ask questions, and explore knowledge like never before.</p>
+
+    <!-- Search -->
     <div class="search-container">
       <div class="search-wrapper" id="searchWrapper">
-        <span class="search-icon">⌕</span>
-        <input id="homeSearch" class="search-box" type="text" placeholder="Search any Wikipedia article…" autocomplete="off" spellcheck="false"/>
+        <div class="search-glow"></div>
+        <div class="search-inner">
+          <span class="search-icon-wrap">⌕</span>
+          <input id="homeSearch" class="search-box" type="text"
+            placeholder="Search any topic…"
+            autocomplete="off" spellcheck="false"
+            enterkeyhint="search"/>
+          <button class="search-go-btn" onclick="triggerSearch()" aria-label="Search">↗</button>
+        </div>
       </div>
       <div class="dropdown" id="dropdown">
         <div class="dropdown-header" id="dropdownHeader">🔥 Trending on Wikipedia</div>
         <div id="dropdownList"></div>
       </div>
     </div>
-    <div class="quick-actions">
-      <button class="qa-chip" onclick="loadArticle('Artificial intelligence')">🤖 Artificial Intelligence</button>
+
+    <!-- Keyboard hint (desktop only) -->
+    <div class="search-hint">
+      <kbd>Enter</kbd> to search &nbsp;·&nbsp; <kbd>↑↓</kbd> navigate &nbsp;·&nbsp; <kbd>Esc</kbd> close
+    </div>
+
+    <!-- Quick topic chips -->
+    <div class="home-topics">
+      <button class="qa-chip" onclick="loadArticle('Artificial intelligence')">🤖 AI</button>
       <button class="qa-chip" onclick="loadArticle('Black hole')">🌑 Black Holes</button>
       <button class="qa-chip" onclick="loadArticle('Pakistan')">🌍 Pakistan</button>
-      <button class="qa-chip" onclick="loadArticle('Quantum mechanics')">⚛️ Quantum Mechanics</button>
+      <button class="qa-chip" onclick="loadArticle('Quantum mechanics')">⚛️ Quantum</button>
       <button class="qa-chip" onclick="loadArticle('Human brain')">🧠 Human Brain</button>
+      <button class="qa-chip" onclick="loadArticle('Roman Empire')">🏛️ Roman Empire</button>
     </div>
-    <div class="search-hint">Press <kbd>Enter</kbd> to search &nbsp;·&nbsp; <kbd>↑↓</kbd> to navigate &nbsp;·&nbsp; <kbd>Esc</kbd> to close</div>
+
+    <!-- Stats strip -->
+    <div class="home-stats">
+      <div class="home-stat">
+        <div class="home-stat-val"><span>60M+</span></div>
+        <div class="home-stat-lbl">Articles</div>
+      </div>
+      <div class="home-stat">
+        <div class="home-stat-val"><span>AI</span></div>
+        <div class="home-stat-lbl">Summaries</div>
+      </div>
+      <div class="home-stat">
+        <div class="home-stat-val"><span>∞</span></div>
+        <div class="home-stat-lbl">Knowledge</div>
+      </div>
+      <div class="home-stat">
+        <div class="home-stat-val"><span>Free</span></div>
+        <div class="home-stat-lbl">Always</div>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -629,9 +834,13 @@ homeSearch.addEventListener('input', () => {
 homeSearch.addEventListener('keydown', e => {
   if (e.key === 'ArrowDown') { e.preventDefault(); moveDd(1); return; }
   if (e.key === 'ArrowUp') { e.preventDefault(); moveDd(-1); return; }
-  if (e.key === 'Enter') { e.preventDefault(); if (ddIndex >= 0 && dropdownItems[ddIndex]) loadArticle(dropdownItems[ddIndex].title); else if (homeSearch.value.trim()) loadArticle(homeSearch.value.trim()); return; }
+  if (e.key === 'Enter') { e.preventDefault(); triggerSearch(); return; }
   if (e.key === 'Escape') closeDropdown();
 });
+function triggerSearch() {
+  if (ddIndex >= 0 && dropdownItems[ddIndex]) loadArticle(dropdownItems[ddIndex].title);
+  else if (homeSearch.value.trim()) loadArticle(homeSearch.value.trim());
+}
 document.addEventListener('click', e => { if (!e.target.closest('.search-container')) closeDropdown(); });
 
 function showTrending() {
