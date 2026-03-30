@@ -3,8 +3,155 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WikisAI</title>
+
+<!-- ══ PRIMARY SEO ══ -->
+<title>WikisAI — Read, Understand & Explore Wikipedia with AI</title>
+<meta name="description" content="WikisAI lets you read any Wikipedia article and instantly chat with AI to understand it deeper. Get AI summaries, ask questions, and explore 60M+ articles powered by AI.">
+<meta name="keywords" content="wikipedia AI, wikipedia chat, AI summary, wikipedia reader, wikisai, AI powered wikipedia, learn with AI, wikipedia assistant, article summarizer">
+<meta name="author" content="WikisAI">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<link rel="canonical" href="https://wikisai.vercel.app/">
+
+<!-- ══ OPEN GRAPH (Facebook, WhatsApp, LinkedIn) ══ -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="WikisAI">
+<meta property="og:title" content="WikisAI — Read, Understand & Explore Wikipedia with AI">
+<meta property="og:description" content="Chat with AI about any Wikipedia article. Get instant summaries, ask deep questions, and explore knowledge like never before. 60M+ articles. Free.">
+<meta property="og:url" content="https://wikisai.vercel.app/">
+<meta property="og:image" content="https://wikisai.vercel.app/favicon/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="WikisAI — AI-powered Wikipedia reader">
+<meta property="og:locale" content="en_US">
+
+<!-- ══ TWITTER / X CARD ══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@wikisai">
+<meta name="twitter:title" content="WikisAI — Read, Understand & Explore Wikipedia with AI">
+<meta name="twitter:description" content="Chat with AI about any Wikipedia article. Get instant summaries, ask deep questions, and explore knowledge like never before.">
+<meta name="twitter:image" content="https://wikisai.vercel.app/favicon/og-image.png">
+<meta name="twitter:image:alt" content="WikisAI — AI-powered Wikipedia reader">
+
+<!-- ══ EXTRA CRAWL / INDEXING HINTS ══ -->
+<meta name="theme-color" content="#d4820a">
+<meta name="application-name" content="WikisAI">
+<meta name="generator" content="WikisAI">
+<meta name="rating" content="general">
+<meta name="revisit-after" content="7 days">
+<meta name="language" content="English">
+
+<!-- ══ FAVICON ══ -->
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#f0b90b">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+
+<!-- ══ SCHEMA.ORG STRUCTURED DATA ══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://wikisai.vercel.app/#website",
+      "url": "https://wikisai.vercel.app/",
+      "name": "WikisAI",
+      "description": "AI-powered Wikipedia reader. Read any Wikipedia article and chat with AI to understand it deeper.",
+      "inLanguage": "en-US",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://wikisai.vercel.app/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://wikisai.vercel.app/#app",
+      "name": "WikisAI",
+      "url": "https://wikisai.vercel.app/",
+      "description": "Chat with AI about any Wikipedia article. Get instant AI summaries, ask deep questions, and explore 60M+ articles powered by AI.",
+      "applicationCategory": "EducationApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "featureList": [
+        "AI-powered article summaries",
+        "Chat with AI about any Wikipedia article",
+        "60M+ Wikipedia articles",
+        "Dark and light mode",
+        "Text selection AI explanations"
+      ],
+      "screenshot": "https://wikisai.vercel.app/favicon/og-image.png",
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://wikisai.vercel.app/#organization",
+      "name": "WikisAI",
+      "url": "https://wikisai.vercel.app/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://wikisai.vercel.app/favicon/apple-touch-icon.png",
+        "width": 180,
+        "height": 180
+      },
+      "sameAs": []
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is WikisAI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WikisAI is a free AI-powered Wikipedia reader that lets you search any Wikipedia article and chat with an AI assistant to get summaries, explanations, and answers to your questions about the topic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is WikisAI free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, WikisAI is completely free to use. Simply visit wikisai.vercel.app, search for any topic, and start chatting with AI."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does WikisAI work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WikisAI fetches the live Wikipedia article for your search query and passes the full text to an AI model. The AI can then summarize the article, answer questions, explain concepts, and highlight key facts — all grounded in the actual Wikipedia content."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many articles does WikisAI support?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "WikisAI supports all 60 million+ articles available on English Wikipedia, covering every topic imaginable."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- ══ PRECONNECT FOR PERFORMANCE ══ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://en.wikipedia.org">
+<link rel="dns-prefetch" href="https://api.together.xyz">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
 /* ══ DARK THEME (default) ══ */
