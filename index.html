@@ -380,26 +380,31 @@ body.article-active .home-theme-btn{display:none;}
 .home-stats{
   display:flex;align-items:center;justify-content:center;
   gap:0;margin-top:2.8rem;
-  border:1px solid var(--border);border-radius:14px;
-  overflow:hidden;background:var(--surface);
+  border:none;border-radius:0;
+  overflow:visible;background:transparent;
   animation:fadeUp .6s .5s ease both;
   width:100%;max-width:420px;
   position:relative;z-index:1;
 }
 .home-stat{
-  flex:1;padding:.9rem .5rem;text-align:center;
-  border-right:1px solid var(--border);
+  flex:1;padding:.7rem .5rem;text-align:center;
+  border-right:none;
+  position:relative;
+}
+.home-stat:not(:last-child)::after{
+  content:'';position:absolute;right:0;top:25%;bottom:25%;
+  width:1px;background:var(--border);
 }
 .home-stat:last-child{border-right:none;}
 .home-stat-val{
-  font-family:'Syne',sans-serif;font-size:1.3rem;font-weight:800;
+  font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:800;
   color:var(--text);letter-spacing:-.02em;line-height:1;
 }
 .home-stat-val span{
   background:linear-gradient(135deg,var(--accent),var(--accent2));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
-.home-stat-lbl{font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.3rem;}
+.home-stat-lbl{font-size:.54rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:.3rem;}
 
 /* ── KEYBOARD HINT ── */
 .search-hint{
@@ -423,11 +428,12 @@ body.article-active .home-theme-btn{display:none;}
   animation:fadeUp .6s .7s ease both;
   z-index:5;
 }
+.home-credit .heart{color:#e05555;font-style:normal;}
 .home-credit a{
-  color:var(--muted);text-decoration:none;pointer-events:all;
-  transition:color .2s;
+  color:var(--text2);text-decoration:none;pointer-events:all;
+  transition:color .2s;border-bottom:1px solid transparent;
 }
-.home-credit a:hover{color:var(--accent2);}
+.home-credit a:hover{color:var(--accent2);border-bottom-color:var(--accent2);}
 #articlePage:not(.hidden) ~ .home-credit{ display:none; }
 
 /* ═══════ ARTICLE PAGE ═══════ */
@@ -454,7 +460,8 @@ body.article-active .home-theme-btn{display:none;}
 .summary-banner{background:var(--summary-bg);border:1px solid var(--summary-border);border-radius:10px;padding:1.6rem 2rem;margin-bottom:2.5rem;position:relative;overflow:hidden;}
 .summary-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--purple),var(--accent));}
 .summary-label{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--purple);margin-bottom:.8rem;display:flex;align-items:center;gap:.45rem;}
-.summary-body{font-family:'Cormorant Garamond',serif;font-size:1.08rem;line-height:1.9;color:var(--text);font-style:italic;}
+.summary-body{font-family:'Cormorant Garamond',serif;font-size:1.22rem;line-height:1.95;color:var(--text);font-weight:500;letter-spacing:.01em;}
+@media(max-width:700px){.summary-body{font-size:1.13rem;line-height:1.85;}}
 
 .article-h1{font-family:'Syne',sans-serif;font-size:2.6rem;font-weight:800;line-height:1.12;color:var(--text);margin-bottom:.8rem;letter-spacing:-.03em;}
 .article-meta-bar{display:flex;align-items:center;gap:1.2rem;font-size:.63rem;color:var(--muted);letter-spacing:.07em;text-transform:uppercase;padding-bottom:1.5rem;border-bottom:1px solid var(--border);margin-bottom:2rem;flex-wrap:wrap;}
@@ -630,7 +637,6 @@ body.article-active .home-theme-btn{display:none;}
       <kbd>Enter</kbd> to search &nbsp;·&nbsp; <kbd>↑↓</kbd> navigate &nbsp;·&nbsp; <kbd>Esc</kbd> close
     </div>
 
-
     <div class="home-stats">
       <div class="home-stat">
         <div class="home-stat-val"><span>60M+</span></div>
@@ -654,7 +660,7 @@ body.article-active .home-theme-btn{display:none;}
 
 <!-- Credit line — fixed bottom, no bg -->
 <div class="home-credit" id="homeCredit">
-  made with ♥ by <a href="#" onclick="return false;">nasir</a>
+  made with <em class="heart">♥</em> by <a href="mailto:nasirjamali789@gmail.com">nasir</a>
 </div>
 
 <!-- ═══ ARTICLE PAGE ════════════════════════════ -->
