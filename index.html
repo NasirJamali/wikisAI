@@ -266,6 +266,10 @@ body.article-active .home-theme-btn{display:none;}
 #homePage{
   display:flex;flex-direction:column;align-items:center;justify-content:center;
   background:var(--bg);overflow:hidden;
+  /* FIX: disable text selection on home page */
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  user-select:none;
 }
 
 /* Layered background: diagonal lines + radial fade */
@@ -293,11 +297,14 @@ body.article-active .home-theme-btn{display:none;}
 @keyframes orbFloat{0%,100%{transform:translate(0,0);}33%{transform:translate(24px,-18px);}66%{transform:translate(-12px,22px);}}
 
 /* ── MAIN CONTENT WRAPPER ── */
+/* FIX: give home-inner a stacking context so dropdown renders above stats */
 .home-inner{
   position:relative;z-index:10;
   width:100%;max-width:700px;
   padding:1.5rem 1.5rem 2rem;
   display:flex;flex-direction:column;align-items:center;gap:0;
+  /* overflow visible so dropdown can escape the container */
+  overflow:visible;
 }
 
 /* ── TOP BADGE ── */
@@ -339,7 +346,13 @@ body.article-active .home-theme-btn{display:none;}
 }
 
 /* ── SEARCH BLOCK ── */
-.search-container{position:relative;width:100%;animation:fadeUp .6s .3s ease both;}
+/* FIX: search-container must be position:relative with high z-index
+   so dropdown sits above topics/stats below it */
+.search-container{
+  position:relative;width:100%;
+  animation:fadeUp .6s .3s ease both;
+  z-index:500; /* raised so dropdown clears stats strip */
+}
 
 /* Glow ring that appears on focus */
 .search-glow{
@@ -377,6 +390,10 @@ body.article-active .home-theme-btn{display:none;}
   font-size:1rem;padding:1.1rem .5rem 1.1rem 0;
   caret-color:var(--accent);min-width:0;
   -webkit-appearance:none;
+  /* allow selection inside input */
+  -webkit-user-select:text;
+  -moz-user-select:text;
+  user-select:text;
 }
 .search-box::placeholder{color:var(--muted);}
 
@@ -391,10 +408,12 @@ body.article-active .home-theme-btn{display:none;}
 .search-go-btn:hover{transform:scale(1.08);box-shadow:0 4px 18px rgba(184,106,8,.5);}
 
 /* ── DROPDOWN ── */
+/* FIX: dropdown z-index must exceed all home-inner children including stats */
 .dropdown{
   position:absolute;top:calc(100% + 8px);left:0;right:0;
   background:var(--dropdown-bg);border:1px solid var(--border2);
-  border-radius:14px;overflow:hidden;z-index:100;
+  border-radius:14px;overflow:hidden;
+  z-index:9000; /* well above stats strip and topics */
   box-shadow:var(--shadow-dropdown);
   opacity:0;transform:translateY(-6px) scale(.98);pointer-events:none;
   transition:opacity .18s,transform .2s cubic-bezier(.34,1.4,.64,1);
@@ -424,12 +443,14 @@ body.article-active .home-theme-btn{display:none;}
   display:flex;justify-content:center;gap:.45rem;
   flex-wrap:wrap;margin-top:1.1rem;
   animation:fadeUp .6s .4s ease both;
+  position:relative;z-index:1; /* below search-container */
 }
 .qa-chip{
   font-family:'DM Mono',monospace;font-size:.62rem;letter-spacing:.05em;
   padding:.4rem .9rem;border:1px solid var(--border2);
   border-radius:20px;color:var(--text2);background:transparent;
   cursor:pointer;transition:all .18s;white-space:nowrap;
+  -webkit-user-select:none;user-select:none;
 }
 .qa-chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim);transform:translateY(-1px);}
 
@@ -441,6 +462,7 @@ body.article-active .home-theme-btn{display:none;}
   overflow:hidden;background:var(--surface);
   animation:fadeUp .6s .5s ease both;
   width:100%;max-width:420px;
+  position:relative;z-index:1; /* below search-container */
 }
 .home-stat{
   flex:1;padding:.9rem .5rem;text-align:center;
@@ -619,7 +641,7 @@ body.article-active .home-theme-btn{display:none;}
   .home-sub{font-size:.8rem;margin-bottom:2rem;}
   .home-stats{max-width:100%;}
   .home-stat-val{font-size:1.1rem;}
-  .search-hint{display:none;} /* hide kb hint on mobile */
+  .search-hint{display:none;}
   .home-topics{gap:.4rem;}
   .qa-chip{font-size:.6rem;padding:.35rem .75rem;}
 }
@@ -737,7 +759,6 @@ body.article-active .home-theme-btn{display:none;}
         <button class="ask-quick-chip" onclick="askQuick('Summarize this article briefly')">✦ Summarize</button>
         <button class="ask-quick-chip" onclick="askQuick('What are the key questions about this topic?')">❓ Questions</button>
         <button class="ask-quick-chip" onclick="askQuick('What are the key facts and most important points?')">📌 Key Facts</button>
-      
       </div>
     </div>
   </div>
@@ -751,7 +772,6 @@ body.article-active .home-theme-btn{display:none;}
       <div class="chat-header-label">Chatting about</div>
       <div class="chat-topic" id="chatTopic">—</div>
     </div>
-    <!-- Close button: returns to article page -->
     <button class="chat-close" onclick="closeChat()" title="Back to article">✕</button>
   </div>
   <div class="chat-body">
@@ -794,9 +814,7 @@ function toggleTheme() {
   syncThemeIcons(next);
 }
 function syncThemeIcons(t) {
-  // Home floating button: show sun in dark mode, moon in light mode
   document.getElementById('homeThemeIcon').textContent = t === 'dark' ? '☀️' : '🌙';
-  // Article topbar button: opposite icon (shows what you'll switch TO)
   const tb = document.getElementById('topbarTheme');
   if (tb) tb.textContent = t === 'dark' ? '☀️' : '🌙';
 }
@@ -806,7 +824,6 @@ function syncThemeIcons(t) {
   syncThemeIcons(s);
 })();
 
-/* ── show/hide home theme btn based on current page ── */
 function updateHomeThemeBtn() {
   const homeThemeBtn = document.getElementById('homeThemeBtn');
   const isArticlePage = !document.getElementById('articlePage').classList.contains('hidden');
@@ -964,10 +981,18 @@ askBarInput.addEventListener('keydown', e => { if (e.key === 'Enter') openChatFr
 function openChatFromBar() { openChat(askBarInput.value.trim()); }
 function askQuick(q) { askBarInput.value = q; openChat(q); }
 
-/* ── SELECTION ── */
+/* ── SELECTION (article page only) ── */
 let selectedText = '';
 const selPopup = document.getElementById('selectionPopup');
+
+function isOnArticlePage() {
+  return !document.getElementById('articlePage').classList.contains('hidden');
+}
+
+/* FIX: Only show selection popup when on the article page, not home */
 document.addEventListener('mouseup', e => {
+  /* Ignore if we're on home page */
+  if (!isOnArticlePage()) { selPopup.classList.remove('show'); return; }
   if (e.target.closest('#selectionPopup') || e.target.closest('#chatPopup')) return;
   setTimeout(() => {
     const sel = window.getSelection();
@@ -983,7 +1008,28 @@ document.addEventListener('mouseup', e => {
     } else selPopup.classList.remove('show');
   }, 10);
 });
+
+/* FIX: Also handle touch/mobile selection — same guard */
+document.addEventListener('touchend', e => {
+  if (!isOnArticlePage()) { selPopup.classList.remove('show'); return; }
+  if (e.target.closest('#selectionPopup') || e.target.closest('#chatPopup')) return;
+  setTimeout(() => {
+    const sel = window.getSelection();
+    const text = sel ? sel.toString().trim() : '';
+    if (text.length > 8) {
+      selectedText = text;
+      const touch = e.changedTouches[0];
+      let x = touch.clientX - 100, y = touch.clientY - 60;
+      x = Math.max(8, Math.min(x, window.innerWidth - 208));
+      if (y < 8) y = touch.clientY + 10;
+      selPopup.style.left = x+'px'; selPopup.style.top = y+'px';
+      selPopup.classList.add('show');
+    } else selPopup.classList.remove('show');
+  }, 80);
+});
+
 document.addEventListener('mousedown', e => { if (!e.target.closest('#selectionPopup')) selPopup.classList.remove('show'); });
+
 function copySelected() {
   navigator.clipboard.writeText(selectedText).then(() => {
     selPopup.classList.remove('show');
@@ -1035,7 +1081,6 @@ function openChat(initialQ = '') {
   if (initialQ) { chatInput.value = initialQ; askBarInput.value = ''; setTimeout(() => sendChat(), 80); }
 }
 
-/* closeChat: hides chat panel, returns user to article page */
 function closeChat() {
   document.getElementById('chatPopup').classList.remove('open');
 }
