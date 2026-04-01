@@ -1,14 +1,13 @@
 {
   "name": "WikisAI",
   "short_name": "WikisAI",
-  "description": "Read, Understand & Explore Wikipedia with AI - AI-powered Wikipedia reader with chat interface",
+  "description": "Read, Understand & Explore Wikipedia with AI",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#06060a",
   "theme_color": "#d4820a",
   "orientation": "portrait-primary",
   "scope": "/",
-  "categories": ["education", "reference", "productivity"],
   "icons": [
     {
       "src": "/favicon1/favicon-96x96.png",
@@ -28,30 +27,5 @@
       "type": "image/png",
       "purpose": "any maskable"
     }
-  ],
-  "screenshots": [
-    {
-      "src": "/shot.png",
-      "sizes": "1200x630",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "WikisAI Homepage"
-    }
-  ],
-  "shortcuts": [
-    {
-      "name": "Search Wikipedia",
-      "short_name": "Search",
-      "description": "Search any Wikipedia article",
-      "url": "/",
-      "icons": [
-        {
-          "src": "/favicon1/favicon-96x96.png",
-          "sizes": "96x96"
-        }
-      ]
-    }
-  ],
-  "related_applications": [],
-  "prefer_related_applications": false
+  ]
 }
