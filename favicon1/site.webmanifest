@@ -1,8 +1,21 @@
 {
   "name": "WikisAI",
   "short_name": "WikisAI",
-  "description": "Read, Understand & Explore Wikipedia with AI",
+  "description": "Read, Understand & Explore Wikipedia with AI - AI-powered Wikipedia reader with chat interface",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06060a",
+  "theme_color": "#d4820a",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "categories": ["education", "reference", "productivity"],
   "icons": [
+    {
+      "src": "/favicon1/favicon-96x96.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
     {
       "src": "/favicon1/web-app-manifest-192x192.png",
       "sizes": "192x192",
@@ -14,16 +27,31 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
-    },
-    {
-      "src": "/favicon1/favicon-96x96.png",
-      "sizes": "96x96",
-      "type": "image/png"
     }
   ],
-  "theme_color": "#d4820a",
-  "background_color": "#06060a",
-  "display": "standalone",
-  "start_url": "/",
-  "scope": "/"
+  "screenshots": [
+    {
+      "src": "/shot.png",
+      "sizes": "1200x630",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "WikisAI Homepage"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Search Wikipedia",
+      "short_name": "Search",
+      "description": "Search any Wikipedia article",
+      "url": "/",
+      "icons": [
+        {
+          "src": "/favicon1/favicon-96x96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
 }
