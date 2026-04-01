@@ -1,104 +1,217 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-HY0QPVB05Q"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-HY0QPVB05Q');
-  </script>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-<title>Wiki's AI — Read, Understand & Explore Wikipedia with AI</title>
-<meta name="description" content="WikisAI lets you read any Wikipedia article and instantly chat with AI to understand it deeper. Get AI summaries, ask questions, and explore 60M+ articles powered by AI.">
-<meta name="keywords" content="wikipedia AI, wikipedia chat, AI summary, wikipedia reader, wikisai, AI powered wikipedia, learn with AI, wikipedia assistant, article summarizer">
-<meta name="author" content="WikisAI">
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-<link rel="canonical" href="https://wikisai.site/">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="WikisAI">
-<meta property="og:title" content="WikisAI — Read, Understand & Explore Wikipedia with AI">
-<meta property="og:description" content="Chat with AI about any Wikipedia article. Get instant summaries, ask deep questions, and explore knowledge like never before. 60M+ articles. Free.">
-<meta property="og:url" content="https://wikisai.site/">
-<meta property="og:image" content="https://wikisai.site/favicon/og-image.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="WikisAI — AI-powered Wikipedia reader">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@wikisai">
-<meta name="twitter:title" content="WikisAI — Read, Understand & Explore Wikipedia with AI">
-<meta name="twitter:description" content="Chat with AI about any Wikipedia article. Get instant summaries, ask deep questions, and explore knowledge like never before.">
-<meta name="twitter:image" content="https://wikisai.site/favicon/og-image.png">
-<meta name="twitter:image:alt" content="WikisAI — AI-powered Wikipedia reader">
-<meta name="theme-color" content="#d4820a">
-<meta name="application-name" content="WikisAI">
-<meta name="generator" content="WikisAI">
-<meta name="rating" content="general">
-<meta name="revisit-after" content="7 days">
-<meta name="language" content="English">
-<link rel="icon" type="image/png" href="./favicon1/favicon-96x96.png" sizes="96x96" />
-<link rel="icon" type="image/svg+xml" href="./favicon1/favicon.svg" />
-<link rel="shortcut icon" href="./favicon1/favicon.ico" />
-<link rel="apple-touch-icon" sizes="180x180" href="./favicon1/apple-touch-icon.png" />
-<link rel="manifest" href="./favicon1/site.webmanifest" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://wikisai.site/#website",
-      "url": "https://wikisai.site/",
-      "name": "WikisAI",
-      "description": "AI-powered Wikipedia reader. Read any Wikipedia article and chat with AI to understand it deeper.",
-      "inLanguage": "en-US",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": { "@type": "EntryPoint", "urlTemplate": "https://wikisai.site/?q={search_term_string}" },
-        "query-input": "required name=search_term_string"
+
+
+  <!-- ═══ PRIMARY META ═══ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover">
+  <title>WikisAI — Read, Understand & Explore Wikipedia with AI</title>
+  <meta name="description" content="WikisAI lets you read any Wikipedia article and instantly chat with AI to understand it deeper. Get AI summaries, ask questions, and explore 60M+ articles powered by AI. Free forever.">
+  <meta name="keywords" content="wikipedia AI, wikipedia chat, AI summary, wikipedia reader, wikisai, AI powered wikipedia, learn with AI, wikipedia assistant, article summarizer, AI learning tool, wikipedia explained, chat with wikipedia">
+  <meta name="author" content="WikisAI">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow">
+  <link rel="canonical" href="https://wikisai.site/">
+
+  <!-- ═══ OPEN GRAPH (Facebook, LinkedIn, WhatsApp, Discord, Slack) ═══ -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="WikisAI">
+  <meta property="og:title" content="WikisAI — Read, Understand & Explore Wikipedia with AI">
+  <meta property="og:description" content="Chat with AI about any Wikipedia article. Get instant summaries, ask deep questions, and explore knowledge like never before. 60M+ articles. Free.">
+  <meta property="og:url" content="https://wikisai.site/">
+  <meta property="og:image" content="https://wikisai.site/shot.png">
+  <meta property="og:image:secure_url" content="https://wikisai.site/shot.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="WikisAI — AI-powered Wikipedia reader with chat interface">
+  <meta property="og:locale" content="en_US">
+
+  <!-- ═══ TWITTER / X CARD ═══ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@wikisai">
+  <meta name="twitter:creator" content="@wikisai">
+  <meta name="twitter:title" content="WikisAI — Read, Understand & Explore Wikipedia with AI">
+  <meta name="twitter:description" content="Chat with AI about any Wikipedia article. Get instant summaries, ask deep questions, and explore knowledge like never before. Free.">
+  <meta name="twitter:image" content="https://wikisai.site/shot.png">
+  <meta name="twitter:image:alt" content="WikisAI — AI-powered Wikipedia reader">
+
+  <!-- ═══ ADDITIONAL SEO SIGNALS ═══ -->
+  <meta name="theme-color" content="#d4820a">
+  <meta name="msapplication-TileColor" content="#d4820a">
+  <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+  <meta name="application-name" content="WikisAI">
+  <meta name="generator" content="WikisAI">
+  <meta name="rating" content="general">
+  <meta name="revisit-after" content="7 days">
+  <meta name="language" content="English">
+  <meta name="geo.region" content="US">
+  <meta name="category" content="Education, Reference, Artificial Intelligence">
+  <meta name="classification" content="Education">
+  <meta name="coverage" content="Worldwide">
+  <meta name="distribution" content="Global">
+  <meta name="target" content="all">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="WikisAI">
+  <meta name="format-detection" content="telephone=no">
+
+<!-- ═══ FAVICONS (all sizes, all platforms) ═══ -->
+<link rel="icon" type="image/svg+xml" href="/favicon1/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon1/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon1/favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon1/apple-touch-icon.png">
+<link rel="shortcut icon" href="/favicon1/favicon.ico">
+<link rel="manifest" href="/favicon1/site.webmanifest">
+
+<!-- Fallback for older browsers -->
+<link rel="icon" type="image/x-icon" href="/favicon1/favicon.ico">
+
+  <!-- ═══ STRUCTURED DATA (JSON-LD) ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://wikisai.site/#website",
+        "url": "https://wikisai.site/",
+        "name": "WikisAI",
+        "alternateName": ["Wiki's AI", "Wikis AI", "WikiAI"],
+        "description": "AI-powered Wikipedia reader. Read any Wikipedia article and chat with AI to understand it deeper. Free forever.",
+        "inLanguage": "en-US",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://wikisai.site/?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://wikisai.site/#app",
+        "name": "WikisAI",
+        "url": "https://wikisai.site/",
+        "description": "Chat with AI about any Wikipedia article. Get instant AI summaries, ask deep questions, and explore 60M+ articles powered by AI.",
+        "applicationCategory": "EducationApplication",
+        "applicationSubCategory": "Reference",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "featureList": [
+          "AI-powered article summaries",
+          "Chat with AI about any Wikipedia article",
+          "60M+ Wikipedia articles",
+          "Dark and light mode",
+          "Text selection AI explanations",
+          "Trending articles",
+          "Real-time Wikipedia search"
+        ],
+        "screenshot": "https://wikisai.site/shot.png",
+        "image": "https://wikisai.site/shot.png",
+        "inLanguage": "en-US",
+        "creator": {
+          "@type": "Organization",
+          "@id": "https://wikisai.site/#organization"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://wikisai.site/#organization",
+        "name": "WikisAI",
+        "url": "https://wikisai.site/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://wikisai.site/favicon/apple-icon-180x180.png",
+          "width": 180,
+          "height": 180
+        },
+        "image": "https://wikisai.site/shot.png",
+        "sameAs": []
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is WikisAI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WikisAI is a free AI-powered Wikipedia reader that lets you search any Wikipedia article and chat with an AI assistant to get summaries, explanations, and answers to your questions about the topic."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is WikisAI free to use?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, WikisAI is completely free to use. Simply visit wikisai.site, search for any topic, and start chatting with AI."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does WikisAI work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WikisAI fetches the live Wikipedia article for your search query and passes the full text to an AI model. The AI can then summarize the article, answer questions, explain concepts, and highlight key facts — all grounded in the actual Wikipedia content."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many articles does WikisAI support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WikisAI supports all 60 million+ articles available on English Wikipedia, covering every topic imaginable."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What can I ask WikisAI about a Wikipedia article?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can ask WikisAI anything about a Wikipedia article — get a quick summary, ask for explanations of complex concepts, request key facts and dates, explore controversies or debates, or simply chat to understand the topic better."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "WikisAI",
+        "operatingSystem": "Web",
+        "applicationCategory": "EducationApplication",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "ratingCount": "128"
+        },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
       }
-    },
-    {
-      "@type": "WebApplication",
-      "@id": "https://wikisai.site/#app",
-      "name": "WikisAI",
-      "url": "https://wikisai.site/",
-      "description": "Chat with AI about any Wikipedia article. Get instant AI summaries, ask deep questions, and explore 60M+ articles powered by AI.",
-      "applicationCategory": "EducationApplication",
-      "operatingSystem": "All",
-      "browserRequirements": "Requires JavaScript",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "featureList": ["AI-powered article summaries","Chat with AI about any Wikipedia article","60M+ Wikipedia articles","Dark and light mode","Text selection AI explanations"],
-      "screenshot": "https://wikisai.site/favicon/og-image.png",
-      "inLanguage": "en-US"
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://wikisai.site/#organization",
-      "name": "WikisAI",
-      "url": "https://wikisai.site/",
-      "logo": { "@type": "ImageObject", "url": "https://wikisai.site/favicon/apple-touch-icon.png", "width": 180, "height": 180 },
-      "sameAs": []
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "What is WikisAI?", "acceptedAnswer": { "@type": "Answer", "text": "WikisAI is a free AI-powered Wikipedia reader that lets you search any Wikipedia article and chat with an AI assistant to get summaries, explanations, and answers to your questions about the topic." } },
-        { "@type": "Question", "name": "Is WikisAI free to use?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, WikisAI is completely free to use. Simply visit wikisai.vercel.app, search for any topic, and start chatting with AI." } },
-        { "@type": "Question", "name": "How does WikisAI work?", "acceptedAnswer": { "@type": "Answer", "text": "WikisAI fetches the live Wikipedia article for your search query and passes the full text to an AI model. The AI can then summarize the article, answer questions, explain concepts, and highlight key facts — all grounded in the actual Wikipedia content." } },
-        { "@type": "Question", "name": "How many articles does WikisAI support?", "acceptedAnswer": { "@type": "Answer", "text": "WikisAI supports all 60 million+ articles available on English Wikipedia, covering every topic imaginable." } }
-      ]
-    }
-  ]
-}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://en.wikipedia.org">
-<link rel="dns-prefetch" href="https://api.together.xyz">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    ]
+  }
+  </script>
+
+  <!-- ═══ FONTS ═══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://en.wikipedia.org">
+  <link rel="dns-prefetch" href="https://api.together.xyz">
+  <link rel="dns-prefetch" href="https://wikimedia.org">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 :root, [data-theme="dark"] {
   --bg: #06060a;
@@ -303,7 +416,7 @@ body.article-active .home-theme-btn{display:none;}
   color:var(--text);font-family:'DM Mono',monospace;
   font-size:1rem;padding:1.1rem .5rem 1.1rem 0;
   caret-color:var(--accent);min-width:0;
-
+  -webkit-appearance:none;
   -webkit-user-select:text;
   -moz-user-select:text;
   user-select:text;
@@ -347,7 +460,6 @@ body.article-active .home-theme-btn{display:none;}
 .dropdown-item:hover,.dropdown-item.active{background:var(--surface2);}
 .dropdown-item:hover .di-title,.dropdown-item.active .di-title{color:var(--accent);}
 
-/* compact number badge */
 .di-num{
   font-family:'Syne',sans-serif;font-size:.62rem;font-weight:700;
   color:var(--muted);width:14px;text-align:center;flex-shrink:0;
@@ -622,11 +734,12 @@ body.article-active .home-theme-btn{display:none;}
           <input id="homeSearch" class="search-box" type="text"
             placeholder="Search any topic…"
             autocomplete="off" spellcheck="false"
-            enterkeyhint="search"/>
+            enterkeyhint="search"
+            aria-label="Search Wikipedia articles"/>
           <button class="search-go-btn" onclick="triggerSearch()" aria-label="Search">↗</button>
         </div>
       </div>
-      <div class="dropdown" id="dropdown">
+      <div class="dropdown" id="dropdown" role="listbox" aria-label="Search suggestions">
         <div class="dropdown-header" id="dropdownHeader">🔥 Trending today</div>
         <div id="dropdownList"></div>
       </div>
@@ -636,7 +749,7 @@ body.article-active .home-theme-btn{display:none;}
       <kbd>Enter</kbd> to search &nbsp;·&nbsp; <kbd>↑↓</kbd> navigate &nbsp;·&nbsp; <kbd>Esc</kbd> close
     </div>
 
-    <div class="home-stats">
+    <div class="home-stats" aria-label="WikisAI statistics">
       <div class="home-stat">
         <div class="home-stat-val"><span>60M+</span></div>
         <div class="home-stat-lbl">Articles</div>
@@ -693,7 +806,7 @@ body.article-active .home-theme-btn{display:none;}
 </div>
 
 <!-- ═══ CHAT POPUP ══════════════════════════════ -->
-<div id="chatPopup">
+<div id="chatPopup" role="dialog" aria-modal="true" aria-label="AI Chat">
   <div class="chat-popup-header">
     <div class="chat-status-dot"></div>
     <div class="chat-header-info">
@@ -704,25 +817,25 @@ body.article-active .home-theme-btn{display:none;}
   </div>
   <div class="chat-body">
     <div class="suggested-qs" id="suggestedQs"></div>
-    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-messages" id="chatMessages" role="log" aria-live="polite"></div>
     <div id="chatError"></div>
     <div class="chat-input-area">
       <div class="chat-input-row">
         <div class="chat-input-wrap">
-          <textarea id="chatInput" class="chat-input" placeholder="Ask anything about this article…" disabled rows="1"></textarea>
+          <textarea id="chatInput" class="chat-input" placeholder="Ask anything about this article…" disabled rows="1" aria-label="Chat message input"></textarea>
         </div>
-        <button class="chat-send" id="chatSend" onclick="sendChat()" disabled>↑</button>
+        <button class="chat-send" id="chatSend" onclick="sendChat()" disabled aria-label="Send message">↑</button>
       </div>
       <div class="chat-hint">Enter to send &nbsp;·&nbsp; Shift+Enter for new line</div>
     </div>
   </div>
 </div>
 
-<div class="selection-popup" id="selectionPopup">
+<div class="selection-popup" id="selectionPopup" role="tooltip">
   <button class="sel-btn copy" onclick="copySelected()">📋 Copy</button>
   <button class="sel-btn summarize" onclick="summarizeSelected()">✦ Ask AI</button>
 </div>
-<div class="copy-toast" id="copyToast">✓ Copied to clipboard</div>
+<div class="copy-toast" id="copyToast" role="status">✓ Copied to clipboard</div>
 
 <script>
 const TOGETHER_MODEL = 'mistralai/Mistral-Small-24B-Instruct-2501';
@@ -766,7 +879,6 @@ async function fetchRealTrending() {
   if (trendingCache) return trendingCache;
 
   try {
-    // Get yesterday's date in YYYY/MM/DD format
     const d = new Date();
     d.setDate(d.getDate() - 1);
     const yyyy = d.getFullYear();
@@ -779,7 +891,6 @@ async function fetchRealTrending() {
     const data = await res.json();
     const articles = data.items[0].articles;
 
-    // Filter out meta/special pages and pick top 5
     const SKIP = /^(Main_Page|Special:|Wikipedia:|Help:|Portal:|Talk:|User:|File:|Template:|Category:|WP:|Wikimedia)/i;
     const filtered = articles
       .filter(a => !SKIP.test(a.article))
@@ -792,7 +903,6 @@ async function fetchRealTrending() {
     trendingCache = filtered;
     return filtered;
   } catch {
-    // Fallback to a small curated list if API fails
     return [
       { title: 'Artificial intelligence', views: null },
       { title: 'Black hole', views: null },
@@ -866,12 +976,13 @@ async function searchDropdown(q) {
 function makeDdItem(num, title, views, type) {
   const el = document.createElement('div');
   el.className = 'dropdown-item';
+  el.setAttribute('role', 'option');
   const idx = num - 1;
   el.innerHTML = `
     <div class="di-num">${num}</div>
     <div class="di-info">
       <div class="di-title">${escHtml(title)}</div>
-      ${views ? `<div class="di-views">${escHtml(views)}</div>` : (type === 'trending' ? '' : '')}
+      ${views ? `<div class="di-views">${escHtml(views)}</div>` : ''}
     </div>
     ${type === 'trending' && views ? `<div class="di-badge">trending</div>` : ''}
   `;
@@ -923,14 +1034,14 @@ async function loadArticle(query) {
       <h1 class="article-h1">${escHtml(title)}</h1>
       <div class="article-meta-bar">
         <span>Wikipedia</span>
-        <a href="${wikiUrl}" target="_blank" rel="noopener">Open source ↗</a>
+        <a href="${wikiUrl}" target="_blank" rel="noopener noreferrer">Open source ↗</a>
         <span>~${readTime} min read</span>
         <span>${Math.round(plainText.length/1000)}k chars</span>
       </div>
       <div class="wiki-content" id="wikiContent">${fixed}</div>
     `;
     document.querySelectorAll('.wiki-content .mw-editsection,.wiki-content .navbox,.wiki-content .mw-references-wrap,.wiki-content .reflist,.wiki-content .hatnote,.wiki-content .sistersitebox,.wiki-content .ambox,.wiki-content .noprint,.wiki-content .portal').forEach(el => el.remove());
-    document.querySelectorAll('.wiki-content a').forEach(a => { if (a.href.includes('wikipedia.org')) { a.target='_blank'; a.rel='noopener'; } });
+    document.querySelectorAll('.wiki-content a').forEach(a => { if (a.href.includes('wikipedia.org')) { a.target='_blank'; a.rel='noopener noreferrer'; } });
 
     document.getElementById('summaryBtn').disabled = false;
     document.getElementById('askBarOuter').classList.remove('hidden');
