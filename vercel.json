@@ -13,7 +13,7 @@
     { "src": "/sitemap.xml", "dest": "/sitemap.xml" },
     { "src": "/robots.txt", "dest": "/robots.txt" },
     { "src": "/shot.png", "dest": "/shot.png" },
-    { "src": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|webmanifest))$", "dest": "/$1" },
+    { "src": "/(.*\\.(png|jpg|jpeg|gif|svg|ico|webmanifest|xml|txt))$", "dest": "/$1" },
     { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
