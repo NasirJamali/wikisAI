@@ -1,3 +1,98 @@
+# ============================================================
+# robots.txt for WikisAI
+# https://wikisai.com
+# ============================================================
+
+# ---------- Allow everything by default ----------
 User-agent: *
 Allow: /
-Sitemap: https://wikisai.site/sitemap.xml
+
+# ---------- Block internal / non-SEO paths ----------
+Disallow: /api/
+Disallow: /assets/
+Disallow: /_next/
+Disallow: /static/js/
+Disallow: /static/css/
+Disallow: /*.json$
+Disallow: /*?*utm_
+Disallow: /*?*ref=
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
+Disallow: /search
+Disallow: /tmp/
+Disallow: /private/
+
+# ---------- Allow all image / font assets for rendering ----------
+Allow: /assets/*.css
+Allow: /assets/*.js
+Allow: /logo.png
+Allow: /favicon1/
+
+# ---------- Block bad / noisy SEO crawlers ----------
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+User-agent: BLEXBot
+Crawl-delay: 10
+
+User-agent: PetalBot
+Crawl-delay: 10
+
+# ---------- Block AI scraper bots (optional — remove to allow) ----------
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Claude-Web
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# ---------- Explicit allow for major search engines ----------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# ---------- Sitemap location ----------
+Sitemap: https://wikisai.com/sitemap.xml
