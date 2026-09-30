@@ -1,9 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ============ Core Pages ============ -->
   <url>
-    <loc>https://wikisai.site/</loc>
-    <lastmod>2026-04-01</lastmod>
-    <changefreq>weekly</changefreq>
+    <loc>https://wikisai.com/</loc>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://wikisai.com/all-tools</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://wikisai.com/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://wikisai.com/contact-us</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://wikisai.com/policy</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://wikisai.com/terms</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- ============ Featured AI Tools ============ -->
+  <url><loc>https://wikisai.com/ai-image-editor</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/enhance-image</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/remove-image-background</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://wikisai.com/upscale-image-ai</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/ai-face-generator</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/image-to-pdf</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://wikisai.com/pdf-to-jpg</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/image-to-text</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://wikisai.com/crop-image</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ Passport & ID Photo Tools ============ -->
+  <url><loc>https://wikisai.com/passport-size-photo-genrate</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://wikisai.com/red-background-passport-photo</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/white-background-passport-photo</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/resize-signature-6cm-2cm</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/signature-3-5cm-4-5cm</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/signature-50mm-20mm</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/passport-35mm-45mm</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/passport-2x2-inch</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/photo-3x4-inch</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/photo-4x6-inch</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/image-600x600-pixels</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ Basic Photo Editing ============ -->
+  <url><loc>https://wikisai.com/blur-background</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/remove-object-from-photo</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/add-name-dob-on-photo</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/rotate-image</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/flip-image</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/watermark-image</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/freehand-crop</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/circle-crop</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/square-crop</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/round-corners</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/change-aspect-ratio</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/merge-photo-signature</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/join-images</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/split-image</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/image-color-picker</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/edit-image-metadata</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wikisai.com/view-image-metadata</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wikisai.com/remove-image-metadata</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wikisai.com/crop-png</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- ============ Blur, Pixelate & Special Effects ============ -->
+  <url><loc>https://wikisai.com/beautify-image</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/deep-fry-photo</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wikisai.com/unblur-image</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/blur-image</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/blur-face</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/unblur-face</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/add-border-to-image</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/pixelate-image</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/pixelate-face</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/censor-photo</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/motion-blur</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wikisai.com/grayscale-image</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/black-and-white-image</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/picture-to-pixel-art</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wikisai.com/add-white-border-to-image</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://wikisai.com/blemishes-remover</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/retouch-image</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/add-text-to-image</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/add-logo-to-image</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- ============ DPI & Quality ============ -->
+  <url><loc>https://wikisai.com/increase-image-quality</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/convert-dpi</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/check-image-dpi</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/super-resolution</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ Resize & Dimensions ============ -->
+  <url><loc>https://wikisai.com/resize-image-pixel</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/resize-image-by-pixel</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/resize-image-in-centimeter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/resize-image-in-millimeter</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/resize-image-in-inches</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/bulk-image-resizer</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+
+  <!-- ============ Official & Exam Sizes ============ -->
+  <url><loc>https://wikisai.com/a4-size-image</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/ssc-photo-resize</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/pan-card-photo-resize</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/upsc-photo-resize</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/psc-photo-resize</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- ============ Resize for Social Media ============ -->
+  <url><loc>https://wikisai.com/instagram-photo-resize</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/instagram-grid-maker</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/whatsapp-dp-resize</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/youtube-banner-resize</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/zoom-out-image</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+
+  <!-- ============ Format Conversions ============ -->
+  <url><loc>https://wikisai.com/image-converter</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/image-to-jpg</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/jpeg-to-jpg</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/heic-to-jpg</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/webp-to-jpg</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/webp-to-png</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/avif-to-jpg</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/jfif-to-jpg</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/jpeg-to-png</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/png-to-jpeg</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/png-to-ico</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/image-to-word</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/jpg-to-text</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/png-to-text</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/favicon-generator</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- ============ Image to PDF & PDF Tools ============ -->
+  <url><loc>https://wikisai.com/jpg-to-pdf-under-50kb</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/jpg-to-pdf-under-100kb</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/jpg-to-pdf-under-150kb</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/jpg-to-pdf-under-200kb</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/jpg-to-pdf-under-250kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/jpg-to-pdf-under-300kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/jpg-to-pdf-under-400kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/jpg-to-pdf-under-500kb</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/jpg-to-pdf-under-1mb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/jpg-to-pdf-under-2mb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/merge-pdf</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/pdf-tools</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ General Compression ============ -->
+  <url><loc>https://wikisai.com/compress-image</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://wikisai.com/reduce-image-size-in-kb</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://wikisai.com/reduce-image-size-in-mb</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/jpg-to-kb</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/convert-mb-to-kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/convert-kb-to-mb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- ============ Exact Target Sizes ============ -->
+  <url><loc>https://wikisai.com/compress-image-to-5kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-10kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-15kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-20kb</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/compress-image-20kb-to-50kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-25kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-30kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-40kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-50kb</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-60kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-70kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-80kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-90kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/resize-image-to-50kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-100kb</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-150kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-200kb</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/resize-image-to-200kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-300kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-500kb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-1mb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/compress-image-to-2mb</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- ============ GIF & Video Tools ============ -->
+  <url><loc>https://wikisai.com/gif-maker</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/gif-compressor</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/add-text-to-gif</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/video-to-gif</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+  <!-- ============ More Tools ============ -->
+  <url><loc>https://wikisai.com/photo-collage-maker</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/text-to-handwriting</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://wikisai.com/generate-signature</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://wikisai.com/audio-tools</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/this-person-does-not-exist</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://wikisai.com/invoice-generator</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+
 </urlset>
