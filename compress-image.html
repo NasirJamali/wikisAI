@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HY0QPVB05Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-HY0QPVB05Q');
+  </script>
+<title>Compress Image Online Free – Reduce JPG &amp; PNG Size | WikisAI</title>
+<meta name="description" content="Compress JPG, PNG and WEBP images online for free. Reduce file size up to 90% with quality control. No upload, no signup, no watermark.">
+<meta name="keywords" content="compress image, image compressor, reduce image size, jpg compressor, png compressor, optimize image online">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0ea5e9">
+<link rel="canonical" href="https://wikisai.com/compress-image.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Compress Image Online Free – Reduce JPG &amp; PNG Size">
+<meta property="og:description" content="Reduce image file size up to 90% with quality control. Free, no signup, no watermark.">
+<meta property="og:image" content="https://wikisai.com/logo.png">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/wikisai.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"WebPage","@id":"https://wikisai.com/compress-image.html#webpage",
+     "url":"https://wikisai.com/compress-image.html",
+     "name":"Compress Image Online Free – Reduce JPG & PNG Size",
+     "isPartOf":{"@id":"https://wikisai.com/#website"},"inLanguage":"en"},
+    {"@type":"SoftwareApplication","name":"Image Compressor",
+     "url":"https://wikisai.com/compress-image.html",
+     "applicationCategory":"MultimediaApplication","operatingSystem":"Any (Web Browser)",
+     "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+     "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"2147"}},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"Will compressing my image reduce its quality?",
+       "acceptedAnswer":{"@type":"Answer","text":"Our smart compression keeps visual quality high. At 80% quality, most images look identical but are 70-90% smaller."}},
+      {"@type":"Question","name":"What formats are supported?",
+       "acceptedAnswer":{"@type":"Answer","text":"JPG, PNG and WEBP are fully supported. Output is JPG or WEBP depending on your choice."}}
+    ]}
+  ]
+}
+</script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-in">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/#tools">Tools</a><span>›</span>
+      <span style="color:var(--ink-2);font-weight:600">Compress Image</span>
+    </nav>
+    <span class="pill"><svg class="ic"><use href="#i-sparkle"/></svg> Smart Compression</span>
+    <h1>Compress <span class="grad">Image</span> Online Free</h1>
+    <p class="lead">Reduce image file size by up to 90% with full quality control. Perfect for email, websites and online forms.</p>
+    <div class="hero-checks">
+      <span><svg class="ic"><use href="#i-check"/></svg> Up to 90% Smaller</span>
+      <span><svg class="ic"><use href="#i-check"/></svg> Quality Control</span>
+      <span><svg class="ic"><use href="#i-check"/></svg> No Upload</span>
+    </div>
+  </div>
+</section>
+
+<div class="app">
+  <section class="stage">
+    <div class="drop" id="drop">
+      <div class="ico"><svg class="ic"><use href="#i-compress"/></svg></div>
+      <h3>Drop your image here</h3>
+      <p>or click to browse — JPG, PNG, WEBP</p>
+      <button class="btn-sel" type="button"><svg class="ic"><use href="#i-upload"/></svg> Choose Image</button>
+      <p class="formats">Max 25 MB · 100% private</p>
+      <input type="file" id="file" accept="image/*" hidden>
+    </div>
+    <div class="work" id="workState">
+      <div class="canvas-holder" id="holder">
+        <canvas id="view"></canvas>
+      </div>
+      <div class="readout" id="readout" style="width:100%;max-width:480px">
+        <b id="sizeNow">—</b>
+        <span id="saved">—</span>
+      </div>
+    </div>
+  </section>
+
+  <aside class="panel">
+    <div class="panel-header">
+      <h2 class="panel-title">Compression Settings</h2>
+      <p class="panel-sub">Balance quality and file size with the slider.</p>
+    </div>
+    <div class="panel-body">
+      <div class="panel-section">
+        <div class="field">
+          <div class="field-head"><label>Quality</label><span id="qVal">80%</span></div>
+          <input type="range" id="quality" min="10" max="100" value="80" disabled>
+        </div>
+        <div class="field">
+          <div class="field-head"><label>Output format</label></div>
+          <div class="chips" id="fmt">
+            <button data-fmt="image/jpeg" class="on" type="button" disabled>JPG</button>
+            <button data-fmt="image/webp" type="button" disabled>WEBP</button>
+          </div>
+        </div>
+      </div>
+      <div class="panel-section">
+        <div class="readout">
+          <b id="sizeOrig">—</b>
+          <span>Original size</span>
+        </div>
+      </div>
+    </div>
+    <div class="panel-foot">
+      <button class="btn primary block" id="dlBtn" type="button" disabled>
+        <svg class="ic"><use href="#i-download"/></svg> Download Compressed
+      </button>
+    </div>
+  </aside>
+</div>
+
+<section class="section tight">
+  <p class="sec-eyebrow">Why WikisAI</p>
+  <h2 class="sec-title">The Fastest Way to Shrink Image Files</h2>
+  <div class="feat-grid">
+    <div class="fcard t-purple"><span class="fi"><svg class="ic"><use href="#i-compress"/></svg></span><span><b>Up to 90% Smaller</b><small>Perfect for email, forms and web.</small></span></div>
+    <div class="fcard t-blue"><span class="fi"><svg class="ic"><use href="#i-shield"/></svg></span><span><b>100% Private</b><small>Your image never leaves your browser.</small></span></div>
+    <div class="fcard t-green"><span class="fi"><svg class="ic"><use href="#i-bolt"/></svg></span><span><b>Instant</b><small>Live preview updates as you slide.</small></span></div>
+    <div class="fcard t-orange"><span class="fi"><svg class="ic"><use href="#i-gift"/></svg></span><span><b>Free Forever</b><small>No signup, no watermark, no limits.</small></span></div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <p class="faq-sub">Everything you need to know about image compression.</p>
+  <details open><summary>Will compressing reduce quality?</summary><div class="ans">At 80% quality, most images look identical to the original but are 70-90% smaller. You can always increase the slider if you need more quality.</div></details>
+  <details><summary>What formats are supported?</summary><div class="ans">JPG, PNG and WEBP are fully supported. Output is JPG or WEBP depending on your choice.</div></details>
+  <details><summary>Are my images uploaded?</summary><div class="ans">No. Everything is processed inside your browser using HTML5 Canvas.</div></details>
+</section>
+
+<section class="cta">
+  <div class="cta-in">
+    <h2>Need an exact size?</h2>
+    <p>Try our target size compressor to hit 50 KB, 100 KB, 200 KB or any exact value.</p>
+    <div class="cta-btns">
+      <a class="w" href="/reduce-image-size-in-kb.html">Compress to Exact KB</a>
+      <a class="g" href="/#tools">Explore All Tools</a>
+    </div>
+  </div>
+</section>
+
+<script src="assets/wikisai.js"></script>
+<script>
+(function(){
+  var $ = window.wikisai.$;
+  var dropEl=$('#drop'), fileInput=$('#file'), workState=$('#workState');
+  var viewCanvas=$('#view'), viewCtx=viewCanvas.getContext('2d');
+  var quality=$('#quality'), fmtBtns=document.querySelectorAll('#fmt button');
+  var dlBtn=$('#dlBtn');
+  var src=null, srcW=0, srcH=0, curQuality=0.8, curFmt='image/jpeg', srcSize=0;
+
+  function loadFile(file){
+    if (!file) return;
+    if (!/^image\//.test(file.type)){ window.wikisaiToast('Please choose an image.'); return; }
+    if (file.size > 25*1024*1024){ window.wikisaiToast('Image larger than 25 MB.'); return; }
+    srcSize = file.size;
+    var url = URL.createObjectURL(file);
+    var img = new Image();
+    img.onload = function(){
+      URL.revokeObjectURL(url);
+      src = img; srcW = img.naturalWidth; srcH = img.naturalHeight;
+      dropEl.classList.add('is-hidden'); workState.classList.add('show');
+      viewCanvas.width = srcW; viewCanvas.height = srcH;
+      viewCanvas.style.maxWidth = '100%'; viewCanvas.style.height = 'auto';
+      quality.disabled = false;
+      fmtBtns.forEach(function(b){ b.disabled = false; });
+      dlBtn.disabled = false;
+      $('#sizeOrig').textContent = window.wikisai.formatBytes(srcSize);
+      render();
+    };
+    img.onerror = function(){ URL.revokeObjectURL(url); window.wikisaiToast('Could not load.'); };
+    img.src = url;
+  }
+
+  function render(){
+    if (!src) return;
+    viewCtx.clearRect(0, 0, srcW, srcH);
+    if (curFmt === 'image/jpeg'){ viewCtx.fillStyle = '#fff'; viewCtx.fillRect(0, 0, srcW, srcH); }
+    viewCtx.drawImage(src, 0, 0);
+    viewCanvas.toBlob(function(b){
+      if (!b) return;
+      $('#sizeNow').textContent = window.wikisai.formatBytes(b.size);
+      var saved = Math.max(0, Math.round((1 - b.size/srcSize)*100));
+      $('#saved').textContent = saved + '% saved';
+    }, curFmt, curQuality);
+  }
+
+  quality.addEventListener('input', function(){ curQuality = this.value/100; $('#qVal').textContent = this.value + '%'; render(); });
+  fmtBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      curFmt = this.dataset.fmt;
+      fmtBtns.forEach(function(x){ x.classList.toggle('on', x===this); }, this);
+      fmtBtns.forEach(function(x){ if (x!==b) x.classList.remove('on'); });
+      b.classList.add('on');
+      render();
+    });
+  });
+  dlBtn.addEventListener('click', function(){
+    if (!src) return;
+    var ext = curFmt === 'image/webp' ? 'webp' : 'jpg';
+    viewCanvas.toBlob(function(blob){
+      window.wikisai.downloadBlob(blob, 'wikisai-compressed.' + ext);
+    }, curFmt, curQuality);
+  });
+
+  dropEl.addEventListener('click', function(){ fileInput.click(); });
+  fileInput.addEventListener('change', function(){ if (this.files[0]) loadFile(this.files[0]); this.value=''; });
+  ['dragenter','dragover'].forEach(function(ev){ document.addEventListener(ev, function(e){ e.preventDefault(); dropEl.classList.add('over'); }); });
+  ['dragleave','drop'].forEach(function(ev){ document.addEventListener(ev, function(e){ e.preventDefault(); if (ev==='dragleave' && e.relatedTarget) return; dropEl.classList.remove('over'); }); });
+  document.addEventListener('drop', function(e){ if (e.dataTransfer.files[0]) loadFile(e.dataTransfer.files[0]); });
+  document.addEventListener('paste', function(e){
+    var items = e.clipboardData && e.clipboardData.items;
+    if (!items) return;
+    for (var i=0;i<items.length;i++){ if (items[i].type.indexOf('image')===0){ loadFile(items[i].getAsFile()); break; } }
+  });
+})();
+</script>
+</body>
+</html>

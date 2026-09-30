@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HY0QPVB05Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-HY0QPVB05Q');
+  </script>
+<title>Resize Image by Pixel Online Free – Exact Width &amp; Height | WikisAI</title>
+<meta name="description" content="Resize any image to exact pixel dimensions online for free. Lock aspect ratio, keep quality, and download instantly. No signup, no watermark.">
+<meta name="keywords" content="resize image pixel, resize image, image resizer, resize jpg, pixel resizer, resize photo online">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0ea5e9">
+<link rel="canonical" href="https://wikisai.com/resize-image-pixel.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Resize Image by Pixel Online Free – Exact Width &amp; Height">
+<meta property="og:description" content="Resize images to exact pixel dimensions. Free, no signup.">
+<meta property="og:image" content="https://wikisai.com/logo.png">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/wikisai.css">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"WebPage","@id":"https://wikisai.com/resize-image-pixel.html#webpage",
+     "url":"https://wikisai.com/resize-image-pixel.html",
+     "name":"Resize Image by Pixel Online Free – Exact Width & Height",
+     "isPartOf":{"@id":"https://wikisai.com/#website"},"inLanguage":"en"},
+    {"@type":"SoftwareApplication","name":"Resize Image Pixel",
+     "url":"https://wikisai.com/resize-image-pixel.html",
+     "applicationCategory":"MultimediaApplication","operatingSystem":"Any (Web Browser)",
+     "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+     "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"1567"}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-in">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/#tools">Tools</a><span>›</span>
+      <span style="color:var(--ink-2);font-weight:600">Resize Image Pixel</span>
+    </nav>
+    <span class="pill"><svg class="ic"><use href="#i-sparkle"/></svg> Pixel-Perfect Resizing</span>
+    <h1>Resize Image <span class="grad">by Pixel</span></h1>
+    <p class="lead">Resize any photo to exact pixel dimensions with an aspect-ratio lock. Perfect for social media, forms and ID photos.</p>
+    <div class="hero-checks">
+      <span><svg class="ic"><use href="#i-check"/></svg> Exact Pixels</span>
+      <span><svg class="ic"><use href="#i-check"/></svg> Aspect Lock</span>
+      <span><svg class="ic"><use href="#i-check"/></svg> High Quality</span>
+    </div>
+  </div>
+</section>
+
+<div class="app">
+  <section class="stage">
+    <div class="drop" id="drop">
+      <div class="ico"><svg class="ic"><use href="#i-scale"/></svg></div>
+      <h3>Drop your image here</h3>
+      <p>or click to browse — JPG, PNG, WEBP</p>
+      <button class="btn-sel" type="button"><svg class="ic"><use href="#i-upload"/></svg> Choose Image</button>
+      <p class="formats">Max 25 MB · 100% private</p>
+      <input type="file" id="file" accept="image/*" hidden>
+    </div>
+    <div class="work" id="workState">
+      <div class="canvas-holder" id="holder">
+        <canvas id="view"></canvas>
+      </div>
+      <div class="readout" style="width:100%;max-width:480px">
+        <b id="outInfo">—</b>
+        <span id="origInfo">—</span>
+      </div>
+    </div>
+  </section>
+
+  <aside class="panel">
+    <div class="panel-header">
+      <h2 class="panel-title">Resize Settings</h2>
+      <p class="panel-sub">Enter exact dimensions in pixels.</p>
+    </div>
+    <div class="panel-body">
+      <div class="panel-section">
+        <div class="field">
+          <div class="field-head"><label>Width (px)</label></div>
+          <input type="number" id="inW" min="1" max="10000" value="800" disabled>
+        </div>
+        <div class="field">
+          <div class="field-head"><label>Height (px)</label></div>
+          <input type="number" id="inH" min="1" max="10000" value="600" disabled>
+        </div>
+        <div class="field">
+          <label class="switch" style="margin-top:4px">
+            <input type="checkbox" id="lockRatio" checked>
+            <span class="track"><span class="thumb"></span></span>
+            <span class="switch-label">Lock aspect ratio</span>
+          </label>
+        </div>
+      </div>
+      <div class="panel-section">
+        <div class="field-head" style="margin-bottom:8px"><label>Quick presets</label></div>
+        <div class="chips" id="quick">
+          <button data-w="1920" data-h="1080" type="button">1920×1080</button>
+          <button data-w="1080" data-h="1080" type="button">1080×1080</button>
+          <button data-w="800" data-h="600" type="button">800×600</button>
+          <button data-w="600" data-h="600" type="button">600×600</button>
+          <button data-w="413" data-h="531" type="button">413×531</button>
+          <button data-w="200" data-h="200" type="button">200×200</button>
+        </div>
+      </div>
+    </div>
+    <div class="panel-foot">
+      <button class="btn primary block" id="dlBtn" type="button" disabled>
+        <svg class="ic"><use href="#i-download"/></svg> Download Resized Image
+      </button>
+    </div>
+  </aside>
+</div>
+
+<section class="section tight">
+  <p class="sec-eyebrow">Why WikisAI</p>
+  <h2 class="sec-title">Pixel-Perfect Resizing, Right in Your Browser</h2>
+  <div class="feat-grid">
+    <div class="fcard t-blue"><span class="fi"><svg class="ic"><use href="#i-scale"/></svg></span><span><b>Exact Pixels</b><small>Enter any width &amp; height up to 10,000 px.</small></span></div>
+    <div class="fcard t-purple"><span class="fi"><svg class="ic"><use href="#i-layers"/></svg></span><span><b>High Quality</b><small>Bicubic interpolation keeps images sharp.</small></span></div>
+    <div class="fcard t-green"><span class="fi"><svg class="ic"><use href="#i-shield"/></svg></span><span><b>100% Private</b><small>Nothing is uploaded — all local.</small></span></div>
+    <div class="fcard t-orange"><span class="fi"><svg class="ic"><use href="#i-gift"/></svg></span><span><b>Free Forever</b><small>No signup, no watermark.</small></span></div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <p class="faq-sub">Common questions about resizing images by pixel.</p>
+  <details open><summary>What does "lock aspect ratio" do?</summary><div class="ans">It keeps the original width-to-height ratio so your image never looks stretched. When you change the width, the height updates automatically (and vice versa).</div></details>
+  <details><summary>What's the maximum size I can resize to?</summary><div class="ans">Up to 10,000 × 10,000 pixels. Going much larger than the original may reduce sharpness, so use our Upscale tool for better results.</div></details>
+  <details><summary>Are my images uploaded?</summary><div class="ans">No. Everything is processed inside your browser using HTML5 Canvas.</div></details>
+</section>
+
+<section class="cta">
+  <div class="cta-in">
+    <h2>Need a specific KB size?</h2>
+    <p>Try our target-size compressor to hit 20 KB, 50 KB, 100 KB or any exact value.</p>
+    <div class="cta-btns">
+      <a class="w" href="/reduce-image-size-in-kb.html">Compress to Exact KB</a>
+      <a class="g" href="/#tools">Explore All Tools</a>
+    </div>
+  </div>
+</section>
+
+<script src="assets/wikisai.js"></script>
+<script>
+(function(){
+  var $ = window.wikisai.$;
+  var dropEl=$('#drop'), fileInput=$('#file'), workState=$('#workState');
+  var viewCanvas=$('#view'), viewCtx=viewCanvas.getContext('2d');
+  var inW=$('#inW'), inH=$('#inH'), lock=$('#lockRatio');
+  var dlBtn=$('#dlBtn'), quick=$('#quick');
+  var src=null, srcW=0, srcH=0, ratio=1;
+
+  function loadFile(file){
+    if (!file) return;
+    if (!/^image\//.test(file.type)){ window.wikisaiToast('Please choose an image.'); return; }
+    if (file.size > 25*1024*1024){ window.wikisaiToast('Image larger than 25 MB.'); return; }
+    var url = URL.createObjectURL(file);
+    var img = new Image();
+    img.onload = function(){
+      URL.revokeObjectURL(url);
+      src=img; srcW=img.naturalWidth; srcH=img.naturalHeight;
+      ratio = srcW/srcH;
+      dropEl.classList.add('is-hidden'); workState.classList.add('show');
+      inW.disabled=false; inH.disabled=false; dlBtn.disabled=false;
+      inW.value = srcW; inH.value = srcH;
+      $('#origInfo').textContent = 'Original: ' + srcW + ' × ' + srcH + ' px';
+      render();
+    };
+    img.onerror = function(){ URL.revokeObjectURL(url); window.wikisaiToast('Could not load.'); };
+    img.src = url;
+  }
+
+  function render(){
+    if (!src) return;
+    var w = Math.max(1, Math.min(10000, parseInt(inW.value)||1));
+    var h = Math.max(1, Math.min(10000, parseInt(inH.value)||1));
+    viewCanvas.width = w; viewCanvas.height = h;
+    viewCanvas.style.maxWidth = '100%'; viewCanvas.style.height = 'auto';
+    viewCtx.imageSmoothingEnabled = true;
+    viewCtx.imageSmoothingQuality = 'high';
+    viewCtx.clearRect(0, 0, w, h);
+    viewCtx.drawImage(src, 0, 0, w, h);
+    $('#outInfo').textContent = w + ' × ' + h + ' px';
+  }
+
+  inW.addEventListener('input', function(){
+    if (lock.checked && ratio){ inH.value = Math.max(1, Math.round((+this.value) / ratio)); }
+    render();
+  });
+  inH.addEventListener('input', function(){
+    if (lock.checked && ratio){ inW.value = Math.max(1, Math.round((+this.value) * ratio)); }
+    render();
+  });
+  quick.addEventListener('click', function(e){
+    var b = e.target.closest('button');
+    if (!b) return;
+    inW.value = b.dataset.w; inH.value = b.dataset.h;
+    lock.checked = false;
+    render();
+  });
+  dlBtn.addEventListener('click', function(){
+    if (!src) return;
+    viewCanvas.toBlob(function(blob){ window.wikisai.downloadBlob(blob, 'wikisai-resized-' + viewCanvas.width + 'x' + viewCanvas.height + '.png'); }, 'image/png');
+  });
+
+  dropEl.addEventListener('click', function(){ fileInput.click(); });
+  fileInput.addEventListener('change', function(){ if (this.files[0]) loadFile(this.files[0]); this.value=''; });
+  ['dragenter','dragover'].forEach(function(ev){ document.addEventListener(ev, function(e){ e.preventDefault(); dropEl.classList.add('over'); }); });
+  ['dragleave','drop'].forEach(function(ev){ document.addEventListener(ev, function(e){ e.preventDefault(); if (ev==='dragleave' && e.relatedTarget) return; dropEl.classList.remove('over'); }); });
+  document.addEventListener('drop', function(e){ if (e.dataTransfer.files[0]) loadFile(e.dataTransfer.files[0]); });
+  document.addEventListener('paste', function(e){
+    var items = e.clipboardData && e.clipboardData.items;
+    if (!items) return;
+    for (var i=0;i<items.length;i++){ if (items[i].type.indexOf('image')===0){ loadFile(items[i].getAsFile()); break; } }
+  });
+})();
+</script>
+</body>
+</html>

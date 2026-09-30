@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+<title>HEIC to JPG Converter Online Free – iPhone Photo Converter | WikisAI</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HY0QPVB05Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-HY0QPVB05Q');
+  </script>
+<meta name="description" content="Convert HEIC and HEIF photos from iPhone to JPG online for free. Batch convert, keep quality, download instantly. No signup, no watermark.">
+<meta name="keywords" content="heic to jpg, heif to jpg, iphone photo converter, convert heic online, heic converter">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0ea5e9">
+<link rel="canonical" href="https://wikisai.com/heic-to-jpg.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="HEIC to JPG Converter Online Free – iPhone Photo Converter">
+<meta property="og:description" content="Convert HEIC photos from iPhone to JPG. Free, no signup.">
+<meta property="og:image" content="https://wikisai.com/logo.png">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/wikisai.css">
+<style>
+  .file-list{display:flex;flex-direction:column;gap:8px;margin-top:14px;width:100%}
+  .file-row{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:12px;
+    background:#f8fafc;border:1px solid var(--line-2);font-size:13px}
+  .file-row .nm{flex:1;font-weight:600;color:var(--ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .file-row .st{font-size:11.5px;color:var(--muted-2);font-weight:600}
+  .file-row .st.done{color:#059669}
+  .file-row .st.err{color:#e11d48}
+  .file-row .dl{font-size:12px;font-weight:700;color:var(--brand-2);text-decoration:none;
+    padding:6px 12px;border-radius:8px;background:var(--brand-soft);transition:.15s;border:0;cursor:pointer}
+  .file-row .dl:hover{background:#cfe8fd}
+  .file-row .dl:disabled{opacity:.5;cursor:not-allowed}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"WebPage","@id":"https://wikisai.com/heic-to-jpg.html#webpage",
+     "url":"https://wikisai.com/heic-to-jpg.html",
+     "name":"HEIC to JPG Converter Online Free – iPhone Photo Converter",
+     "isPartOf":{"@id":"https://wikisai.com/#website"},"inLanguage":"en"},
+    {"@type":"SoftwareApplication","name":"HEIC to JPG Converter",
+     "url":"https://wikisai.com/heic-to-jpg.html",
+     "applicationCategory":"MultimediaApplication","operatingSystem":"Any (Web Browser)",
+     "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-in">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/#tools">Tools</a><span>›</span>
+      <span style="color:var(--ink-2);font-weight:600">HEIC to JPG</span>
+    </nav>
+    <span class="pill"><svg class="ic"><use href="#i-sparkle"/></svg> Batch Convert</span>
+    <h1>HEIC to <span class="grad">JPG Converter</span></h1>
+    <p class="lead">Convert HEIC and HEIF photos from your iPhone into universal JPG files. Batch convert, keep quality.</p>
+    <div class="hero-checks">
+      <span><svg class="ic"><use href="#i-check"/></svg> Batch Support</span>
+      <span><svg class="ic"><use href="#i-check"/></svg> Keep Quality</span>
+      <span><svg class="ic"><use href="#i-check"/></svg> No Upload</span>
+    </div>
+  </div>
+</section>
+
+<div class="app">
+  <section class="stage">
+    <div class="drop" id="drop">
+      <div class="ico"><svg class="ic"><use href="#i-refresh"/></svg></div>
+      <h3>Drop your HEIC files here</h3>
+      <p>or click to browse — add as many as you need</p>
+      <button class="btn-sel" type="button"><svg class="ic"><use href="#i-upload"/></svg> Choose HEIC Files</button>
+      <p class="formats">HEIC / HEIF · 100% private</p>
+      <input type="file" id="file" accept=".heic,.heif,image/heic,image/heif" multiple hidden>
+    </div>
+    <div class="work" id="workState">
+      <div class="file-list" id="list"></div>
+    </div>
+  </section>
+
+  <aside class="panel">
+    <div class="panel-header">
+      <h2 class="panel-title">Conversion Settings</h2>
+      <p class="panel-sub">Choose output format and quality.</p>
+    </div>
+    <div class="panel-body">
+      <div class="panel-section">
+        <div class="field">
+          <div class="field-head"><label>Output format</label></div>
+          <div class="chips" id="fmt">
+            <button data-fmt="image/jpeg" class="on" type="button">JPG</button>
+            <button data-fmt="image/png" type="button">PNG</button>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-head"><label>Quality</label><span id="qVal">92%</span></div>
+          <input type="range" id="quality" min="50" max="100" value="92">
+        </div>
+      </div>
+      <div class="panel-section">
+        <div class="readout">
+          <b id="count">0 files</b>
+          <span>queued</span>
+        </div>
+      </div>
+    </div>
+    <div class="panel-foot">
+      <button class="btn primary block" id="dlAll" type="button" disabled>
+        <svg class="ic"><use href="#i-download"/></svg> Download All
+      </button>
+    </div>
+  </aside>
+</div>
+
+<section class="section tight">
+  <p class="sec-eyebrow">Why WikisAI</p>
+  <h2 class="sec-title">Convert iPhone Photos Without Uploading</h2>
+  <div class="feat-grid">
+    <div class="fcard t-cyan"><span class="fi"><svg class="ic"><use href="#i-refresh"/></svg></span><span><b>Batch Conversion</b><small>Convert many HEIC files at once.</small></span></div>
+    <div class="fcard t-blue"><span class="fi"><svg class="ic"><use href="#i-shield"/></svg></span><span><b>100% Private</b><small>Your photos never leave your device.</small></span></div>
+    <div class="fcard t-green"><span class="fi"><svg class="ic"><use href="#i-star"/></svg></span><span><b>Full Quality</b><small>Choose JPEG or PNG with quality control.</small></span></div>
+    <div class="fcard t-orange"><span class="fi"><svg class="ic"><use href="#i-gift"/></svg></span><span><b>Free Forever</b><small>No signup, no watermark, no limits.</small></span></div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <p class="faq-sub">Common questions about HEIC conversion.</p>
+  <details open><summary>What is HEIC?</summary><div class="ans">HEIC (High Efficiency Image Container) is the format iPhones use by default. It offers better compression than JPG, but many apps and websites don't support it — that's why converting to JPG is useful.</div></details>
+  <details><summary>Are my photos uploaded?</summary><div class="ans">No. The conversion runs entirely in your browser using a JavaScript HEIC decoder. Your photos never leave your device.</div></details>
+  <details><summary>Does conversion reduce quality?</summary><div class="ans">At 92% quality, the difference is virtually invisible. You can increase the slider for even higher quality (larger files) or lower it for smaller files.</div></details>
+</section>
+
+<section class="cta">
+  <div class="cta-in">
+    <h2>Converted your HEICs?</h2>
+    <p>Now compress them or resize to exact dimensions.</p>
+    <div class="cta-btns">
+      <a class="w" href="/compress-image.html">Compress Images</a>
+      <a class="g" href="/#tools">Explore All Tools</a>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+<script src="assets/wikisai.js"></script>
+<script>
+(function(){
+  var $ = window.wikisai.$;
+  var dropEl=$('#drop'), fileInput=$('#file'), workState=$('#workState'), list=$('#list');
+  var quality=$('#quality'), fmtBtns=document.querySelectorAll('#fmt button');
+  var dlAll=$('#dlAll');
+  var files = []; // { file, blob, url, status }
+
+  function loadFiles(fl){
+    Array.prototype.slice.call(fl).forEach(function(f){
+      var entry = { file: f, blob: null, url: null, status: 'pending' };
+      files.push(entry);
+    });
+    renderList();
+    updateState();
+    files.forEach(function(f){ if (f.status === 'pending') convertOne(f); });
+  }
+
+  function convertOne(entry){
+    entry.status = 'working';
+    renderList();
+    var outFmt = document.querySelector('#fmt button.on').dataset.fmt;
+    var outQ = +quality.value / 100;
+    heic2any({ blob: entry.file, toType: outFmt, quality: outQ }).then(function(result){
+      var blob = Array.isArray(result) ? result[0] : result;
+      entry.blob = blob;
+      entry.url = URL.createObjectURL(blob);
+      entry.status = 'done';
+      renderList();
+      updateState();
+    }).catch(function(){
+      entry.status = 'err';
+      renderList();
+      updateState();
+    });
+  }
+
+  function renderList(){
+    list.innerHTML = files.map(function(f, i){
+      var status = f.status === 'done' ? 'Ready' : f.status === 'working' ? 'Converting…' : f.status === 'err' ? 'Failed' : 'Pending';
+      var cls = f.status === 'done' ? 'done' : f.status === 'err' ? 'err' : '';
+      var dl = f.status === 'done' ? '<button class="dl" data-i="' + i + '">Download</button>' : '';
+      return '<div class="file-row">' +
+        '<span class="nm">' + escapeHtml(f.file.name) + '</span>' +
+        '<span class="st ' + cls + '">' + status + '</span>' +
+        dl +
+      '</div>';
+    }).join('');
+  }
+  function escapeHtml(s){ return String(s).replace(/[&<>"']/g, function(c){ return { '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]; }); }
+
+  function updateState(){
+    var total = files.length;
+    var done = files.filter(function(f){ return f.status === 'done'; }).length;
+    dropEl.classList.toggle('is-hidden', total > 0);
+    workState.classList.toggle('show', total > 0);
+    $('#count').textContent = done + ' / ' + total + ' files';
+    dlAll.disabled = done === 0;
+  }
+
+  list.addEventListener('click', function(e){
+    var b = e.target.closest('button.dl');
+    if (!b) return;
+    var f = files[+b.dataset.i];
+    if (!f || !f.blob) return;
+    var ext = f.blob.type === 'image/png' ? 'png' : 'jpg';
+    window.wikisai.downloadBlob(f.blob, f.file.name.replace(/\.(heic|heif)$/i, '') + '.' + ext);
+  });
+
+  dlAll.addEventListener('click', function(){
+    files.filter(function(f){ return f.status === 'done'; }).forEach(function(f, i){
+      setTimeout(function(){
+        var ext = f.blob.type === 'image/png' ? 'png' : 'jpg';
+        window.wikisai.downloadBlob(f.blob, f.file.name.replace(/\.(heic|heif)$/i, '') + '.' + ext);
+      }, i * 200);
+    });
+  });
+
+  fmtBtns.forEach(function(b){
+    b.addEventListener('click', function(){
+      fmtBtns.forEach(function(x){ x.classList.remove('on'); });
+      b.classList.add('on');
+      files.forEach(function(f){
+        if (f.url) URL.revokeObjectURL(f.url);
+        f.blob = null; f.url = null; f.status = 'pending';
+      });
+      renderList();
+      files.forEach(function(f){ if (f.status === 'pending') convertOne(f); });
+    });
+  });
+  quality.addEventListener('input', function(){
+    $('#qVal').textContent = this.value + '%';
+    files.forEach(function(f){
+      if (f.url) URL.revokeObjectURL(f.url);
+      f.blob = null; f.url = null; f.status = 'pending';
+    });
+    renderList();
+    files.forEach(function(f){ if (f.status === 'pending') convertOne(f); });
+  });
+
+  dropEl.addEventListener('click', function(){ fileInput.click(); });
+  fileInput.addEventListener('change', function(){ if (this.files.length) loadFiles(this.files); this.value=''; });
+  ['dragenter','dragover'].forEach(function(ev){ document.addEventListener(ev, function(e){ e.preventDefault(); dropEl.classList.add('over'); }); });
+  ['dragleave','drop'].forEach(function(ev){ document.addEventListener(ev, function(e){ e.preventDefault(); if (ev==='dragleave' && e.relatedTarget) return; dropEl.classList.remove('over'); }); });
+  document.addEventListener('drop', function(e){ if (e.dataTransfer.files.length) loadFiles(e.dataTransfer.files); });
+})();
+</script>
+</body>
+</html>

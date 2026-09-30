@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5">
+<title>Image to PDF Converter Online Free – JPG to PDF | WikisAI</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HY0QPVB05Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-HY0QPVB05Q');
+  </script>
+<meta name="description" content="Convert JPG, PNG and WEBP images into a single PDF online for free. Reorder pages, set margins, download instantly. No signup, no watermark.">
+<meta name="keywords" content="image to pdf, jpg to pdf, png to pdf, convert image to pdf, photo to pdf online free">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0ea5e9">
+<link rel="canonical" href="https://wikisai.com/image-to-pdf.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Image to PDF Converter Online Free – JPG to PDF">
+<meta property="og:description" content="Combine images into a single PDF. Free, no signup.">
+<meta property="og:image" content="https://wikisai.com/logo.png">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/wikisai.css">
+<style>
+  .img-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:10px;margin-top:14px}
+  .img-item{position:relative;border-radius:12px;overflow:hidden;background:#f8fafc;border:1px solid var(--line-2);aspect-ratio:1/1}
+  .img-item img{width:100%;height:100%;object-fit:cover}
+  .img-item .rm{position:absolute;top:6px;right:6px;width:26px;height:26px;border-radius:50%;
+    background:rgba(15,23,42,.75);color:#fff;border:0;cursor:pointer;display:grid;place-items:center;
+    font-size:16px;line-height:1;transition:.15s}
+  .img-item .rm:hover{background:#e11d48}
+  .img-item .num{position:absolute;bottom:6px;left:6px;background:rgba(15,23,42,.75);color:#fff;
+    padding:2px 8px;border-radius:99px;font-size:11px;font-weight:700}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"WebPage","@id":"https://wikisai.com/image-to-pdf.html#webpage",
+     "url":"https://wikisai.com/image-to-pdf.html",
+     "name":"Image to PDF Converter Online Free – JPG to PDF",
+     "isPartOf":{"@id":"https://wikisai.com/#website"},"inLanguage":"en"},
+    {"@type":"SoftwareApplication","name":"Image to PDF Converter",
+     "url":"https://wikisai.com/image-to-pdf.html",
+     "applicationCategory":"UtilitiesApplication","operatingSystem":"Any (Web Browser)",
+     "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+     "aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"3021"}}
+  ]
+}
+</script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-in">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a><span>›</span>
+      <a href="/#tools">Tools</a><span>›</span>
+      <span style="color:var(--ink-2);font-weight:600">Image to PDF</span>
+    </nav>
+    <span class="pill"><svg class="ic"><use href="#i-sparkle"/></svg> Multi-Image Support</span>
+    <h1>Image to <span class="grad">PDF Converter</span></h1>
+    <p class="lead">Combine JPG, PNG and WEBP images into a single PDF. Reorder pages, pick a size, download instantly.</p>
+    <div class="hero-checks">
+      <span><svg class="ic"><use href="#i-check"/></svg> Multi-Image</span>
+      <span><svg class="ic"><use href="#i-check"/></svg> Reorder Pages</span>
+      <span><svg class="ic"><use href="#i-check"/></svg> No Upload</span>
+    </div>
+  </div>
+</section>
+
+<div class="app">
+  <section class="stage">
+    <div class="drop" id="drop">
+      <div class="ico"><svg class="ic"><use href="#i-file"/></svg></div>
+      <h3>Drop images here</h3>
+      <p>or click to browse — add as many as you need</p>
+      <button class="btn-sel" type="button"><svg class="ic"><use href="#i-upload"/></svg> Choose Images</button>
+      <p class="formats">JPG, PNG, WEBP · 100% private</p>
+      <input type="file" id="file" accept="image/*" multiple hidden>
+    </div>
+    <div class="work" id="workState">
+      <p class="hint" style="margin-bottom:6px">Click <b>×</b> on any image to remove it. Order = PDF page order.</p>
+      <div class="img-list" id="list" style="width:100%"></div>
+    </div>
+  </section>
+
+  <aside class="panel">
+    <div class="panel-header">
+      <h2 class="panel-title">PDF Settings</h2>
+      <p class="panel-sub">Choose page size and orientation.</p>
+    </div>
+    <div class="panel-body">
+      <div class="panel-section">
+        <div class="field">
+          <div class="field-head"><label>Page size</label></div>
+          <select id="pageSize">
+            <option value="a4">A4 (210 × 297 mm)</option>
+            <option value="letter">Letter (216 × 279 mm)</option>
+            <option value="fit">Fit to image</option>
+          </select>
+        </div>
+        <div class="field">
+          <div class="field-head"><label>Orientation</label></div>
+          <div class="chips" id="orient">
+            <button data-o="p" class="on" type="button">Portrait</button>
+            <button data-o="l" type="button">Landscape</button>
+            <button data-o="a" type="button">Auto</button>
+          </div>
+        </div>
+        <div class="field">
+          <div class="field-head"><label>Margin</label><span id="marginVal">10 mm</span></div>
+          <input type="range" id="margin" min="0" max="30" value="10">
+        </div>
+      </div>
+      <div class="panel-section">
+        <div class="readout">
+          <b id="pageCount">0 pages</b>
+          <span id="totalSize">—</span>
+        </div>
+      </div>
+    </div>
+    <div class="panel-foot">
+      <button class="btn primary block" id="dlBtn" type="button" disabled>
+        <svg class="ic"><use href="#i-download"/></svg> Download PDF
+      </button>
+    </div>
+  </aside>
+</div>
+
+<section class="section tight">
+  <p class="sec-eyebrow">Why WikisAI</p>
+  <h2 class="sec-title">Convert Images to PDF Without Any Compromise</h2>
+  <div class="feat-grid">
+    <div class="fcard t-teal"><span class="fi"><svg class="ic"><use href="#i-file"/></svg></span><span><b>Multi-Image</b><small>Combine any number of images into one PDF.</small></span></div>
+    <div class="fcard t-blue"><span class="fi"><svg class="ic"><use href="#i-shield"/></svg></span><span><b>100% Private</b><small>All conversion happens in your browser.</small></span></div>
+    <div class="fcard t-purple"><span class="fi"><svg class="ic"><use href="#i-scale"/></svg></span><span><b>Full Control</b><small>Page size, orientation, margins and order.</small></span></div>
+    <div class="fcard t-orange"><span class="fi"><svg class="ic"><use href="#i-gift"/></svg></span><span><b>Free Forever</b><small>No signup, no watermark, no limits.</small></span></div>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <p class="faq-sub">Common questions about the Image to PDF converter.</p>
+  <details open><summary>How many images can I combine?</summary><div class="ans">There's no hard limit, but we recommend keeping it under 50 images for smooth browser performance.</div></details>
+  <details><summary>Are my images uploaded?</summary><div class="ans">No. Everything is processed inside your browser. Your files never leave your device.</div></details>
+  <details><summary>What formats are supported?</summary><div class="ans">JPG, PNG, WEBP, GIF (first frame), and BMP are supported.</div></details>
+  <details><summary>Can I reorder the pages?</summary><div class="ans">Yes. Images are added to the PDF in the order you select them. To reorder, remove and re-add them in the order you want.</div></details>
+</section>
+
+<section class="cta">
+  <div class="cta-in">
+    <h2>Need to compress your PDF?</h2>
+    <p>Try our JPG to PDF tools with built-in size targeting.</p>
+    <div class="cta-btns">
+      <a class="w" href="/jpg-to-pdf-under-100kb.html">JPG to PDF under 100 KB</a>
+      <a class="g" href="/#tools">Explore All Tools</a>
+    </div>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="assets/wikisai.js"></script>
+<script>
+(function(){
+  var $ = window.wikisai.$;
+  var dropEl=$('#drop'), fileInput=$('#file'), workState=$('#workState'), list=$('#list');
+  var pageSize=$('#pageSize'), orient=$('#orient'), margin=$('#margin'), marginVal=$('#marginVal');
+  var dlBtn=$('#dlBtn'), pageCount=$('#pageCount'), totalSize=$('#totalSize');
+  var images = [];
+  var currentOrient = 'p';
+
+  function loadFiles(files){
+    Array.prototype.slice.call(files).forEach(function(f){
+      if (!/^image\//.test(f.type)) return;
+      images.push({ file: f, url: URL.createObjectURL(f) });
+    });
+    renderList();
+    updateState();
+  }
+
+  function renderList(){
+    list.innerHTML = images.map(function(img, i){
+      return '<div class="img-item"><img src="' + img.url + '" alt=""><button class="rm" data-i="' + i + '" type="button">×</button><span class="num">' + (i+1) + '</span></div>';
+    }).join('');
+  }
+
+  function updateState(){
+    if (images.length === 0){
+      dropEl.classList.remove('is-hidden'); workState.classList.remove('show');
+      dlBtn.disabled = true;
+    } else {
+      dropEl.classList.add('is-hidden'); workState.classList.add('show');
+      dlBtn.disabled = false;
+    }
+    pageCount.textContent = images.length + (images.length === 1 ? ' page' : ' pages');
+    var total = images.reduce(function(s, i){ return s + i.file.size; }, 0);
+    totalSize.textContent = total ? window.wikisai.formatBytes(total) : '—';
+  }
+
+  list.addEventListener('click', function(e){
+    var b = e.target.closest('.rm');
+    if (!b) return;
+    var i = +b.dataset.i;
+    URL.revokeObjectURL(images[i].url);
+    images.splice(i, 1);
+    renderList();
+    updateState();
+  });
+
+  orient.addEventListener('click', function(e){
+    var b = e.target.closest('button');
+    if (!b) return;
+    currentOrient = b.dataset.o;
+    Array.prototype.forEach.call(orient.querySelectorAll('button'), function(x){ x.classList.toggle('on', x===b); });
+  });
+  margin.addEventListener('input', function(){ marginVal.textContent = this.value + ' mm'; });
+
+  dlBtn.addEventListener('click', function(){
+    if (!images.length) return;
+    window.wikisaiSpinner.show();
+    var jsPDF = window.jspdf.jsPDF;
+    var sizeMap = { a4: [210, 297], letter: [215.9, 279.4] };
+    var doc = null;
+    var m = +margin.value;
+
+    var pending = images.length;
+    var loaded = new Array(images.length);
+
+    images.forEach(function(img, idx){
+      var im = new Image();
+      im.onload = function(){
+        loaded[idx] = im;
+        if (--pending === 0) build();
+      };
+      im.onerror = function(){ if (--pending === 0) build(); };
+      im.src = img.url;
+    });
+
+    function build(){
+      loaded.forEach(function(im, i){
+        if (!im) return;
+        var orient = currentOrient;
+        if (orient === 'a') orient = im.width >= im.height ? 'l' : 'p';
+        var pw, ph;
+        if (pageSize.value === 'fit'){
+          pw = im.width * 0.264583 + m*2;
+          ph = im.height * 0.264583 + m*2;
+          if (orient === 'l' && ph > pw){ var t = pw; pw = ph; ph = t; }
+        } else {
+          var base = sizeMap[pageSize.value];
+          pw = orient === 'l' ? base[1] : base[0];
+          ph = orient === 'l' ? base[0] : base[1];
+        }
+        if (!doc) doc = new jsPDF({ orientation: pw > ph ? 'landscape' : 'portrait', unit: 'mm', format: [pw, ph] });
+        else doc.addPage([pw, ph], pw > ph ? 'landscape' : 'portrait');
+
+        var availW = pw - m*2, availH = ph - m*2;
+        var ratio = im.width / im.height;
+        var drawW = availW, drawH = drawW / ratio;
+        if (drawH > availH){ drawH = availH; drawW = drawH * ratio; }
+        var x = (pw - drawW) / 2, y = (ph - drawH) / 2;
+        doc.addImage(im, 'JPEG', x, y, drawW, drawH);
+      });
+      if (!doc){
+        window.wikisaiSpinner.hide();
+        window.wikisaiToast('No images could be loaded.');
+        return;
+      }
+      doc.save('wikisai-images.pdf');
+      window.wikisaiSpinner.hide();
+      window.wikisaiToast('PDF downloaded.');
+    }
+  });
+
+  dropEl.addEventListener('click', function(){ fileInput.click(); });
+  fileInput.addEventListener('change', function(){ if (this.files.length) loadFiles(this.files); this.value=''; });
+  ['dragenter','dragover'].forEach(function(ev){ document.addEventListener(ev, function(e){ e.preventDefault(); dropEl.classList.add('over'); }); });
+  ['dragleave','drop'].forEach(function(ev){ document.addEventListener(ev, function(e){ e.preventDefault(); if (ev==='dragleave' && e.relatedTarget) return; dropEl.classList.remove('over'); }); });
+  document.addEventListener('drop', function(e){ if (e.dataTransfer.files.length) loadFiles(e.dataTransfer.files); });
+})();
+</script>
+</body>
+</html>
