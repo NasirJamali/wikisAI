@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5,viewport-fit=cover">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HY0QPVB05Q"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-HY0QPVB05Q');</script>
+<title>Free AI Image Editor Online – Auto Enhance, Beautify, Filters &amp; Crop | WikisAI</title>
+<meta name="description" content="Free online AI image editor with one-click Auto AI enhance, photo beautify, filters, crop, rotate, text &amp; stickers. No login, no watermark, no limits. Your photo never leaves your device.">
+<meta name="keywords" content="ai image editor free, online photo editor, auto enhance photo, ai photo enhancer, beautify photo online, photo editor no login, free photo editor no watermark, crop image online, add text to photo, photo filters online, wikisai">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#0ea5e9">
+<link rel="canonical" href="https://wikisai.com/ai-image-editor">
+<meta property="og:type" content="website"><meta property="og:site_name" content="WikisAI">
+<meta property="og:title" content="Free AI Image Editor Online | WikisAI">
+<meta property="og:description" content="One-click Auto AI enhance, beautify, filters, crop and more. 100% free, no login, no watermark.">
+<meta property="og:url" content="https://wikisai.com/ai-image-editor"><meta property="og:image" content="https://wikisai.com/logo.png">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Free AI Image Editor Online | WikisAI"><meta name="twitter:image" content="https://wikisai.com/logo.png">
+<link rel="icon" type="image/png" href="/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebApplication","name":"WikisAI AI Image Editor","url":"https://wikisai.com/ai-image-editor","applicationCategory":"MultimediaApplication","applicationSubCategory":"Photo Editor","operatingSystem":"Any (Web Browser)","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"featureList":["One-click Auto AI enhance","AI portrait beautify and skin smoothing","Filters and colour grading","Crop, rotate and flip","Text and sticker overlays","Before and after comparison","Download as PNG, JPG or WebP"],"publisher":{"@type":"Organization","name":"WikisAI","url":"https://wikisai.com/"}},
+{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://wikisai.com/"},{"@type":"ListItem","position":2,"name":"AI Image Editor","item":"https://wikisai.com/ai-image-editor"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Is this AI image editor really free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every feature is free with no login, no watermark and no usage limit."}},
+{"@type":"Question","name":"Are my photos uploaded to a server?","acceptedAnswer":{"@type":"Answer","text":"No. Editing happens entirely inside your browser, so your photo never leaves your device."}},
+{"@type":"Question","name":"What does Auto AI do?","acceptedAnswer":{"@type":"Answer","text":"Auto AI analyses lighting, colour balance, noise and skin tones, then automatically corrects exposure, contrast, white balance, sharpness and saturation in one click."}},
+{"@type":"Question","name":"Can I compare before and after?","acceptedAnswer":{"@type":"Answer","text":"Yes. A draggable before/after line appears after Auto AI, and you can toggle it any time with the Compare button."}}]}]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+:root{--ink:#0f172a;--muted:#64748b;--line:#e6eef7;--brand:#0ea5e9;--brand2:#0284c7;--soft:#e0f2fe}
+html,body{margin:0;height:100%}
+body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.5}
+body.ed{overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer}a{color:inherit}
+.ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round;display:block}
+[data-ic]{display:inline-flex}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;padding:12px 22px;font-weight:700;font-size:14.5px;text-decoration:none;transition:.2s}
+.btn.pri{background:linear-gradient(135deg,#38bdf8,#0284c7);color:#fff;box-shadow:0 14px 30px -14px #0284c7}.btn.pri:hover{transform:translateY(-2px)}
+.btn.ghost{background:#fff;border:1px solid var(--line)}.btn.big{padding:16px 30px;font-size:16px}
+/* HOME */
+#home{min-height:100%;background:radial-gradient(900px 480px at 85% 0,#e0f2fe,transparent 65%),radial-gradient(760px 420px at 5% 60%,#ede9fe,transparent 62%),#fff}
+.nav{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:92%;max-width:1100px;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:8px 10px 8px 18px;background:rgba(255,255,255,.8);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.6);border-radius:50px;box-shadow:0 8px 32px rgba(15,23,42,.08)}
+.logo{display:flex;align-items:center;gap:9px;text-decoration:none;font-weight:800;font-size:19px;letter-spacing:-.03em}.logo img{height:32px}.logo em{font-style:normal;color:var(--brand)}
+.badge{background:#ecfdf5;border:1px solid #a7f3d0;color:#047857;font-weight:700;font-size:12.5px;padding:8px 14px;border-radius:50px}
+.hero{max-width:900px;margin:0 auto;padding:120px 20px 40px;text-align:center}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--soft);border:1px solid #cfe8fd;color:var(--brand2);padding:7px 15px;border-radius:999px;font-size:12.5px;font-weight:700;margin-bottom:18px}.pill .ic{width:14px;height:14px}
+h1{margin:0;font-size:clamp(30px,5vw,52px);line-height:1.08;letter-spacing:-.04em;font-weight:800}
+.grad{background:linear-gradient(120deg,#38bdf8,#0284c7 55%,#7c3aed);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:clamp(15px,1.6vw,17px);max-width:600px;margin:16px auto 0}
+.drop{margin:30px auto 0;max-width:720px;border:2.5px dashed #bfe3fb;border-radius:28px;background:rgba(255,255,255,.85);padding:44px 20px;transition:.25s;cursor:pointer}
+.drop:hover,.drop.over{border-color:var(--brand);background:#f0f9ff;transform:scale(1.01)}
+.drop .up{width:72px;height:72px;margin:0 auto 16px;border-radius:22px;display:grid;place-items:center;background:linear-gradient(135deg,#38bdf8,#7c3aed);color:#fff;box-shadow:0 18px 36px -16px #0284c7}.drop .up .ic{width:32px;height:32px}
+.drop h2{margin:0 0 6px;font-size:21px;letter-spacing:-.02em}.drop p{margin:0 0 18px;color:var(--muted);font-size:14px}
+.checks{display:flex;flex-wrap:wrap;gap:8px 18px;justify-content:center;margin-top:18px;font-size:13px;color:var(--muted);font-weight:500}
+.checks span{display:inline-flex;gap:6px;align-items:center}.checks .ic{width:15px;height:15px;color:#10b981;stroke-width:2.4}
+.sec{max-width:1100px;margin:0 auto;padding:44px 20px 0}
+.sec h2{text-align:center;font-size:clamp(22px,3vw,30px);letter-spacing:-.03em;margin:0 0 22px}
+.feats{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+.feat{background:#fff;border:1px solid var(--line);border-radius:18px;padding:20px}
+.feat .fi{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--soft);color:var(--brand2);margin-bottom:12px}
+.feat b{display:block;margin-bottom:4px}.feat p{margin:0;font-size:13.5px;color:var(--muted)}
+details{background:#fff;border:1px solid var(--line);border-radius:14px;margin-bottom:10px}
+summary{cursor:pointer;padding:16px 20px;font-weight:700;font-size:15px}details p{margin:0;padding:0 20px 18px;color:var(--muted);font-size:14px}
+footer{margin-top:50px;padding:26px 20px;text-align:center;font-size:13px;color:var(--muted);border-top:1px solid var(--line)}footer a{margin:0 8px;text-decoration:none;font-weight:600}
+/* EDITOR */
+#editor{position:fixed;inset:0;display:flex;flex-direction:column;background:#e9eff7;z-index:100}
+.bar{height:58px;flex:none;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:6px;padding:0 12px}
+.bar .sp{flex:1}
+.ib{display:inline-flex;align-items:center;gap:7px;height:40px;padding:0 12px;border-radius:12px;border:1px solid var(--line);background:#fff;font-weight:600;font-size:13.5px;transition:.2s}
+.ib:hover:not(:disabled){background:var(--soft);color:var(--brand2)}.ib:disabled{opacity:.35;cursor:default}.ib.on{background:var(--soft);color:var(--brand2);border-color:#bfe3fb}
+.ib.pri{background:linear-gradient(135deg,#38bdf8,#0284c7);color:#fff;border:0}
+.main{flex:1;display:flex;min-height:0}
+.stage{flex:1;min-width:0;position:relative;padding-bottom:64px;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle,#d5dfeb 1px,transparent 1px) 0 0/18px 18px,#eef3f9}
+.wrap{position:relative;touch-action:none;box-shadow:0 20px 60px -20px rgba(15,23,42,.5);background:repeating-conic-gradient(#fff 0 25%,#e2e8f0 0 50%) 0 0/16px 16px;user-select:none;-webkit-user-select:none}
+.wrap canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+#orig{clip-path:inset(0 50% 0 0)}
+.cmp{position:absolute;top:0;bottom:0;left:50%;width:3px;margin-left:-1.5px;background:#fff;box-shadow:0 0 12px rgba(0,0,0,.45);z-index:6;cursor:ew-resize;touch-action:none}
+.cmp::before{content:'';position:absolute;inset:0 -16px}
+.cmp::after{content:'◀ ▶';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:42px;height:42px;border-radius:50%;background:#fff;box-shadow:0 6px 18px rgba(0,0,0,.35);display:grid;place-items:center;font-size:9px;letter-spacing:1px;color:var(--brand2);white-space:nowrap}
+.lb{position:absolute;top:10px;z-index:6;background:rgba(15,23,42,.72);color:#fff;font-size:11px;font-weight:700;padding:5px 12px;border-radius:99px;pointer-events:none;letter-spacing:.04em}.lb.b{left:10px}.lb.a{right:10px;background:linear-gradient(135deg,#38bdf8,#0284c7)}
+.sel{position:absolute;border:1.5px dashed #38bdf8;pointer-events:none;z-index:5;border-radius:4px}
+.crop{position:absolute;z-index:7;border:2px solid #fff;box-shadow:0 0 0 9999px rgba(15,23,42,.55);cursor:move;touch-action:none;background:linear-gradient(#fff6 1px,transparent 1px) 0 33.3%/100% 33.4%,linear-gradient(90deg,#fff6 1px,transparent 1px) 33.3% 0/33.4% 100%}
+.crop i{position:absolute;width:26px;height:26px;background:#fff;border:3px solid var(--brand);border-radius:50%;touch-action:none}
+.crop i[data-h=nw]{left:-14px;top:-14px;cursor:nwse-resize}.crop i[data-h=ne]{right:-14px;top:-14px;cursor:nesw-resize}.crop i[data-h=sw]{left:-14px;bottom:-14px;cursor:nesw-resize}.crop i[data-h=se]{right:-14px;bottom:-14px;cursor:nwse-resize}
+.aibtn{white-space:nowrap;position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:30;border:0;border-radius:99px;padding:14px 28px;display:flex;gap:10px;align-items:center;font-weight:800;font-size:15px;color:#fff;background:linear-gradient(120deg,#0ea5e9,#7c3aed,#db2777);background-size:200% 100%;animation:sh 3s linear infinite,pu 2s ease-in-out infinite;box-shadow:0 14px 34px -10px #7c3aed}
+@keyframes sh{to{background-position:200% 0}}@keyframes pu{50%{transform:translateX(-50%) scale(1.05)}}
+/* AI animation */
+.aiov{position:absolute;inset:0;z-index:20;display:none;place-items:center;overflow:hidden;background:rgba(8,20,45,.4)}.aiov.on{display:grid}
+.aiov .grid{position:absolute;inset:0;background:linear-gradient(rgba(125,211,252,.25) 1px,transparent 1px) 0 0/28px 28px,linear-gradient(90deg,rgba(125,211,252,.25) 1px,transparent 1px) 0 0/28px 28px;animation:gm 2s linear infinite}
+@keyframes gm{to{background-position:0 28px,28px 0}}
+.scan{position:absolute;left:0;right:0;height:26%;background:linear-gradient(180deg,transparent,rgba(56,189,248,.55));border-bottom:3px solid #bae6fd;box-shadow:0 10px 50px 6px #38bdf8;animation:sc 1.6s ease-in-out infinite alternate}
+@keyframes sc{from{top:-26%}to{top:100%}}
+.spk i{position:absolute;width:8px;height:8px;border-radius:50%;background:#fff;box-shadow:0 0 12px 4px #7dd3fc;animation:tw 1.4s ease-in-out infinite}
+@keyframes tw{0%,100%{opacity:0;transform:scale(.2)}50%{opacity:1;transform:scale(1.4)}}
+.aicard{position:relative;z-index:2;background:rgba(15,23,42,.78);backdrop-filter:blur(10px);color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:20px 24px;text-align:center;width:min(280px,86%)}
+.ring{width:54px;height:54px;margin:0 auto 10px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(from 0deg,#38bdf8,#a78bfa,#f472b6,#38bdf8);animation:sp 1.2s linear infinite;position:relative}
+.ring::before{content:'';position:absolute;inset:4px;border-radius:50%;background:#0f172a}.ring span{position:relative;animation:sp 1.2s linear infinite reverse}@keyframes sp{to{transform:rotate(360deg)}}
+.aicard b{font-size:13.5px;display:block;min-height:20px}
+.pb{height:6px;background:rgba(255,255,255,.15);border-radius:9px;margin-top:12px;overflow:hidden}.pb i{display:block;height:100%;width:0;background:linear-gradient(90deg,#38bdf8,#a78bfa,#f472b6);border-radius:9px}
+.aifx{animation:fx 1s ease-in-out infinite alternate}@keyframes fx{from{filter:brightness(.85) saturate(.8)}to{filter:brightness(1.15) saturate(1.3) hue-rotate(12deg)}}
+/* PANEL */
+.panel{width:360px;flex:none;background:#fff;border-left:1px solid var(--line);display:flex;flex-direction:column;min-height:0}
+.tabs{display:flex;gap:4px;padding:8px;overflow-x:auto;border-bottom:1px solid var(--line);scrollbar-width:none}.tabs::-webkit-scrollbar{display:none}
+.tab{flex:1 0 auto;min-width:58px;display:flex;flex-direction:column;align-items:center;gap:4px;padding:8px 6px;border:0;border-radius:12px;background:none;font-size:11px;font-weight:700;color:var(--muted)}
+.tab.on{background:var(--soft);color:var(--brand2)}
+.pc{flex:1;overflow:auto;padding:16px;-webkit-overflow-scrolling:touch}
+.pc h4{margin:16px 0 8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}.pc h4:first-child{margin-top:0}
+.sl{display:block;margin-bottom:14px}.sl span{display:flex;justify-content:space-between;font-size:13px;font-weight:600;margin-bottom:4px}.sl b{color:var(--brand2);font-weight:700}
+input[type=range]{width:100%;accent-color:var(--brand);height:22px;margin:0}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.opt{text-decoration:none;display:flex;align-items:center;gap:9px;padding:11px 12px;border:1px solid var(--line);border-radius:14px;background:#fff;font-weight:600;font-size:13px;text-align:left;transition:.2s}
+.opt:hover{border-color:#7dd3fc;background:#f0f9ff}.opt .ic{width:18px;height:18px;color:var(--brand2);flex:none}
+.hero-ai{background:linear-gradient(135deg,#e0f2fe,#ede9fe);border-radius:18px;padding:18px;text-align:center}
+.hero-ai p{font-size:13px;color:var(--muted);margin:6px 0 14px}
+.chip{border:1px solid var(--line);background:#fff;border-radius:99px;padding:8px 14px;font-size:13px;font-weight:600}.chip.on{background:var(--soft);border-color:#7dd3fc;color:var(--brand2)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.fth{border:2px solid transparent;border-radius:12px;background:none;padding:0;overflow:hidden;font-size:11px;font-weight:700}.fth.on{border-color:var(--brand)}
+.fth canvas{width:100%;aspect-ratio:1;display:block;border-radius:10px}
+.emo{display:grid;grid-template-columns:repeat(8,1fr);gap:4px}.emo button{border:0;background:#f8fafc;border-radius:10px;font-size:21px;padding:6px 0}
+.in{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px 12px;font:inherit;font-size:14px;margin-bottom:10px}
+.row{display:flex;gap:8px;align-items:center;margin-bottom:10px}input[type=color]{width:46px;height:40px;border:1px solid var(--line);border-radius:10px;padding:2px;background:#fff}
+.note{font-size:12.5px;color:var(--muted)}
+.toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#0f172a;color:#fff;padding:10px 18px;border-radius:99px;font-size:13px;font-weight:600;z-index:400;opacity:0;pointer-events:none;transition:.3s}.toast.on{opacity:1}
+.modal{position:fixed;inset:0;z-index:300;background:rgba(15,23,42,.55);backdrop-filter:blur(4px);display:grid;place-items:center;padding:16px}
+.mc{background:#fff;border-radius:22px;padding:22px;width:min(400px,100%)}.mc h3{margin:0 0 14px;font-size:19px}
+@media(max-width:860px){.main{flex-direction:column}.panel{width:100%;height:42%;border-left:0;border-top:1px solid var(--line)}.ib span{display:none}.ib{padding:0 11px}.bar{gap:4px;padding:0 8px}.aibtn{padding:11px 20px;font-size:14px;bottom:10px}}
+@media(prefers-reduced-motion:reduce){.aibtn,.scan,.ring,.aifx{animation:none}}
+</style>
+</head>
+<body>
+
+<!-- ============ UPLOAD SCREEN ============ -->
+<main id="home">
+  <header class="nav">
+    <a class="logo" href="/"><img src="/logo.png" alt="WikisAI logo" width="32" height="32">Wikis<em>AI</em></a>
+    <span class="badge">100% Free · No Login</span>
+  </header>
+
+  <section class="hero">
+    <span class="pill"><i data-ic="sparkle"></i> AI Image Editor</span>
+    <h1>Free <span class="grad">AI Image Editor</span> Online</h1>
+    <p class="lead">Add your photo and let Auto AI enhance it in one click — or fine-tune with pro tools: beautify, filters, crop, text and more. No login, no watermark, no limits.</p>
+
+    <div class="drop" id="drop" tabindex="0" role="button" aria-label="Add image">
+      <div class="up"><i data-ic="upload"></i></div>
+      <h2>Add your image to start editing</h2>
+      <p>Click to browse, drag &amp; drop, or paste (Ctrl+V) — JPG, PNG, WEBP</p>
+      <span class="btn pri big"><i data-ic="plus"></i> Add Image</span>
+    </div>
+    <input type="file" id="file" accept="image/*" hidden>
+
+    <div class="checks">
+      <span><i data-ic="check"></i> 100% Free</span><span><i data-ic="check"></i> No Watermark</span>
+      <span><i data-ic="check"></i> Private — stays on your device</span><span><i data-ic="check"></i> Works on mobile</span>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2>Pro editing tools — all free</h2>
+    <div class="feats">
+      <div class="feat"><div class="fi"><i data-ic="sparkle"></i></div><b>Auto AI Enhance</b><p>One tap fixes lighting, colour, noise and sharpness, with an animated before/after reveal.</p></div>
+      <div class="feat"><div class="fi"><i data-ic="smile"></i></div><b>Beautify &amp; Portrait</b><p>Skin smoothing, glow, skin tone and soft focus for natural-looking portraits.</p></div>
+      <div class="feat"><div class="fi"><i data-ic="wand"></i></div><b>Enhance &amp; Upscale</b><p>HD sharpen, clarity, dehaze, denoise and 2× / 4× upscaling.</p></div>
+      <div class="feat"><div class="fi"><i data-ic="sliders"></i></div><b>Full Adjustments</b><p>Exposure, contrast, highlights, shadows, vibrance, warmth, vignette, grain.</p></div>
+      <div class="feat"><div class="fi"><i data-ic="palette"></i></div><b>12 Filters</b><p>Vivid, Cinematic, Vintage, Noir and more with adjustable intensity.</p></div>
+      <div class="feat"><div class="fi"><i data-ic="crop"></i></div><b>Crop, Rotate, Text</b><p>Crop with ratios, rotate, flip, add text, stickers and frames.</p></div>
+    </div>
+  </section>
+
+  <section class="sec" style="max-width:800px">
+    <h2>Frequently asked questions</h2>
+    <details open><summary>Is this AI image editor really free?</summary><p>Yes. Every feature is free with no login, no watermark and no usage limit.</p></details>
+    <details><summary>Are my photos uploaded to a server?</summary><p>No. All editing happens inside your browser, so your photo never leaves your device.</p></details>
+    <details><summary>What does Auto AI do?</summary><p>It analyses lighting, colour balance, noise and skin tones, then corrects exposure, contrast, white balance, sharpness and saturation automatically.</p></details>
+    <details><summary>Can I compare before and after?</summary><p>Yes. A draggable before/after line appears after Auto AI and can be toggled with the Compare button.</p></details>
+  </section>
+
+  <footer><a href="/">Home</a><a href="/remove-image-background">Remove Background</a><a href="/passport-size-photo-genrate">Passport Photo</a><a href="/compress-image">Compress Image</a><a href="/all-tools">All Tools</a><p>© <span id="yr">2026</span> WikisAI — free forever.</p></footer>
+</main>
+
+<!-- ============ EDITOR ============ -->
+<section id="editor" hidden>
+  <div class="bar">
+    <button class="ib" id="bNew" title="New image"><i data-ic="home"></i><span>New</span></button>
+    <button class="ib" id="bUndo" title="Undo (Ctrl+Z)"><i data-ic="undo"></i><span>Undo</span></button>
+    <button class="ib" id="bRedo" title="Redo (Ctrl+Y)"><i data-ic="redo"></i><span>Redo</span></button>
+    <button class="ib" id="bReset" title="Reset all"><i data-ic="reset"></i><span>Reset</span></button>
+    <div class="sp"></div>
+    <button class="ib" id="bCmp" title="Before / After"><i data-ic="compare"></i><span>Compare</span></button>
+    <button class="ib pri" id="bDl"><i data-ic="download"></i><span>Download</span></button>
+  </div>
+  <div class="main">
+    <div class="stage" id="stage">
+      <div class="wrap" id="wrap">
+        <canvas id="edit"></canvas>
+        <canvas id="orig" hidden></canvas>
+        <div class="cmp" id="cmp" hidden></div>
+        <span class="lb b" id="lbB" hidden>Before</span><span class="lb a" id="lbA" hidden>After</span>
+        <div class="sel" id="selbox" hidden></div>
+        <div class="crop" id="crop" hidden><i data-h="nw"></i><i data-h="ne"></i><i data-h="sw"></i><i data-h="se"></i></div>
+        <div class="aiov" id="aiov"><div class="grid"></div><div class="scan"></div><div class="spk" id="spk"></div>
+          <div class="aicard"><div class="ring"><span data-ic="sparkle"></span></div><b id="aitx">Analyzing…</b><div class="pb"><i id="pbi"></i></div></div></div>
+      </div>
+      <button class="aibtn" id="aibtn" data-a="ai" data-m="auto"><i data-ic="sparkle"></i> Auto AI Enhance</button>
+    </div>
+    <aside class="panel">
+      <div class="tabs" id="tabs"></div>
+      <div class="pc" id="pc"></div>
+    </aside>
+  </div>
+</section>
+
+<div class="modal" id="modal" hidden>
+  <div class="mc">
+    <h3>Download image</h3>
+    <h4 class="note" style="margin:0 0 6px">FORMAT</h4>
+    <div class="chips" id="fmts" style="margin-bottom:14px"><button class="chip on" data-f="png">PNG</button><button class="chip" data-f="jpeg">JPG</button><button class="chip" data-f="webp">WebP</button></div>
+    <label class="sl"><span>Quality <b id="qv">92</b>%</span><input type="range" id="q" min="40" max="100" value="92"></label>
+    <h4 class="note" style="margin:0 0 6px">SIZE</h4>
+    <div class="chips" id="scs" style="margin-bottom:6px"><button class="chip on" data-s="1">Original</button><button class="chip" data-s="2">2× HD</button><button class="chip" data-s="0.5">50%</button></div>
+    <p class="note" id="dims" style="margin:0 0 16px"></p>
+    <div class="row" style="margin:0"><button class="btn ghost" id="mx" style="flex:1">Cancel</button><button class="btn pri" id="mok" style="flex:2"><i data-ic="download"></i> Download</button></div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+(()=>{
+'use strict';
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const mk=(w,h)=>{const c=document.createElement('canvas');c.width=Math.max(1,Math.round(w));c.height=Math.max(1,Math.round(h));return c};
+const clamp=(v,a,b)=>v<a?a:v>b?b:v,sleep=ms=>new Promise(r=>setTimeout(r,ms));
+const IC={
+sparkle:'<path d="M11 3l1.7 4.6L17.3 9l-4.6 1.7L11 15l-1.7-4.3L4.7 9l4.6-1.4z"/><path d="M18.5 14.5l.8 2.2 2.2.8-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8z"/>',
+undo:'<path d="M9 14L4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/>',redo:'<path d="M15 14l5-5-5-5"/><path d="M20 9H10a6 6 0 0 0 0 12h3"/>',
+reset:'<path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/>',compare:'<path d="M12 3v18M7 8l-4 4 4 4M17 8l4 4-4 4"/>',
+download:'<path d="M12 3v12m-5-5l5 5 5-5M4 21h16"/>',upload:'<path d="M12 16V4m-5 5l5-5 5 5M4 20h16"/>',plus:'<path d="M12 5v14M5 12h14"/>',
+home:'<path d="M3 11l9-8 9 8M5 10v10h14V10"/>',check:'<path d="M5 12.5l4.5 4.5L19 7"/>',
+sliders:'<path d="M4 6h9M17 6h3M4 12h3M11 12h9M4 18h11M19 18h1"/><circle cx="15" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="17" cy="18" r="2"/>',
+palette:'<circle cx="12" cy="12" r="9"/><circle cx="8.5" cy="10" r="1.1"/><circle cx="12" cy="7.5" r="1.1"/><circle cx="15.5" cy="10" r="1.1"/>',
+wand:'<path d="M15 4V2M15 10V8M12 6h-2M20 6h-2M13.5 7.5L3 18l3 3L16.5 10.5z"/>',
+smile:'<circle cx="12" cy="12" r="9"/><path d="M8 14c1 1.5 2.2 2 4 2s3-.5 4-2M9 9.5h.01M15 9.5h.01"/>',
+crop:'<path d="M6 2v14a2 2 0 0 0 2 2h14M2 6h14a2 2 0 0 1 2 2v14"/>',type:'<path d="M5 6.5V5h14v1.5M12 5v14M9 19h6"/>',
+frame:'<rect x="3" y="3" width="18" height="18" rx="3"/><rect x="7" y="7" width="10" height="10" rx="1.5"/>',
+rot:'<path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 3v6h-6"/>',rotl:'<path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 3v6h6"/>',
+flip:'<path d="M12 3v18M8 7l-4 5 4 5M16 7l4 5-4 5"/>',flipv:'<path d="M3 12h18M7 8l5-4 5 4M7 16l5 4 5-4"/>',
+trash:'<path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/>',copy:'<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/>',
+layers:'<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>',expand:'<path d="M3 9V3h6M21 9V3h-6M3 15v6h6M21 15v6h-6"/>',
+sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5L19 19M5 19l1.5-1.5M17.5 6.5L19 5"/>',
+moon:'<path d="M20 14A8 8 0 1 1 10 4a6.5 6.5 0 0 0 10 10z"/>',bolt:'<path d="M13 2L4.5 13.5H11l-1 8.5 8.5-11.5H12z"/>'};
+const ic=n=>`<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${IC[n]||''}</svg>`;
+const hydrate=(r=document)=>r.querySelectorAll('[data-ic]').forEach(e=>{e.innerHTML=ic(e.dataset.ic)});
+hydrate();$('#yr').textContent=new Date().getFullYear();
+
+/* ---------- state ---------- */
+const DEF={exposure:0,brightness:0,contrast:0,highlights:0,shadows:0,saturation:0,vibrance:0,warmth:0,tint:0,fade:0,vignette:0,grain:0,
+sharpen:0,clarity:0,dehaze:0,denoise:0,smooth:0,skinGlow:0,skinTone:0,glow:0,blur:0,pixelate:0,bw:0,sepia:0,filter:'none',fi:100,wb:[1,1,1],
+frame:0,fc:'#ffffff',radius:0,layers:[]};
+const TONE=Object.keys(DEF).filter(k=>!['frame','fc','radius','layers'].includes(k));
+const cl=o=>JSON.parse(JSON.stringify(o));
+const FIL={none:{},Vivid:{saturation:32,contrast:14,vibrance:20},Warm:{warmth:30,saturation:10,tint:5},Cool:{warmth:-30,saturation:6},
+'B&W':{bw:100,contrast:14},Noir:{bw:100,contrast:45,vignette:32,brightness:-8},Sepia:{sepia:100},Vintage:{sepia:35,fade:25,warmth:15,vignette:25,saturation:-10},
+Cinematic:{contrast:20,saturation:-8,warmth:-12,tint:-6,vignette:35,shadows:10},Fade:{fade:35,contrast:-10,saturation:-12},
+Dramatic:{contrast:40,saturation:15,clarity:30,vignette:30},Pastel:{saturation:-15,brightness:12,fade:20,warmth:6},Golden:{warmth:40,brightness:6,saturation:12,fade:8}};
+let base,prev,P=cl(DEF),hist=[],hi=-1,cmpOn=false,cmpPos=50,tab='ai',sel=-1,crop=null,busy=false,BX=[],thumbSrc=null,drag=null,exFmt='png',exScale=1;
+
+/* ---------- pixel engine ---------- */
+function bp(s,t,w,h,r,H){const n=H?w:h,o=H?h:w,st=H?4:w*4,os=H?w*4:4,win=2*r+1;
+ for(let q=0;q<o;q++){const B=q*os;for(let c=0;c<3;c++){let sum=0;for(let i=-r;i<=r;i++)sum+=s[B+clamp(i,0,n-1)*st+c];
+  for(let i=0;i<n;i++){t[B+i*st+c]=sum/win;sum+=s[B+Math.min(i+r+1,n-1)*st+c]-s[B+Math.max(i-r,0)*st+c];}}}}
+function bl(d,w,h,r){r=Math.max(1,Math.round(r));const a=d.slice(),b=d.slice();for(let i=0;i<2;i++){bp(a,b,w,h,r,1);bp(b,a,w,h,r,0);}return a}
+const skin=(r,g,b)=>{if(!(r>g&&r>b&&r>60))return 0;const cb=128-.1687*r-.3313*g+.5*b,cr=128+.5*r-.4187*g-.0813*b;
+ return Math.max(0,1-(Math.max(0,77-cb,cb-127)+Math.max(0,133-cr,cr-173))/14)};
+function eff(P){const E={...P},f=FIL[P.filter]||{},m=P.fi/100;for(const q in f)E[q]=(E[q]||0)+f[q]*m;
+ E.contrast+=E.dehaze*.3;E.saturation+=E.dehaze*.15;E.brightness-=E.dehaze*.06;return E}
+function rr(o,x,y,w,h,r){r=Math.min(r,w/2,h/2);o.beginPath();o.moveTo(x+r,y);o.arcTo(x+w,y,x+w,y+h,r);o.arcTo(x+w,y+h,x,y+h,r);o.arcTo(x,y+h,x,y,r);o.arcTo(x,y,x+w,y,r);o.closePath()}
+function process(src,P){
+ const E=eff(P),w=src.width,h=src.height,k=Math.max(w,h)/1100,c=mk(w,h),x=c.getContext('2d',{willReadFrequently:true});
+ if(E.pixelate>0){const s=Math.max(2,Math.round(E.pixelate*Math.min(w,h)/1600)),t=mk(w/s,h/s);t.getContext('2d').drawImage(src,0,0,t.width,t.height);x.imageSmoothingEnabled=false;x.drawImage(t,0,0,w,h)}else x.drawImage(src,0,0);
+ const id=x.getImageData(0,0,w,h),d=id.data,N=w*h*4;let b;
+ if(E.denoise>0){b=bl(d,w,h,1.6*k);const t=6+E.denoise*.45,s=Math.min(1,E.denoise/60);
+  for(let i=0;i<N;i+=4){const df=Math.max(Math.abs(d[i]-b[i]),Math.abs(d[i+1]-b[i+1]),Math.abs(d[i+2]-b[i+2])),m=Math.max(0,1-df/(t*2))*s;
+   d[i]+=(b[i]-d[i])*m;d[i+1]+=(b[i+1]-d[i+1])*m;d[i+2]+=(b[i+2]-d[i+2])*m}}
+ if(E.smooth>0){b=bl(d,w,h,3.2*k);const a=E.smooth/100*.95;
+  for(let i=0;i<N;i+=4){const s=skin(d[i],d[i+1],d[i+2]);if(!s)continue;const df=Math.max(Math.abs(d[i]-b[i]),Math.abs(d[i+1]-b[i+1]),Math.abs(d[i+2]-b[i+2])),m=Math.max(0,1-df/55)*s*a;
+   d[i]+=(b[i]-d[i])*m;d[i+1]+=(b[i+1]-d[i+1])*m;d[i+2]+=(b[i+2]-d[i+2])*m}}
+ if(E.sharpen>0){b=bl(d,w,h,1.3*k);const a=E.sharpen/100*1.6;for(let i=0;i<N;i+=4){d[i]+=(d[i]-b[i])*a;d[i+1]+=(d[i+1]-b[i+1])*a;d[i+2]+=(d[i+2]-b[i+2])*a}}
+ if(E.clarity>0){b=bl(d,w,h,16*k);const a=E.clarity/100*.9;for(let i=0;i<N;i+=4){d[i]+=(d[i]-b[i])*a;d[i+1]+=(d[i+1]-b[i+1])*a;d[i+2]+=(d[i+2]-b[i+2])*a}}
+ if(E.blur>0){b=bl(d,w,h,E.blur/100*14*k);for(let i=0;i<N;i+=4){d[i]=b[i];d[i+1]=b[i+1];d[i+2]=b[i+2]}}
+ if(E.glow>0){b=bl(d,w,h,9*k);const a=E.glow/100*.75;for(let i=0;i<N;i+=4)for(let q=0;q<3;q++){const s=255-(255-d[i+q])*(255-b[i+q])/255;d[i+q]+=(s-d[i+q])*a}}
+ const ex=Math.pow(2,E.exposure/50),br=E.brightness*1.5,ct=clamp(E.contrast*2.2,-250,250),cf=(259*(ct+255))/(255*(259-ct)),sat=Math.max(0,1+E.saturation/100),vib=E.vibrance/100,
+ wm=E.warmth*.55,tn=E.tint*.45,fd=E.fade/100,vg=E.vignette/100,gr=E.grain*.9,bw=Math.min(1,E.bw/100),sp=Math.min(1,E.sepia/100),sh=E.shadows/100,hi=E.highlights/100,
+ st=E.skinTone/100*28,sg=E.skinGlow/100,wb=E.wb,cx=w/2,cy=h/2,md=Math.hypot(cx,cy);
+ for(let y=0,i=0;y<h;y++)for(let X=0;X<w;X++,i+=4){
+  let r=d[i],g=d[i+1],bb=d[i+2];const m=(st||sg)?skin(r,g,bb):0;
+  r*=wb[0]*ex;g*=wb[1]*ex;bb*=wb[2]*ex;r+=br;g+=br;bb+=br;
+  if(sh||hi){let l=(.299*r+.587*g+.114*bb)/255;l=l<0?0:l>1?1:l;const a=sh*(1-l)*(1-l)*90+hi*l*l*90;r+=a;g+=a;bb+=a}
+  r=(r-128)*cf+128;g=(g-128)*cf+128;bb=(bb-128)*cf+128;
+  r+=wm+tn*.5;g-=tn;bb+=tn*.5-wm;
+  if(m){r+=st*m;bb-=st*m*.6;const a=sg*m*38;r+=a;g+=a*.9;bb+=a*.8}
+  const gy=.299*r+.587*g+.114*bb;let s=sat;if(vib){const mx=Math.max(r,g,bb),mn=Math.min(r,g,bb);s*=1+vib*(1-(mx-mn)/255)}
+  r=gy+(r-gy)*s;g=gy+(g-gy)*s;bb=gy+(bb-gy)*s;
+  if(bw){r+=(gy-r)*bw;g+=(gy-g)*bw;bb+=(gy-bb)*bw}
+  if(sp){const tr=.393*r+.769*g+.189*bb,tg=.349*r+.686*g+.168*bb,tb=.272*r+.534*g+.131*bb;r+=(tr-r)*sp;g+=(tg-g)*sp;bb+=(tb-bb)*sp}
+  if(fd){r=r*(1-fd*.25)+fd*34;g=g*(1-fd*.25)+fd*34;bb=bb*(1-fd*.25)+fd*34}
+  if(vg){const dd=Math.hypot(X-cx,y-cy)/md,v=1-vg*Math.pow(Math.max(0,(dd-.35)/.65),1.6)*.9;r*=v;g*=v;bb*=v}
+  if(gr){const n=(Math.random()-.5)*gr;r+=n;g+=n;bb+=n}
+  d[i]=r;d[i+1]=g;d[i+2]=bb}
+ x.putImageData(id,0,0);
+ let out=c,fb=0;const mn=Math.min(w,h),f=Math.round(E.frame/100*mn),rad=E.radius/100*mn;
+ if(f||rad){fb=f;out=mk(w+2*f,h+2*f);const o=out.getContext('2d');if(f){o.fillStyle=P.fc;o.fillRect(0,0,out.width,out.height)}o.save();if(rad){rr(o,f,f,w,h,rad);o.clip()}o.drawImage(c,f,f);o.restore()}
+ const o=out.getContext('2d'),boxes=[];
+ P.layers.forEach(L=>{const fs=L.size/100*out.height;o.font=`${L.bold?'700 ':''}${fs}px ${L.font}`;o.textAlign='center';o.textBaseline='middle';
+  const px=L.x*out.width,py=L.y*out.height;if(L.out){o.lineWidth=fs*.14;o.strokeStyle=L.oc||'#000';o.lineJoin='round';o.strokeText(L.t,px,py)}
+  o.fillStyle=L.c;o.fillText(L.t,px,py);const tw=o.measureText(L.t).width;boxes.push({x:px-tw/2,y:py-fs*.62,w:tw,h:fs*1.24})});
+ out.boxes=boxes;out.fb=fb;return out}
+
+/* ---------- AI analysis ---------- */
+function analyze(src){const t=mk(160,160*src.height/src.width),x=t.getContext('2d');x.drawImage(src,0,0,t.width,t.height);
+ const d=x.getImageData(0,0,t.width,t.height).data,hs=new Uint32Array(256),N=d.length/4;let R=0,G=0,B=0,S=0,sk=0;
+ for(let i=0;i<d.length;i+=4){const r=d[i],g=d[i+1],b=d[i+2];hs[(.299*r+.587*g+.114*b)|0]++;R+=r;G+=g;B+=b;S+=(Math.max(r,g,b)-Math.min(r,g,b))/255;if(skin(r,g,b)>.6)sk++}
+ const pct=q=>{let a=0;for(let i=0;i<256;i++){a+=hs[i];if(a>=N*q)return i}return 255};
+ return{p1:pct(.01),p10:pct(.1),p99:pct(.99),mean:(R*.299+G*.587+B*.114)/N,R:R/N,G:G/N,B:B/N,sat:S/N,skin:sk/N}}
+function aiPatch(a,mode){
+ const rng=Math.max(60,a.p99-a.p1),av=(a.R+a.G+a.B)/3,wf=v=>1+clamp(av/v-1,-.15,.15)*.7;
+ const p={contrast:clamp(Math.round((235/rng-1)*70),0,35),brightness:clamp(Math.round((120-a.mean)/1.5*.7),-25,35),
+  shadows:a.p10<45?clamp(Math.round((45-a.p10)*1.2),0,45):8,highlights:a.p99>245?-25:-6,wb:[wf(a.R),wf(a.G),wf(a.B)],
+  saturation:a.sat<.25?18:8,vibrance:25,sharpen:45,clarity:20,denoise:a.mean<80?38:16,smooth:a.skin>.06?16:0};
+ const M={portrait:{smooth:40,skinGlow:25,glow:20,skinTone:10,sharpen:35,brightness:p.brightness+6},
+  lowlight:{brightness:p.brightness+22,shadows:55,denoise:55,exposure:12,highlights:-15},
+  vivid:{saturation:35,vibrance:40,contrast:Math.max(p.contrast,22),clarity:30,sharpen:55},
+  hd:{sharpen:85,clarity:40,denoise:30,dehaze:15}};
+ return Object.assign(p,M[mode]||{})}
+
+/* ---------- render ---------- */
+let rq=0;const render=()=>{if(!rq)rq=requestAnimationFrame(()=>{rq=0;draw()})};
+function draw(){if(!prev)return;const out=process(prev,P),cv=$('#edit');
+ if(cv.width!==out.width||cv.height!==out.height){cv.width=out.width;cv.height=out.height;fit()}
+ cv.getContext('2d').drawImage(out,0,0);BX=out.boxes;
+ if(cmpOn){const o=$('#orig');o.width=out.width;o.height=out.height;o.getContext('2d').drawImage(prev,out.fb,out.fb)}
+ selBox()}
+function fit(){const st=$('#stage'),cv=$('#edit');if(!cv.width)return;const aw=st.clientWidth-28,ah=st.clientHeight-64-28,s=Math.min(aw/cv.width,ah/cv.height,1.6),w=$('#wrap');
+ w.style.width=cv.width*s+'px';w.style.height=cv.height*s+'px';selBox();showCrop()}
+function mkPrev(c){const s=Math.min(1,1100/Math.max(c.width,c.height)),p=mk(c.width*s,c.height*s),x=p.getContext('2d');x.imageSmoothingQuality='high';x.drawImage(c,0,0,p.width,p.height);return p}
+function setBase(c){base=c;prev=mkPrev(c);thumbSrc=null;$('#edit').width=0;draw()}
+function commit(){hist=hist.slice(0,hi+1);hist.push({base,P:cl(P)});if(hist.length>40)hist.shift();hi=hist.length-1;btns()}
+function restore(i){const e=hist[i];if(e.base!==base){base=e.base;prev=mkPrev(base);thumbSrc=null;$('#edit').width=0}P=cl(e.P);hi=i;sel=-1;crop=null;showCrop();draw();btns();renderTab(tab)}
+function btns(){$('#bUndo').disabled=hi<=0;$('#bRedo').disabled=hi>=hist.length-1}
+const toast=m=>{const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('on'),2200)};
+
+/* ---------- loading ---------- */
+function load(file){if(!file||!file.type.startsWith('image/')){toast('Please choose an image file');return}
+ const u=URL.createObjectURL(file),im=new Image();
+ im.onload=()=>{const s=Math.min(1,4096/Math.max(im.naturalWidth,im.naturalHeight)),c=mk(im.naturalWidth*s,im.naturalHeight*s),x=c.getContext('2d');x.imageSmoothingQuality='high';x.drawImage(im,0,0,c.width,c.height);URL.revokeObjectURL(u);
+  P=cl(DEF);hist=[];hi=-1;sel=-1;crop=null;cmpOn=false;setCmp(false);$('#home').hidden=true;$('#editor').hidden=false;document.body.classList.add('ed');
+  setBase(c);commit();tab='ai';renderTab('ai');requestAnimationFrame(fit);toast('Tip: tap ✨ Auto AI Enhance')};
+ im.onerror=()=>toast('Could not open this image');im.src=u}
+const drop=$('#drop'),fi=$('#file');
+drop.onclick=()=>fi.click();drop.onkeydown=e=>{if(e.key==='Enter'||e.key===' ')fi.click()};fi.onchange=()=>{load(fi.files[0]);fi.value=''};
+['dragover','dragenter'].forEach(v=>drop.addEventListener(v,e=>{e.preventDefault();drop.classList.add('over')}));
+['dragleave','drop'].forEach(v=>drop.addEventListener(v,e=>{e.preventDefault();drop.classList.remove('over')}));
+drop.addEventListener('drop',e=>load(e.dataTransfer.files[0]));
+addEventListener('paste',e=>{const f=[...(e.clipboardData?.files||[])].find(f=>f.type.startsWith('image/'));if(f)load(f)});
+$('#bNew').onclick=()=>{if(confirm('Start over with a new image? Unsaved edits will be lost.')){$('#editor').hidden=true;$('#home').hidden=false;document.body.classList.remove('ed')}};
+$('#bUndo').onclick=()=>hi>0&&restore(hi-1);$('#bRedo').onclick=()=>hi<hist.length-1&&restore(hi+1);
+$('#bReset').onclick=()=>{P=cl(DEF);sel=-1;draw();commit();renderTab(tab);toast('Reset')};
+addEventListener('resize',fit);
+addEventListener('keydown',e=>{if($('#editor').hidden||/INPUT|SELECT|TEXTAREA/.test(e.target.tagName))return;
+ if((e.ctrlKey||e.metaKey)&&e.key==='z'){e.preventDefault();hi>0&&restore(hi-1)}else if((e.ctrlKey||e.metaKey)&&(e.key==='y'||e.key==='Z')){e.preventDefault();hi<hist.length-1&&restore(hi+1)}
+ else if((e.key==='Delete'||e.key==='Backspace')&&sel>=0)act('dellayer')});
+
+/* ---------- compare ---------- */
+function setCmp(on){cmpOn=on;['#orig','#cmp','#lbB','#lbA'].forEach(s=>$(s).hidden=!on);$('#bCmp').classList.toggle('on',on);if(on){posCmp(cmpPos);draw()}}
+function posCmp(p){cmpPos=clamp(p,0,100);$('#cmp').style.left=cmpPos+'%';$('#orig').style.clipPath=`inset(0 ${100-cmpPos}% 0 0)`;$('#lbB').style.opacity=cmpPos>12?1:0;$('#lbA').style.opacity=cmpPos<88?1:0}
+$('#bCmp').onclick=()=>setCmp(!cmpOn);
+$('#cmp').addEventListener('pointerdown',e=>{e.stopPropagation();e.target.setPointerCapture(e.pointerId);drag={cmp:1}});
+const tw=(a,b,ms,fn)=>new Promise(r=>{const t0=performance.now();(function f(t){const p=clamp((t-t0)/ms,0,1),e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;fn(a+(b-a)*e);p<1?requestAnimationFrame(f):r()})(t0)});
+async function reveal(){setCmp(true);await tw(100,0,1000,posCmp);await sleep(250);await tw(0,50,700,posCmp)}
+
+/* ---------- AI run ---------- */
+const STEPS=['Analyzing lighting & exposure…','Balancing colours & white balance…','Reducing noise…','Sharpening details…','Beautifying skin tones…','Applying finishing touches…'];
+async function runAI(mode){if(busy||!prev)return;busy=true;crop=null;showCrop();sel=-1;selBox();
+ const patch=aiPatch(analyze(prev),mode),ov=$('#aiov'),pb=$('#pbi'),tx=$('#aitx'),cv=$('#edit');
+ $('#spk').innerHTML=Array.from({length:26},()=>`<i style="left:${Math.random()*96}%;top:${Math.random()*96}%;animation-delay:${Math.random()*1.4}s"></i>`).join('');
+ ov.classList.add('on');cv.classList.add('aifx');pb.style.transition='none';pb.style.width='0';pb.offsetWidth;pb.style.transition='width 3.6s linear';pb.style.width='100%';
+ for(const s of STEPS){tx.textContent=s;await sleep(600)}
+ const keep={frame:P.frame,fc:P.fc,radius:P.radius,layers:P.layers};P=Object.assign(cl(DEF),patch,keep);
+ draw();ov.classList.remove('on');cv.classList.remove('aifx');busy=false;commit();renderTab(tab);await reveal();toast('✨ Enhanced! Drag the line to compare')}
+
+/* ---------- panel ---------- */
+const TABS=[['ai','sparkle','AI'],['adjust','sliders','Adjust'],['filters','palette','Filters'],['enhance','wand','Enhance'],['beautify','smile','Beautify'],['transform','crop','Crop'],['text','type','Text'],['frame','frame','Frame']];
+$('#tabs').innerHTML=TABS.map(t=>`<button class="tab" data-t="${t[0]}">${ic(t[1])}${t[2]}</button>`).join('');
+$('#tabs').onclick=e=>{const b=e.target.closest('.tab');if(b){if(crop)closeCrop();renderTab(b.dataset.t)}};
+const ADJ=[['exposure','Exposure',-100,100],['brightness','Brightness',-100,100],['contrast','Contrast',-100,100],['highlights','Highlights',-100,100],['shadows','Shadows',-100,100],['saturation','Saturation',-100,100],['vibrance','Vibrance',-100,100],['warmth','Warmth',-100,100],['tint','Tint',-100,100],['fade','Fade',0,100],['vignette','Vignette',0,100],['grain','Grain',0,100]];
+const ENH=[['sharpen','HD Sharpen',0,100],['clarity','Clarity',0,100],['dehaze','Dehaze',0,100],['denoise','Denoise',0,100]];
+const BEA=[['smooth','Skin Smooth',0,100],['skinGlow','Skin Glow',0,100],['skinTone','Skin Tone (cool ↔ warm)',-100,100],['glow','Soft Focus Glow',0,100]];
+const FX=[['blur','Blur',0,100],['pixelate','Pixelate',0,100],['bw','Black & White',0,100],['sepia','Sepia',0,100]];
+const sl=a=>a.map(([k,l,mn,mx])=>`<label class="sl"><span>${l}<b id="v_${k}">${P[k]}</b></span><input type="range" data-k="${k}" min="${mn}" max="${mx}" value="${P[k]}"></label>`).join('');
+const FONTS=[['Inter','Inter, sans-serif'],['Impact','Impact, Haettenschweiler, sans-serif'],['Georgia','Georgia, serif'],['Courier','"Courier New", monospace'],['Script','"Brush Script MT", cursive'],['Comic','"Comic Sans MS", cursive']];
+const EMO='😀 😍 😎 🥳 ❤️ ⭐ 🔥 ✨ 🎉 👑 🌈 🌸 🦋 💯 👍 🎈'.split(' ');
+const RATIOS=[['Free',0],['1:1',1],['4:3',4/3],['3:4',3/4],['16:9',16/9],['9:16',9/16],['3.5×4.5',35/45],['2:3',2/3]];
+function renderTab(t){tab=t;$$('.tab').forEach(b=>b.classList.toggle('on',b.dataset.t===t));const pc=$('#pc');let h='';
+ if(t==='ai')h=`<div class="hero-ai"><b style="font-size:16px">One-tap Auto AI</b><p>Analyses your photo and fixes light, colour, noise &amp; sharpness automatically.</p><button class="btn pri big" data-a="ai" data-m="auto">${ic('sparkle')} Auto AI Enhance</button></div>
+ <h4>AI modes</h4><div class="g2">${[['portrait','smile','Portrait Beauty'],['lowlight','moon','Low-Light Fix'],['vivid','sun','Vivid Pop'],['hd','expand','HD Clean']].map(m=>`<button class="opt" data-a="ai" data-m="${m[0]}">${ic(m[1])}${m[2]}</button>`).join('')}</div>
+ <h4>More free tools</h4><div class="g2"><a class="opt" href="/remove-image-background">${ic('layers')}Remove Background</a><a class="opt" href="/compress-image">${ic('download')}Compress Image</a><a class="opt" href="/passport-size-photo-genrate">${ic('frame')}Passport Photo</a><a class="opt" href="/image-to-pdf">${ic('copy')}Image to PDF</a></div>`;
+ else if(t==='adjust')h=sl(ADJ)+'<p class="note">Tip: double-click a slider to reset it.</p>';
+ else if(t==='filters')h=`<div class="g3">${Object.keys(FIL).map(n=>`<button class="fth${P.filter===n?' on':''}" data-a="filter" data-f="${n}"><canvas width="84" height="84" data-n="${n}"></canvas>${n==='none'?'Original':n}</button>`).join('')}</div>
+  <h4>Filter intensity</h4>${sl([['fi','Intensity',0,100]])}<h4>Effects</h4>${sl(FX)}`;
+ else if(t==='enhance')h=`${sl(ENH)}<h4>HD upscale</h4><div class="g2"><button class="opt" data-a="up" data-s="2">${ic('expand')}Upscale 2×</button><button class="opt" data-a="up" data-s="4">${ic('expand')}Upscale 4×</button></div><p class="note">Current size: ${base.width} × ${base.height}px. Upscaling adds smoothing and sharpening.</p>`;
+ else if(t==='beautify')h=`<h4>Quick looks</h4><div class="g3"><button class="chip" data-a="look" data-m="natural">Natural</button><button class="chip" data-a="look" data-m="glam">Glam</button><button class="chip" data-a="look" data-m="soft">Soft</button></div><h4>Fine-tune</h4>${sl(BEA)}`;
+ else if(t==='transform')h=`<h4>Rotate &amp; flip</h4><div class="g2"><button class="opt" data-a="xf" data-m="l">${ic('rotl')}Rotate left</button><button class="opt" data-a="xf" data-m="r">${ic('rot')}Rotate right</button><button class="opt" data-a="xf" data-m="fh">${ic('flip')}Flip horizontal</button><button class="opt" data-a="xf" data-m="fv">${ic('flipv')}Flip vertical</button></div>
+  <h4>Crop</h4><div class="chips">${RATIOS.map(r=>`<button class="chip" data-a="crop" data-r="${r[1]}">${r[0]}</button>`).join('')}</div>
+  <div class="row" id="cropbtns" style="margin-top:12px" hidden><button class="btn pri" data-a="cropok" style="flex:1">${ic('check')} Apply crop</button><button class="btn ghost" data-a="cropx">Cancel</button></div>`;
+ else if(t==='text')h=`<h4>Text</h4><input class="in" id="tx" data-l="t" placeholder="Type your text…" value="">
+  <div class="row"><select class="in" data-l="font" id="tf" style="margin:0">${FONTS.map(f=>`<option value='${f[1]}'>${f[0]}</option>`).join('')}</select><input type="color" data-l="c" id="tc" value="#ffffff"></div>
+  <label class="sl"><span>Size<b></b></span><input type="range" data-l="size" id="ts" min="2" max="40" value="8"></label>
+  <label class="row"><input type="checkbox" data-l="out" id="to" checked> Outline</label>
+  <div class="g2"><button class="btn pri" data-a="addtext">${ic('plus')} Add text</button><button class="btn ghost" data-a="duplayer">${ic('copy')} Duplicate</button></div>
+  <button class="btn ghost" data-a="dellayer" style="width:100%;margin-top:8px">${ic('trash')} Delete selected</button>
+  <h4>Stickers</h4><div class="emo">${EMO.map(e=>`<button data-a="emoji" data-e="${e}">${e}</button>`).join('')}</div><p class="note">Drag text or stickers on the photo to move them.</p>`;
+ else if(t==='frame')h=`${sl([['frame','Border width',0,15],['radius','Rounded corners',0,50]])}<div class="row"><span style="font-weight:600;font-size:13px;flex:1">Border colour</span><input type="color" data-k="fc" value="${P.fc}"></div>`;
+ pc.innerHTML=h;if(t==='filters')thumbs();if(t==='text')syncText()}
+function thumbs(){if(!thumbSrc){thumbSrc=mk(84,84);const s=Math.min(base.width,base.height),x=thumbSrc.getContext('2d');x.drawImage(base,(base.width-s)/2,(base.height-s)/2,s,s,0,0,84,84)}
+ $$('#pc canvas[data-n]').forEach(c=>{const o=process(thumbSrc,{...cl(DEF),filter:c.dataset.n});c.getContext('2d').drawImage(o,0,0)})}
+function syncText(){const L=P.layers[sel];if(!L||L.t===undefined)return;if(!$('#tx'))return;$('#tx').value=L.t;$('#ts').value=L.size;$('#tc').value=L.c;$('#to').checked=!!L.out;$('#tf').value=L.font}
+
+/* ---------- actions ---------- */
+function patchP(p){Object.assign(P,p);draw();commit();renderTab(tab)}
+function xform(m){const w=base.width,h=base.height,rot=m==='l'||m==='r',c=mk(rot?h:w,rot?w:h),x=c.getContext('2d');
+ if(m==='r'){x.translate(h,0);x.rotate(Math.PI/2)}else if(m==='l'){x.translate(0,w);x.rotate(-Math.PI/2)}else if(m==='fh'){x.translate(w,0);x.scale(-1,1)}else{x.translate(0,h);x.scale(1,-1)}
+ x.drawImage(base,0,0);const f={r:(a,b)=>[1-b,a],l:(a,b)=>[b,1-a],fh:(a,b)=>[1-a,b],fv:(a,b)=>[a,1-b]}[m];
+ P.layers.forEach(L=>{[L.x,L.y]=f(L.x,L.y)});setBase(c);commit()}
+function act(a,el){
+ if(a==='ai')runAI(el?.dataset.m||'auto');
+ else if(a==='filter'){P.filter=el.dataset.f;P.fi=100;draw();commit();renderTab('filters')}
+ else if(a==='look')patchP({natural:{smooth:25,skinGlow:10,sharpen:20},glam:{smooth:55,skinGlow:30,glow:25,skinTone:15,contrast:8},soft:{smooth:40,glow:45,brightness:6,fade:8}}[el.dataset.m]);
+ else if(a==='xf')xform(el.dataset.m);
+ else if(a==='up'){let s=+el.dataset.s;const m=Math.max(base.width,base.height);if(m*s>6000)s=6000/m;if(s<1.05){toast('Image is already at maximum size');return}
+  toast('Upscaling…');setTimeout(()=>{const c=mk(base.width*s,base.height*s),x=c.getContext('2d');x.imageSmoothingQuality='high';x.drawImage(base,0,0,c.width,c.height);
+   const o=process(c,{...cl(DEF),sharpen:40,denoise:10});setBase(o);commit();renderTab('enhance');toast(`Upscaled to ${o.width} × ${o.height}px`)},40)}
+ else if(a==='crop')startCrop(+el.dataset.r);else if(a==='cropok')applyCrop();else if(a==='cropx')closeCrop();
+ else if(a==='addtext'){const v=$('#tx').value.trim()||'Your text';P.layers.push({t:v,x:.5,y:.5,size:+$('#ts').value,c:$('#tc').value,font:$('#tf').value,bold:1,out:+$('#to').checked,oc:'#000000'});sel=P.layers.length-1;draw();commit()}
+ else if(a==='emoji'){P.layers.push({t:el.dataset.e,x:.5,y:.5,size:14,c:'#000',font:'sans-serif',bold:0,out:0});sel=P.layers.length-1;draw();commit()}
+ else if(a==='duplayer'&&sel>=0){const L=cl(P.layers[sel]);L.x=clamp(L.x+.04,0,1);L.y=clamp(L.y+.04,0,1);P.layers.push(L);sel=P.layers.length-1;draw();commit()}
+ else if(a==='dellayer'&&sel>=0){P.layers.splice(sel,1);sel=-1;draw();commit();selBox()}}
+document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(el&&!$('#editor').hidden)act(el.dataset.a,el)});
+document.addEventListener('input',e=>{const t=e.target;
+ if(t.dataset.k){P[t.dataset.k]=t.type==='color'?t.value:+t.value;const v=$('#v_'+t.dataset.k);if(v)v.textContent=t.value;render()}
+ else if(t.dataset.l!==undefined&&sel>=0){const L=P.layers[sel],p=t.dataset.l;L[p]=t.type==='checkbox'?+t.checked:(t.type==='range'||p==='size')?+t.value:t.value;render()}
+ else if(t.id==='q'){$('#qv').textContent=t.value}});
+document.addEventListener('change',e=>{if(e.target.dataset.k||e.target.dataset.l!==undefined)commit()});
+document.addEventListener('dblclick',e=>{const t=e.target;if(t.dataset?.k&&t.type==='range'){t.value=DEF[t.dataset.k]??0;t.dispatchEvent(new Event('input',{bubbles:true}));t.dispatchEvent(new Event('change',{bubbles:true}))}});
+
+/* ---------- layers drag ---------- */
+const frac=e=>{const r=$('#wrap').getBoundingClientRect();return{x:(e.clientX-r.left)/r.width,y:(e.clientY-r.top)/r.height}};
+function selBox(){const s=$('#selbox'),b=BX[sel],cv=$('#edit');if(sel<0||!b||crop||!cv.width){s.hidden=true;return}
+ s.hidden=false;s.style.left=(b.x/cv.width*100)+'%';s.style.top=(b.y/cv.height*100)+'%';s.style.width=(b.w/cv.width*100)+'%';s.style.height=(b.h/cv.height*100)+'%'}
+$('#wrap').addEventListener('pointerdown',e=>{if(crop||busy||drag)return;const f=frac(e),cv=$('#edit'),px=f.x*cv.width,py=f.y*cv.height;
+ for(let i=BX.length-1;i>=0;i--){const b=BX[i],p=8;if(px>=b.x-p&&px<=b.x+b.w+p&&py>=b.y-p&&py<=b.y+b.h+p){sel=i;drag={l:1,dx:P.layers[i].x-f.x,dy:P.layers[i].y-f.y,m:0};
+  $('#wrap').setPointerCapture(e.pointerId);if(tab!=='text')renderTab('text');else syncText();selBox();return}}
+ sel=-1;selBox()});
+addEventListener('pointermove',e=>{if(!drag)return;const f=frac(e);
+ if(drag.cmp){posCmp(f.x*100);return}
+ if(drag.l){const L=P.layers[sel];L.x=clamp(f.x+drag.dx,0,1);L.y=clamp(f.y+drag.dy,0,1);drag.m=1;render()}
+ else if(drag.c)moveCrop(f)});
+addEventListener('pointerup',()=>{if(!drag)return;const d=drag;drag=null;if(d.l&&d.m)commit();if(d.c)showCrop()});
+
+/* ---------- crop ---------- */
+let cRatio=0;
+function startCrop(r){cRatio=r;const cv=$('#edit'),W=cv.width,H=cv.height;let fh=.8,fw=r?fh*r*H/W:.8;if(fw>.92){fw=.92;fh=fw*W/(r*H)}
+ crop={x:(1-fw)/2,y:(1-fh)/2,w:fw,h:fh};sel=-1;selBox();$('#cropbtns').hidden=false;$$('#pc .chip').forEach(c=>c.classList.toggle('on',+c.dataset.r===r));showCrop()}
+function showCrop(){const c=$('#crop');if(!crop){c.hidden=true;return}c.hidden=false;c.style.left=crop.x*100+'%';c.style.top=crop.y*100+'%';c.style.width=crop.w*100+'%';c.style.height=crop.h*100+'%'}
+function closeCrop(){crop=null;showCrop();const b=$('#cropbtns');if(b)b.hidden=true;fit()}
+$('#crop').addEventListener('pointerdown',e=>{e.stopPropagation();e.preventDefault();const f=frac(e);drag={c:1,h:e.target.dataset.h||'m',s:f,c0:{...crop}}});
+function moveCrop(f){const d=drag,c0=d.c0,cv=$('#edit'),W=cv.width,H=cv.height;
+ if(d.h==='m'){crop={...c0,x:clamp(c0.x+f.x-d.s.x,0,1-c0.w),y:clamp(c0.y+f.y-d.s.y,0,1-c0.h)}}
+ else{const ax=d.h.includes('w')?c0.x+c0.w:c0.x,ay=d.h.includes('n')?c0.y+c0.h:c0.y,mx=clamp(f.x,0,1),my=clamp(f.y,0,1),sx=mx<ax?-1:1,sy=my<ay?-1:1;
+  let w=Math.max(.06,Math.abs(mx-ax)),h=Math.max(.06,Math.abs(my-ay));
+  if(cRatio){h=w*W/(cRatio*H);const lim=sy<0?ay:1-ay;if(h>lim){h=lim;w=h*cRatio*H/W}}
+  crop={x:Math.min(ax,ax+sx*w),y:Math.min(ay,ay+sy*h),w,h}}
+ showCrop()}
+function applyCrop(){const c=crop,w=base.width,h=base.height,n=mk(c.w*w,c.h*h);n.getContext('2d').drawImage(base,c.x*w,c.y*h,c.w*w,c.h*h,0,0,n.width,n.height);
+ P.layers.forEach(L=>{L.x=(L.x-c.x)/c.w;L.y=(L.y-c.y)/c.h});crop=null;showCrop();setBase(n);commit();renderTab('transform');requestAnimationFrame(fit)}
+
+/* ---------- export ---------- */
+$('#bDl').onclick=()=>{sel=-1;selBox();dims();$('#modal').hidden=false};
+$('#mx').onclick=()=>$('#modal').hidden=true;$('#modal').onclick=e=>{if(e.target.id==='modal')$('#modal').hidden=true};
+$('#fmts').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;exFmt=b.dataset.f;$$('#fmts .chip').forEach(c=>c.classList.toggle('on',c===b))};
+$('#scs').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;exScale=+b.dataset.s;$$('#scs .chip').forEach(c=>c.classList.toggle('on',c===b));dims()};
+function dims(){const s=expScale();$('#dims').textContent=`Output: ${Math.round(base.width*s)} × ${Math.round(base.height*s)} px`}
+function expScale(){let s=exScale;const m=Math.max(base.width,base.height);if(m*s>8000)s=8000/m;return s}
+$('#mok').onclick=async()=>{$('#modal').hidden=true;toast('Preparing your image…');await sleep(60);
+ const s=expScale();let src=base;if(s!==1){src=mk(base.width*s,base.height*s);const x=src.getContext('2d');x.imageSmoothingQuality='high';x.drawImage(base,0,0,src.width,src.height)}
+ let out=process(src,P);if(exFmt==='jpeg'){const f=mk(out.width,out.height),x=f.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,f.width,f.height);x.drawImage(out,0,0);out=f}
+ out.toBlob(b=>{if(!b){toast('Export failed — try a smaller size');return}const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='wikisai-edited.'+(exFmt==='jpeg'?'jpg':exFmt);document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000);toast('Downloaded ✓')},'image/'+exFmt,$('#q').value/100)};
+})();
+</script>
+</body>
+</html>
