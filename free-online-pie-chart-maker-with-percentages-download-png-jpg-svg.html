@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Online Pie Chart Maker with Percentages – Create, Customize & Download as PNG, JPG or SVG</title>
+<meta name="description" content="Free online pie chart maker: enter labels and values, add percentages, make it 3D or a doughnut chart, pick colors and download your pie chart as PNG, JPG or SVG. No signup.">
+<meta name="keywords" content="pie chart maker, free online pie chart maker, pie chart generator, pie chart with percentages, 3d pie chart maker, doughnut chart maker, download pie chart as png, pie chart svg, make a pie chart online">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<meta name="theme-color" content="#4f46e5">
+<!-- IMPORTANT: replace YOURDOMAIN.com with your real domain everywhere in this file -->
+<link rel="canonical" href="https://YOURDOMAIN.com/free-online-pie-chart-maker-with-percentages-download-png-jpg-svg">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Free Online Pie Chart Maker with Percentages – Download as PNG, JPG or SVG">
+<meta property="og:description" content="Make a custom pie chart online in seconds. 3D, doughnut, percentages, custom colors. Download as PNG, JPG or SVG for free.">
+<meta property="og:url" content="https://YOURDOMAIN.com/free-online-pie-chart-maker-with-percentages-download-png-jpg-svg">
+<meta property="og:image" content="https://YOURDOMAIN.com/preview.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Free Online Pie Chart Maker with Percentages">
+<meta name="twitter:description" content="Create, customize and download pie charts as PNG, JPG or SVG. Free, no signup.">
+<meta name="twitter:image" content="https://YOURDOMAIN.com/preview.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Free Online Pie Chart Maker",
+      "url": "https://YOURDOMAIN.com/free-online-pie-chart-maker-with-percentages-download-png-jpg-svg",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any (web browser)",
+      "description": "Create custom pie charts and doughnut charts online with percentages, 3D effect and custom colors. Download as PNG, JPG or SVG.",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "featureList": "Percentages on slices, 3D pie chart, doughnut chart, custom colors, legend positions, PNG JPG SVG download"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://YOURDOMAIN.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Pie Chart Maker", "item": "https://YOURDOMAIN.com/free-online-pie-chart-maker-with-percentages-download-png-jpg-svg" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "How do I make a pie chart online for free?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Type your labels and values into the form above, choose your options, and the pie chart is generated instantly. Then click Download PNG, JPG or SVG." } },
+        { "@type": "Question", "name": "How do I show percentages on a pie chart?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Set the Slice Text option to Percentage. Each slice then shows its share of the total, calculated automatically from your values." } },
+        { "@type": "Question", "name": "Can I make a 3D pie chart or a doughnut chart?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Switch on the 3D option for a 3D pie chart, or set Pie Hole above 0 (for example 0.5) to turn the pie into a doughnut chart." } },
+        { "@type": "Question", "name": "Which file formats can I download?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You can download your pie chart as a PNG, JPG or SVG file. SVG is a vector format that stays sharp at any size." } },
+        { "@type": "Question", "name": "Do the values have to add up to 100?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Enter any positive numbers. The chart works out each slice's share of the total, so values do not need to add up to 100." } },
+        { "@type": "Question", "name": "Is my data saved or uploaded?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. The chart is drawn entirely in your browser. Your data never leaves your device." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --bg:#f5f6fb; --card:#fff; --ink:#1f2433; --muted:#5b6275; --line:#e3e6f0;
+    --brand:#4f46e5; --brand-d:#3b34c4; --ok:#059669; --err:#dc2626;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  a{color:var(--brand)}
+  header.top{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 18px}
+  .top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+  .logo{display:flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;color:var(--ink)}
+  .logo svg{width:26px;height:26px}
+  nav a{margin-left:16px;font-size:14px;text-decoration:none;color:var(--muted)}
+  nav a:hover{color:var(--brand)}
+  h1{font-size:clamp(26px,4.2vw,38px);line-height:1.2;text-align:center;margin:34px 0 10px}
+  .lead{text-align:center;color:var(--muted);max-width:720px;margin:0 auto 26px}
+  .tool{display:grid;grid-template-columns:minmax(0,380px) minmax(0,1fr);gap:20px;align-items:start}
+  @media(max-width:860px){.tool{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 1px 3px rgba(20,25,50,.05)}
+  .field{margin-bottom:14px}
+  label{display:block;font-size:14px;font-weight:600;margin-bottom:5px}
+  input[type=text],input[type=number],select,textarea{width:100%;font:inherit;font-size:15px;padding:9px 11px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
+  textarea{min-height:92px;resize:vertical}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--brand);box-shadow:0 0 0 3px rgba(79,70,229,.15)}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .inline{display:flex;align-items:center;gap:10px}
+  .inline label{margin:0}
+  input[type=color]{width:42px;height:32px;padding:0;border:1.5px solid var(--line);border-radius:6px;background:#fff;cursor:pointer}
+  .switch{position:relative;width:46px;height:26px;flex:none}
+  .switch input{opacity:0;width:0;height:0}
+  .switch span{position:absolute;inset:0;background:#c3c8d8;border-radius:26px;transition:.2s;cursor:pointer}
+  .switch span:before{content:"";position:absolute;width:20px;height:20px;left:3px;top:3px;background:#fff;border-radius:50%;transition:.2s}
+  .switch input:checked+span{background:var(--brand)}
+  .switch input:checked+span:before{transform:translateX(20px)}
+  .hint{font-size:12.5px;color:var(--muted);margin-top:4px}
+  .btn{font:inherit;font-weight:600;border:0;border-radius:9px;padding:10px 16px;cursor:pointer;color:#fff;background:var(--brand)}
+  .btn:hover{background:var(--brand-d)}
+  .btn.ghost{background:#eef0fa;color:var(--brand)}
+  .btn.ghost:hover{background:#e1e4f6}
+  .btn:disabled{opacity:.45;cursor:not-allowed}
+  .btns{display:flex;gap:10px;flex-wrap:wrap}
+  #msg{font-size:14px;margin:10px 0 0;min-height:20px}
+  #msg.err{color:var(--err)} #msg.warn{color:#b45309}
+  .out{position:sticky;top:70px}
+  @media(max-width:860px){.out{position:static}}
+  #chartBox{background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+  #chartBox svg{display:block;width:100%;height:auto}
+  .dl{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:14px}
+  .dl .btn.png{background:#dc2626}.dl .btn.png:hover{background:#b91c1c}
+  .dl .btn.jpg{background:#7c3aed}.dl .btn.jpg:hover{background:#6d28d9}
+  .dl .btn.svg{background:var(--ok)}.dl .btn.svg:hover{background:#047857}
+  section.content{margin:48px auto 0}
+  section.content h2{font-size:26px;margin:0 0 8px;text-align:center}
+  section.content h2:after{content:"";display:block;width:56px;height:4px;background:var(--brand);border-radius:4px;margin:10px auto 0}
+  section.content p{color:#434a5e}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+  @media(max-width:760px){.grid3{grid-template-columns:1fr}}
+  .grid3 .card h3{margin:0 0 6px;font-size:17px}
+  .grid3 .card p{margin:0;font-size:14.5px}
+  ol.steps{padding-left:22px;color:#434a5e}
+  details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:10px 0}
+  summary{font-weight:600;cursor:pointer}
+  details p{margin:8px 0 0}
+  footer{margin-top:60px;border-top:1px solid var(--line);background:#fff;padding:26px 0;text-align:center;color:var(--muted);font-size:14px}
+  footer a{margin:0 8px;text-decoration:none}
+  .sr{position:absolute;left:-9999px}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Pie Chart Maker home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="#c7d2fe"/><path d="M16 2a14 14 0 0 1 14 14H16z" fill="#4f46e5"/><path d="M16 16h14a14 14 0 0 1-9 13z" fill="#06b6d4"/></svg>
+      Pie Chart Maker
+    </a>
+    <nav aria-label="Main">
+      <a href="#features">Features</a>
+      <a href="#how-to">How to</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <h1>Free Online Pie Chart Maker with Percentages</h1>
+  <p class="lead">Create a custom pie chart, 3D pie chart or doughnut chart in seconds. Type your data, style it, and download it as <strong>PNG, JPG or SVG</strong>. Free, no signup, and your data never leaves your browser.</p>
+
+  <noscript><p class="card">This pie chart maker needs JavaScript. Please enable it in your browser.</p></noscript>
+
+  <div class="tool">
+    <!-- CONTROLS -->
+    <form class="card" id="form" onsubmit="return false" aria-label="Pie chart settings">
+      <div class="field">
+        <label for="title">Chart title</label>
+        <input type="text" id="title" value="Pie Chart" placeholder="Enter title for chart" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <label for="mode">Data input format</label>
+        <select id="mode">
+          <option value="separate" selected>Labels &amp; values separated</option>
+          <option value="together">Labels &amp; values together</option>
+        </select>
+      </div>
+
+      <div id="sepBox">
+        <div class="field">
+          <label for="labels">Labels (separated by commas)</label>
+          <input type="text" id="labels" value="Work, Eat, Sleep, Watch TV" placeholder="Work, Eat, Sleep, Watch TV" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="values">Values (separated by commas)</label>
+          <input type="text" id="values" value="20, 10, 10, 5" placeholder="20, 10, 10, 5" autocomplete="off">
+        </div>
+      </div>
+
+      <div id="togBox" hidden>
+        <div class="field">
+          <label for="together">Label: value (one per line or comma separated)</label>
+          <textarea id="together" placeholder="Work: 20&#10;Eat: 10&#10;Sleep: 10&#10;Watch TV: 5">Work: 20
+Eat: 10
+Sleep: 10
+Watch TV: 5</textarea>
+          <div class="hint">Use a colon or equals sign, e.g. <code>Rent: 1200</code></div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="sliceText">Slice text</label>
+          <select id="sliceText">
+            <option value="percentage" selected>Percentage</option>
+            <option value="value">Value</option>
+            <option value="label">Label</option>
+            <option value="none">None</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="legendPos">Legend position</label>
+          <select id="legendPos">
+            <option value="labeled" selected>Labeled (outside)</option>
+            <option value="top">Top</option>
+            <option value="bottom">Bottom</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+            <option value="none">None</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="hole">Pie hole (0 to 0.9)</label>
+          <input type="number" id="hole" min="0" max="0.9" step="0.05" value="0">
+        </div>
+        <div class="field">
+          <label for="rotate">Rotate (0 to 360)</label>
+          <input type="number" id="rotate" min="0" max="360" step="10" value="0">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="palette">Color palette</label>
+        <select id="palette">
+          <option value="vibrant" selected>Vibrant</option>
+          <option value="pastel">Pastel</option>
+          <option value="ocean">Ocean</option>
+          <option value="warm">Warm</option>
+          <option value="mono">Indigo shades</option>
+        </select>
+      </div>
+
+      <div class="field inline">
+        <label class="switch" for="is3d" style="margin:0"><input type="checkbox" id="is3d"><span></span></label>
+        <label for="is3d">Make 3D</label>
+      </div>
+
+      <div class="row">
+        <div class="field inline"><input type="color" id="bg" value="#ffffff"><label for="bg">Background</label></div>
+        <div class="field inline"><input type="color" id="titleColor" value="#000000"><label for="titleColor">Title color</label></div>
+      </div>
+      <div class="field inline"><input type="color" id="legendColor" value="#000000"><label for="legendColor">Legend &amp; label color</label></div>
+
+      <div class="btns">
+        <button type="button" class="btn" id="gen">Generate pie chart</button>
+        <button type="button" class="btn ghost" id="example">Load example</button>
+      </div>
+      <div id="msg" role="status" aria-live="polite"></div>
+    </form>
+
+    <!-- OUTPUT -->
+    <div class="out">
+      <div class="card">
+        <div id="chartBox" aria-label="Your pie chart"></div>
+        <div class="dl">
+          <button class="btn png" id="dlPng" type="button">⬇ Download PNG</button>
+          <button class="btn jpg" id="dlJpg" type="button">⬇ Download JPG</button>
+          <button class="btn svg" id="dlSvg" type="button">⬇ Download SVG</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SEO CONTENT -->
+  <section class="content" id="features">
+    <h2>Pie Chart Maker Features</h2>
+    <p style="text-align:center;max-width:760px;margin:12px auto 0">Make clean, good-looking pie charts without spreadsheets or design software. Enter your numbers and the chart updates instantly, ready to drop into a report, presentation, school assignment or website.</p>
+    <div class="grid3">
+      <div class="card"><h3>Percentages on every slice</h3><p>Show the percentage, the raw value or the label on each slice. Shares are calculated for you, so values don't need to add up to 100.</p></div>
+      <div class="card"><h3>3D pie &amp; doughnut charts</h3><p>Turn on the 3D effect with one click, or raise the pie hole value to turn your pie chart into a doughnut chart.</p></div>
+      <div class="card"><h3>Custom colors &amp; legend</h3><p>Choose a color palette, background and title color, then place the legend at the top, bottom, left, right or label slices directly.</p></div>
+      <div class="card"><h3>Download PNG, JPG or SVG</h3><p>Export a high-resolution PNG or JPG for documents and slides, or a scalable SVG for print and web design.</p></div>
+      <div class="card"><h3>Rotate the chart</h3><p>Rotate the starting angle from 0 to 360 degrees so key slices sit exactly where you want them.</p></div>
+      <div class="card"><h3>Private &amp; free</h3><p>Everything runs in your browser. There is no signup and no watermark, and your data is never uploaded.</p></div>
+    </div>
+  </section>
+
+  <section class="content" id="how-to">
+    <h2>How to Make a Pie Chart Online</h2>
+    <ol class="steps">
+      <li><strong>Add your data.</strong> Type your labels and values, either in two lists or as <em>Label: value</em> pairs.</li>
+      <li><strong>Pick your style.</strong> Choose slice text (percentage, value or label), a color palette, legend position, 3D or doughnut.</li>
+      <li><strong>Check the preview.</strong> The pie chart updates live as you type.</li>
+      <li><strong>Download.</strong> Save the chart as a PNG, JPG or SVG file.</li>
+    </ol>
+  </section>
+
+  <section class="content" id="what-is">
+    <h2>What Is a Pie Chart?</h2>
+    <p>A pie chart is a circular graph divided into slices, where each slice shows a category's share of the whole. The full circle is 100%, and each slice's angle is proportional to its value divided by the total. Pie charts work best with a small number of categories (roughly two to seven) when you want to show how a total is split, such as a budget breakdown, survey results, market share or time spent on daily activities. A doughnut chart is a pie chart with a hole in the center, which many people find cleaner for modern reports and dashboards.</p>
+    <p><strong>When to use a pie chart:</strong> parts of a whole that add up to a meaningful total, with few categories and clear differences between slices. <strong>When to avoid it:</strong> comparing many similar values or showing change over time. A bar chart or line chart is usually clearer for those.</p>
+  </section>
+
+  <section class="content" id="faq">
+    <h2>Pie Chart Maker FAQ</h2>
+    <details><summary>How do I make a pie chart online for free?</summary><p>Type your labels and values in the form above, choose your options, and the pie chart is generated instantly. Then click Download PNG, JPG or SVG.</p></details>
+    <details><summary>How do I show percentages on a pie chart?</summary><p>Set <em>Slice text</em> to <em>Percentage</em>. Each slice shows its share of the total, calculated automatically from your values.</p></details>
+    <details><summary>Can I make a 3D pie chart or a doughnut chart?</summary><p>Yes. Switch on <em>Make 3D</em> for a 3D pie chart, or set <em>Pie hole</em> above 0 (for example 0.5) to make a doughnut chart.</p></details>
+    <details><summary>Which file formats can I download?</summary><p>PNG, JPG and SVG. SVG is a vector format that stays sharp at any size, which makes it ideal for print.</p></details>
+    <details><summary>Do the values have to add up to 100?</summary><p>No. Enter any positive numbers. The chart works out each slice's share of the total.</p></details>
+    <details><summary>Is my data saved or uploaded?</summary><p>No. The chart is drawn entirely in your browser and your data never leaves your device.</p></details>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="#top">Pie Chart Maker</a> · <a href="#features">Features</a> · <a href="#how-to">How to</a> · <a href="#faq">FAQ</a></p>
+    <p>© <span id="yr">2026</span> Pie Chart Maker. Free online pie chart generator with percentages.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var $ = function(id){ return document.getElementById(id); };
+
+  var PALETTES = {
+    vibrant:["#4f46e5","#f43f5e","#f59e0b","#10b981","#06b6d4","#a855f7","#ec4899","#84cc16","#f97316","#3b82f6","#14b8a6","#eab308"],
+    pastel:["#a5b4fc","#fda4af","#fcd34d","#6ee7b7","#67e8f9","#d8b4fe","#f9a8d4","#bef264","#fdba74","#93c5fd","#5eead4","#fde047"],
+    ocean:["#0c4a6e","#0369a1","#0284c7","#0ea5e9","#38bdf8","#7dd3fc","#0f766e","#14b8a6","#2dd4bf","#1d4ed8","#60a5fa","#164e63"],
+    warm:["#7f1d1d","#b91c1c","#dc2626","#ea580c","#f97316","#f59e0b","#fbbf24","#be185d","#e11d48","#fb7185","#92400e","#d97706"],
+    mono:["#312e81","#3730a3","#4338ca","#4f46e5","#6366f1","#818cf8","#a5b4fc","#c7d2fe","#1e1b4b","#5b21b6","#7c3aed","#a78bfa"]
+  };
+
+  function colorFor(i, pal){
+    var p = PALETTES[pal] || PALETTES.vibrant;
+    if(i < p.length) return p[i];
+    return "hsl(" + ((i * 47) % 360) + " 65% 55%)";
+  }
+  function isLight(c){
+    if(c.charAt(0) !== "#") return false;
+    var r = parseInt(c.substr(1,2),16), g = parseInt(c.substr(3,2),16), b = parseInt(c.substr(5,2),16);
+    return (0.299*r + 0.587*g + 0.114*b) > 165;
+  }
+  function esc(s){
+    return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+  }
+  function tw(s, size){ return String(s).length * (size || 14) * 0.58; }
+  function clamp(n, a, b){ return Math.min(b, Math.max(a, n)); }
+  function fmt(n){
+    if(Math.abs(n) >= 1e6) return n.toLocaleString("en-US", {maximumFractionDigits:2});
+    return String(Math.round(n * 1000) / 1000);
+  }
+  function pctStr(p){ return (Math.round(p * 10) / 10) + "%"; }
+  function setMsg(text, cls){ var m = $("msg"); m.textContent = text || ""; m.className = cls || ""; }
+
+  /* ---------- parsing ---------- */
+  function parseData(){
+    var items = [], warns = [], err = null;
+    if($("mode").value === "separate"){
+      var labels = $("labels").value.split(",").map(function(s){return s.trim();}).filter(Boolean);
+      var rawVals = $("values").value.split(",").map(function(s){return s.trim();}).filter(Boolean);
+      if(!rawVals.length) return {items:[], warns:warns, err:"Enter some values, for example: 20, 10, 10, 5"};
+      for(var i = 0; i < rawVals.length; i++){
+        var v = Number(rawVals[i].replace(/%$/, ""));
+        if(!isFinite(v)){ return {items:[], warns:warns, err:"“" + rawVals[i] + "” is not a number. Use digits only, separated by commas."}; }
+        items.push({label: labels[i] || ("Item " + (i + 1)), value: v});
+      }
+      if(labels.length > rawVals.length) warns.push("You entered more labels than values; extra labels were ignored.");
+      if(labels.length < rawVals.length) warns.push("Some values have no label, so they were named Item N.");
+    } else {
+      var tokens = $("together").value.split(/[\n;,]+/).map(function(s){return s.trim();}).filter(Boolean);
+      if(!tokens.length) return {items:[], warns:warns, err:"Enter some pairs, for example: Work: 20"};
+      for(var j = 0; j < tokens.length; j++){
+        var m = tokens[j].match(/^(.+?)\s*[:=]\s*(-?\d+(?:\.\d+)?)\s*%?$/) || tokens[j].match(/^(.+?)\s+(-?\d+(?:\.\d+)?)\s*%?$/);
+        if(!m) return {items:[], warns:warns, err:"Couldn't read “" + tokens[j] + "”. Use the format Label: 20"};
+        items.push({label: m[1].trim(), value: parseFloat(m[2])});
+      }
+    }
+    var kept = items.filter(function(it){ return it.value > 0; });
+    if(kept.length < items.length) warns.push("Zero and negative values can't be shown in a pie chart and were skipped.");
+    if(!kept.length) err = "Enter at least one value greater than zero.";
+    return {items:kept, warns:warns, err:err};
+  }
+
+  /* ---------- rendering ---------- */
+  var lastSvg = "", lastW = 0, lastH = 0;
+
+  function build(items){
+    var title = $("title").value.trim();
+    var is3d = $("is3d").checked;
+    var hole = clamp(parseFloat($("hole").value) || 0, 0, 0.9);
+    var rot = parseFloat($("rotate").value) || 0;
+    var legend = $("legendPos").value;
+    var sliceText = $("sliceText").value;
+    var pal = $("palette").value;
+    var bg = $("bg").value, tc = $("titleColor").value, lc = $("legendColor").value;
+    var FONT = "font-family=\"Arial, Helvetica, sans-serif\"";
+
+    var R = 170, rx = R, ry = is3d ? R * 0.58 : R, depth = is3d ? 30 : 0;
+    var total = items.reduce(function(s, it){ return s + it.value; }, 0);
+    var n = items.length;
+    var maxLabel = items.reduce(function(m, it){ return Math.max(m, tw(it.label, 14)); }, 0);
+
+    var W = 760;
+    if(legend === "labeled") W = Math.max(W, 2 * (R * 1.2 + 24 + maxLabel));
+    W = Math.ceil(W);
+
+    var titleH = title ? 68 : 26;
+
+    /* legend geometry */
+    var topH = 0, botH = 0, sideW = 0, vertH = 0, rows = [];
+    if(legend === "top" || legend === "bottom"){
+      var maxRow = W - 60, cur = [], curW = 0;
+      items.forEach(function(it, i){
+        var w = 26 + tw(it.label, 14) + 24;
+        if(curW + w > maxRow && cur.length){ rows.push({items:cur, w:curW}); cur = []; curW = 0; }
+        cur.push({it:it, i:i, w:w}); curW += w;
+      });
+      if(cur.length) rows.push({items:cur, w:curW});
+      var lh = rows.length * 26 + 18;
+      if(legend === "top") topH = lh; else botH = lh;
+    }
+    if(legend === "left" || legend === "right"){
+      sideW = maxLabel + 60;
+      vertH = n * 28 + 10;
+    }
+
+    var pieBlockH = 2 * ry + depth + (legend === "labeled" ? 64 : 24);
+    var contentH = Math.max(pieBlockH, vertH + 20);
+    var H = Math.ceil(titleH + topH + contentH + botH + 8);
+
+    var cx = W / 2;
+    if(legend === "right") cx = (W - sideW) / 2;
+    if(legend === "left") cx = sideW + (W - sideW) / 2;
+    var cy = titleH + topH + contentH / 2 - depth / 2;
+
+    function P(a, f, dy){ return [cx + rx * f * Math.cos(a), cy + ry * f * Math.sin(a) + (dy || 0)]; }
+    function pt(p){ return p[0].toFixed(2) + " " + p[1].toFixed(2); }
+
+    var out = [];
+    out.push("<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"" + W + "\" height=\"" + H + "\" viewBox=\"0 0 " + W + " " + H + "\" role=\"img\" aria-label=\"" + esc((title || "Pie chart")) + "\">");
+    out.push("<rect width=\"" + W + "\" height=\"" + H + "\" fill=\"" + bg + "\"/>");
+    if(title){
+      out.push("<text x=\"" + (W / 2) + "\" y=\"" + 42 + "\" text-anchor=\"middle\" font-size=\"26\" font-weight=\"700\" fill=\"" + tc + "\" " + FONT + ">" + esc(title) + "</text>");
+    }
+
+    /* compute slices */
+    var a = (-90 + rot) * Math.PI / 180;
+    var slices = items.map(function(it, i){
+      var span = it.value / total * 2 * Math.PI;
+      var s = {label: it.label, value: it.value, pct: it.value / total * 100, start: a, end: a + span, color: colorFor(i, pal)};
+      a += span;
+      return s;
+    });
+    var TWO = 2 * Math.PI;
+
+    /* 3D side walls first */
+    if(is3d){
+      slices.forEach(function(s){
+        var k0 = Math.floor(s.start / TWO) - 1, k1 = Math.ceil(s.end / TWO) + 1;
+        for(var k = k0; k <= k1; k++){
+          var lo = Math.max(s.start, TWO * k), hi = Math.min(s.end, TWO * k + Math.PI);
+          if(hi - lo < 1e-6) continue;
+          var d = "M" + pt(P(lo, 1)) + " A" + rx + " " + ry + " 0 0 1 " + pt(P(hi, 1)) +
+                  " L" + pt(P(hi, 1, depth)) + " A" + rx + " " + ry + " 0 0 0 " + pt(P(lo, 1, depth)) + " Z";
+          out.push("<path d=\"" + d + "\" fill=\"" + s.color + "\"/>");
+          out.push("<path d=\"" + d + "\" fill=\"#000\" fill-opacity=\".28\"/>");
+        }
+      });
+    }
+
+    /* top faces */
+    slices.forEach(function(s){
+      var span = s.end - s.start, d;
+      if(span >= TWO - 1e-6){
+        d = "M" + (cx + rx) + " " + cy + " A" + rx + " " + ry + " 0 1 1 " + (cx - rx) + " " + cy + " A" + rx + " " + ry + " 0 1 1 " + (cx + rx) + " " + cy + " Z";
+        if(hole > 0){
+          var ix = rx * hole, iy = ry * hole;
+          d += " M" + (cx + ix) + " " + cy + " A" + ix + " " + iy + " 0 1 1 " + (cx - ix) + " " + cy + " A" + ix + " " + iy + " 0 1 1 " + (cx + ix) + " " + cy + " Z";
+        }
+        out.push("<path d=\"" + d + "\" fill=\"" + s.color + "\" fill-rule=\"evenodd\" stroke=\"#fff\" stroke-width=\"2\"/>");
+      } else {
+        var large = span > Math.PI ? 1 : 0;
+        d = "M" + pt(P(s.start, 1)) + " A" + rx + " " + ry + " 0 " + large + " 1 " + pt(P(s.end, 1));
+        if(hole > 0){
+          d += " L" + pt(P(s.end, hole)) + " A" + (rx * hole) + " " + (ry * hole) + " 0 " + large + " 0 " + pt(P(s.start, hole)) + " Z";
+        } else {
+          d += " L" + cx + " " + cy + " Z";
+        }
+        out.push("<path d=\"" + d + "\" fill=\"" + s.color + "\" stroke=\"#fff\" stroke-width=\"2\" stroke-linejoin=\"round\"/>");
+      }
+    });
+
+    /* slice text */
+    if(sliceText !== "none"){
+      slices.forEach(function(s){
+        if(s.end - s.start < 0.12 && slices.length > 1) return; /* too thin for text */
+        var mid = (s.start + s.end) / 2;
+        var f = hole > 0 ? (1 + hole) / 2 : (slices.length === 1 ? 0.5 : 0.66);
+        var p = P(mid, f);
+        var txt = sliceText === "percentage" ? pctStr(s.pct) : sliceText === "value" ? fmt(s.value) : s.label;
+        out.push("<text x=\"" + p[0].toFixed(1) + "\" y=\"" + (p[1] + 5).toFixed(1) + "\" text-anchor=\"middle\" font-size=\"14\" font-weight=\"700\" fill=\"" + (isLight(s.color) ? "#1f2433" : "#ffffff") + "\" " + FONT + ">" + esc(txt) + "</text>");
+      });
+    }
+
+    /* legends */
+    if(legend === "labeled"){
+      slices.forEach(function(s){
+        var mid = (s.start + s.end) / 2, c = Math.cos(mid), sn = Math.sin(mid);
+        var dy = (is3d && sn > 0) ? depth : 0;
+        var p1 = P(mid, 1.0, dy), p2 = P(mid, 1.1, dy), p3 = P(mid, 1.16, dy);
+        out.push("<polyline points=\"" + p1[0].toFixed(1) + "," + p1[1].toFixed(1) + " " + p2[0].toFixed(1) + "," + p2[1].toFixed(1) + "\" stroke=\"" + lc + "\" stroke-opacity=\".5\" fill=\"none\"/>");
+        var anchor = c > 0.15 ? "start" : c < -0.15 ? "end" : "middle";
+        var ty = p3[1] + (sn > 0.5 ? 14 : sn < -0.5 ? -4 : 5);
+        out.push("<text x=\"" + p3[0].toFixed(1) + "\" y=\"" + ty.toFixed(1) + "\" text-anchor=\"" + anchor + "\" font-size=\"14\" fill=\"" + lc + "\" " + FONT + ">" + esc(s.label) + "</text>");
+      });
+    } else if(legend === "top" || legend === "bottom"){
+      var y0 = legend === "top" ? titleH + 8 : titleH + topH + contentH + 4;
+      rows.forEach(function(row, ri){
+        var x = (W - row.w) / 2, y = y0 + ri * 26 + 16;
+        row.items.forEach(function(e){
+          out.push("<rect x=\"" + x.toFixed(1) + "\" y=\"" + (y - 12) + "\" width=\"14\" height=\"14\" rx=\"3\" fill=\"" + slices[e.i].color + "\"/>");
+          out.push("<text x=\"" + (x + 22).toFixed(1) + "\" y=\"" + y + "\" font-size=\"14\" fill=\"" + lc + "\" " + FONT + ">" + esc(e.it.label) + "</text>");
+          x += e.w;
+        });
+      });
+    } else if(legend === "left" || legend === "right"){
+      var lx = legend === "right" ? W - sideW + 14 : 24;
+      var ly = titleH + topH + contentH / 2 - vertH / 2 + 18;
+      slices.forEach(function(s, i){
+        var y = ly + i * 28;
+        out.push("<rect x=\"" + lx + "\" y=\"" + (y - 12) + "\" width=\"14\" height=\"14\" rx=\"3\" fill=\"" + s.color + "\"/>");
+        out.push("<text x=\"" + (lx + 22) + "\" y=\"" + y + "\" font-size=\"14\" fill=\"" + lc + "\" " + FONT + ">" + esc(s.label) + "</text>");
+      });
+    }
+
+    out.push("</svg>");
+    lastW = W; lastH = H;
+    return out.join("");
+  }
+
+  function setDownloads(on){
+    ["dlPng","dlJpg","dlSvg"].forEach(function(id){ $(id).disabled = !on; });
+  }
+
+  function render(){
+    var res = parseData();
+    if(res.err){
+      setMsg(res.err, "err");
+      $("chartBox").innerHTML = "<p style=\"padding:60px 20px;text-align:center;color:#5b6275\">Your pie chart will appear here once the data is valid.</p>";
+      lastSvg = ""; setDownloads(false);
+      return;
+    }
+    setMsg(res.warns.join(" "), res.warns.length ? "warn" : "");
+    lastSvg = build(res.items);
+    $("chartBox").innerHTML = lastSvg;
+    setDownloads(true);
+  }
+
+  /* ---------- downloads ---------- */
+  function fileBase(){
+    var t = ($("title").value || "pie-chart").trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+    return t || "pie-chart";
+  }
+  function saveBlob(blob, name){
+    var url = URL.createObjectURL(blob), a = document.createElement("a");
+    a.href = url; a.download = name;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){ document.body.removeChild(a); URL.revokeObjectURL(url); }, 200);
+  }
+  function downloadSvg(){
+    if(!lastSvg) return;
+    saveBlob(new Blob(["<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n" + lastSvg], {type:"image/svg+xml;charset=utf-8"}), fileBase() + ".svg");
+  }
+  function downloadRaster(type){
+    if(!lastSvg) return;
+    var scale = 2, img = new Image();
+    img.onload = function(){
+      var c = document.createElement("canvas");
+      c.width = lastW * scale; c.height = lastH * scale;
+      var ctx = c.getContext("2d");
+      ctx.fillStyle = $("bg").value; ctx.fillRect(0, 0, c.width, c.height);
+      ctx.drawImage(img, 0, 0, c.width, c.height);
+      c.toBlob(function(b){
+        if(b) saveBlob(b, fileBase() + (type === "image/png" ? ".png" : ".jpg"));
+        else setMsg("Your browser couldn't create the image. Try the SVG download.", "err");
+      }, type, 0.95);
+    };
+    img.onerror = function(){ setMsg("Your browser couldn't create the image. Try the SVG download.", "err"); };
+    img.src = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(lastSvg);
+  }
+
+  /* ---------- events ---------- */
+  var timer;
+  function later(){ clearTimeout(timer); timer = setTimeout(render, 120); }
+
+  ["title","labels","values","together","hole","rotate"].forEach(function(id){ $(id).addEventListener("input", later); });
+  ["sliceText","legendPos","palette","is3d","bg","titleColor","legendColor"].forEach(function(id){ $(id).addEventListener("input", render); $(id).addEventListener("change", render); });
+
+  $("mode").addEventListener("change", function(){
+    var sep = $("mode").value === "separate";
+    if(!sep){
+      /* carry current data across */
+      var l = $("labels").value.split(",").map(function(s){return s.trim();}).filter(Boolean);
+      var v = $("values").value.split(",").map(function(s){return s.trim();}).filter(Boolean);
+      if(v.length) $("together").value = v.map(function(x, i){ return (l[i] || ("Item " + (i + 1))) + ": " + x; }).join("\n");
+    } else {
+      var lines = $("together").value.split(/[\n;,]+/).map(function(s){return s.trim();}).filter(Boolean), L = [], V = [];
+      lines.forEach(function(t){
+        var m = t.match(/^(.+?)\s*[:=]\s*(-?\d+(?:\.\d+)?)\s*%?$/) || t.match(/^(.+?)\s+(-?\d+(?:\.\d+)?)\s*%?$/);
+        if(m){ L.push(m[1].trim()); V.push(m[2]); }
+      });
+      if(V.length){ $("labels").value = L.join(", "); $("values").value = V.join(", "); }
+    }
+    $("sepBox").hidden = !sep; $("togBox").hidden = sep;
+    render();
+  });
+
+  $("gen").addEventListener("click", render);
+  $("example").addEventListener("click", function(){
+    $("title").value = "Monthly Budget";
+    $("labels").value = "Rent, Food, Transport, Savings, Fun";
+    $("values").value = "1200, 450, 180, 300, 120";
+    $("together").value = "Rent: 1200\nFood: 450\nTransport: 180\nSavings: 300\nFun: 120";
+    render();
+  });
+  $("dlPng").addEventListener("click", function(){ downloadRaster("image/png"); });
+  $("dlJpg").addEventListener("click", function(){ downloadRaster("image/jpeg"); });
+  $("dlSvg").addEventListener("click", downloadSvg);
+
+  $("yr").textContent = new Date().getFullYear();
+  render();
+})();
+</script>
+</body>
+</html>
